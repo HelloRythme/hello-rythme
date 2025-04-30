@@ -1,0 +1,156 @@
+html {
+	scroll-padding-top: 9.2em; /* Ajuste en fonction de la hauteur de ta barre sticky */
+  }
+  
+.row{
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0;
+	--bs-gutter-x: 0;
+	--bs-gutter-y: 0; 
+}
+
+body{
+	color: black;
+}
+
+#site{min-height:100vh;}
+
+nav{position: fixed;
+    z-index: 10;}
+
+svg{
+	position: absolute;
+	top: 10.5em;
+	z-index: 3;
+}
+
+
+#titre_site{
+	position: absolute;
+	font-size: 200%;
+	top: 4.6em;
+	z-index: 5;
+}
+
+#page {margin-top: 18em;}
+
+@media screen and (min-width: 576px) {
+	html {
+		scroll-padding-top:3.5em; 
+	  }
+	#titre_site {
+		top: 1.6em;
+	}
+	svg{top:3.6em;}
+	#page {margin-top: 11.9em;}
+  }
+
+  @media screen and (min-width: 645px) {
+	svg{top:3.1em;}
+	#page {margin-top: 11.7em;}
+  }
+
+
+@media screen and (min-width: 700px) {
+	svg{top:2.9em;}
+	#page {margin-top: 12.4em;}
+  }
+
+  @media screen and (min-width: 768px) {
+	html {
+		scroll-padding-top:1.8em; 
+	  }
+	svg{top:2.6em;}
+	#page {margin-top: 12.7em;}
+  }
+
+  @media screen and (min-width: 815px) {
+	svg{top:2.3em;}
+	#page {margin-top: 13em;}
+  }
+
+  @media screen and (min-width: 864px) {
+	svg{top:2.2em;}
+	#page {margin-top: 13.6em;}
+  }
+
+  @media screen and (min-width: 925px) {
+	svg{top:1.8em;}
+	#page {margin-top: 14.1em;}
+  }
+
+  @media screen and (min-width: 992px) {
+	#titre_site {
+		top: 0.8em;
+	}
+	svg{top:-0.2em;}
+	#page {margin-top: 12.5em;}
+  }
+
+  @media screen and (min-width: 1085px) {
+	svg{top:-0.6em;}
+	#page {margin-top: 14.1em;}
+  }
+
+  @media screen and (min-width: 1200px) {
+	svg{top:-1.4em;}
+	#page {margin-top: 16em;}
+  }
+
+  @media screen and (min-width: 1400px) {
+	svg{top:-2em;}
+	#page {margin-top: 30em;}
+  }
+
+
+
+footer{
+	text-align: right;
+	padding-right: 1em !important;
+	}
+
+.clair {
+background-color: #C2B7AD;
+}
+
+.sombre {
+	background-color: #463f32;
+	}
+
+a {text-decoration: none;
+}
+
+a:hover{
+	font-weight: bold;
+}
+
+a:focus {
+	outline: 2px solid #C2B7AD; /* jolie couleur de ton site */
+	outline-offset: 2px;
+  }
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+
+button {
+	background-color: #C2B7AD;
+	color: #463f32;
+	border: 0.5px solid #463f32;
+	border-radius: 8px;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  
+button:hover {
+	background-color: #463f32;
+	color: #C2B7AD;
+  }
+
+
+
+

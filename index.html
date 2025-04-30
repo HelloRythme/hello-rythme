@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Hello'Rythm</title>
+  <title>Hello Rythme</title>
 <meta name="title" content="danse chorégraphie couple mariage bal Valenciennes Nord France" />
 <meta name="description" content="Issaev Anastassia: cours de danse de couples, standards et latines, et chorégraphies de mariage, à Oisy, entre Valenciennes et Denain, Nord, Haut-de-France" />
 <meta name="geo.region" content="FR" />
@@ -16,56 +16,49 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="format/gen.css"/>
+<link rel="stylesheet" href="/css/site.css"/>
+<link rel="stylesheet" href="/css/accueil.css"/>
+<link rel="stylesheet" href="/css/nav.css"/>
+<script src="/js/include.js" defer></script>
 </head>
 
-<body class="container-flex m-0 p-0">
+<body>
 
-<header class="row m-0 p-0" id="header">
+<div id="site" class="row container-flex">
 
-<nav class="row d-flex m-0 p-0">
-<div class="col-xm-6 col-md-3"><a class="" href="index.html">Accueil</a></div>
-<div class="col-xm-6 col-md-3"><a class="" href="cours.html">Les cours</a></div>
-<div class="col-xm-6 col-md-3"><a class="" href="danse.html">Les danses</a></div>
-<div class="col-xm-6 col-md-3"><a class="" href="presentation.html">Qui suis-je?</a></div>
-<div class="col-xm-6 col-md-3"><a class="" href="infos.html">Infos pratiques</a></div>
-<div class="col-xm-6 col-md-3"><a class="" href="contact.html">Contact</a></div>
-
-</nav>
-<h1 id="titre">Hello'Rythm</h1>
-<svg id="vague" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#C2B7AD" fill-opacity="1" d="M0,288L40,261.3C80,235,160,181,240,160C320,139,400,149,480,170.7C560,192,640,224,720,202.7C800,181,880,107,960,112C1040,117,1120,203,1200,224C1280,245,1360,203,1400,181.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
-
-</header>
+<div id="header"></div>
 
 
+<div class="row container-flex d-flex sombre align-self-start" id="page">
 
 
-<div class="" id="accueil">
-
-<div class="row d-flex" id="menu">
-	<div class="submenu col-xm-12 col-lg-4" id="submenu1">
-		<div class="rub blanc" title="ouverture bal chorégraphie de mariage"></div>
+	<div class="submenu col-xm-12 col-lg-4">
+		<div class="rub blanc" title="ouverture bal chorégraphie mariage"></div>
 		<div class="rub fond" id="ouverture"></div>
-		<div class="rub cat"><a class="click" href="#page_ouverture">Ouverture de bal</a></div>
+		<div class="rub cat"><a class="click" href="cours/mariage/">Chorégraphies de mariage</a></div>
 		
 	</div>
 	<div class="submenu col-xm-12 col-sm-6 col-lg-4 " id="submenu2">
 		<div class="rub blanc" title="cours solos danse latines standards"></div>
 		<div class="rub fond" id="solo"></div>
-		<div class="rub cat"><a class="click" href="#page_solo">Cours Solos</a></div>
+		<div class="rub cat"><a class="click" href="cours/particuliers/">Cours solos ou en couples</a></div>
 	</div>
 	<div class="submenu col-xm-12 col-sm-6 col-lg-4" id="submenu3">
 		<div class="rub blanc" title="cours couples groupes danse latines standards"></div>
 		<div class="rub fond" id="couple"></div>
-		<div class="rub cat"><a class="click" href="#page_couple">Cours en couple ou entre amis</a></div>
+		<div class="rub cat"><a class="click" href="cours/entreprises/">Prestations pour entreprises</a></div>
 	</div>
+
+
 </div>
 
-<div id="pied" class="row">
+<footer class="row container-flex d-flex sombre align-self-end">
 <p>Mentions légales</p>
-</div>
+</footer>
 
 </div>
+</body>
+</html>
 
 
 
@@ -76,62 +69,6 @@ function affiche(){
 
 let largeurEcran = window.innerWidth; 
 console.log(largeurEcran);
-
-if(largeurEcran > 1123){
-document.getElementById("titre").style.fontSize = "300%";
-document.getElementById("titre").style.letterSpacing = "24pt";
-document.getElementById("vague").style.marginTop = "-6em";
-
-}
-else if(largeurEcran > 944){
-document.getElementById("titre").style.fontSize = "300%";
-document.getElementById("titre").style.letterSpacing = "24pt";
-document.getElementById("vague").style.marginTop = "-5em";
-
-}
-else if(largeurEcran > 767){
-document.getElementById("titre").style.fontSize = "300%";
-document.getElementById("titre").style.letterSpacing = "18pt";
-document.getElementById("vague").style.marginTop = "-4em";
-}
-else if (largeurEcran > 641){
-document.getElementById("titre").style.fontSize = "300%";
-document.getElementById("titre").style.letterSpacing = "16pt";
-document.getElementById("vague").style.marginTop = "-4em";
-}
-else if (largeurEcran > 565){
-document.getElementById("titre").style.fontSize = "250%";
-document.getElementById("titre").style.letterSpacing = "14pt";
-document.getElementById("vague").style.marginTop = "-3em";
-}
-else if (largeurEcran > 359){
-document.getElementById("titre").style.fontSize = "150%";
-document.getElementById("titre").style.letterSpacing = "12pt";
-document.getElementById("vague").style.marginTop = "-2em";
-}
-else{
-document.getElementById("titre").style.fontSize = "150%";
-document.getElementById("titre").style.letterSpacing = "12pt";
-document.getElementById("vague").style.marginTop = "-1em";
-var submenus = document.getElementsByClassName("submenu");
-for (var i =0; i < submenus.length; i++){
-submenus[i].style.height = "250px";
-}
-var rubs = document.getElementsByClassName("rub");
-for (var i =0; i < rubs.length; i++){
-rubs[i].style.height = "250px";
-rubs[i].style.width = "250px";
-}
-var fonds = document.getElementsByClassName("fond");
-for ( var i =0; i < fonds.length; i++){
-fonds[i].style.marginTop = "-250px";
-}
-var cats = document.getElementsByClassName("cat");
-for ( vari =0; i < cats.length; i++){
-cats[i].style.marginTop = "-250px";
-}
-
-}
 
 
 

@@ -1,0 +1,41 @@
+
+video{
+  max-width: 100%;
+  display: block;
+  object-fit: cover; /* ou 'contain' selon ton besoin */
+  aspect-ratio: 16 / 9;
+}
+
+.video-player {
+position: relative;
+background: #000;
+max-width: min(95%, 470px);
+margin: 0 0 0 0 ;
+}
+
+.controls {
+display: flex;
+align-items: center;
+background: rgba(0, 0, 0, 0.7);
+justify-content: space-between;
+color: white;
+padding: 0 0.3em 0.1em 0.3em;
+}
+
+.playPause, .fullscreen{
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0 0 0 0;
+}
+
+.yt{
+  letter-spacing: 0px;
+  font-family: "Arial Narrow",sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.yt:hover{
+  color: red;
+}

@@ -1,0 +1,51 @@
+.series{
+max-width: 20em;
+
+}
+
+.card {
+  padding: 0.5em;
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: white;
+  height: 132px;
+  transition: background-color 0.3s, box-shadow 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  margin-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+}
+
+.card:hover{
+    background-color: lightgrey;
+    box-shadow: 0 0 15px rgba(194, 183, 173, 0.8);
+    transform: scale(1.02);
+}
+
+
+
+ul{text-align: left;
+font-size: 90%;
+line-height: 12pt;}
+
+iframe{
+    width: 90%;
+    height: 80px;
+}
+
+@keyframes pulse-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse-animation 0.4s ease;
+}
+
+#reset-button{
+  text-align: right;
+}
+
+
+

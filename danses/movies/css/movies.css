@@ -1,0 +1,51 @@
+.media-container{
+    max-width: 90%;
+}
+
+iframe{
+    height: 250px;
+}
+
+.video-link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .video-thumbnail {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* ajuste la taille max selon ton besoin */
+    overflow: hidden;
+    border-radius: 12px; /* optionnel : coins arrondis */
+  }
+  
+  .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 0, 0, 0.7);
+    clip-path: polygon(25% 20%, 25% 80%, 75% 50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .video-thumbnail:hover .play-button {
+    background: rgba(255, 254, 255, 0.7); /* un petit effet au hover */
+  }
+
+  h3{
+    width: 80%;
+    background: rgb(194,183,173,0.3);
+    line-height: 2em;
+  }
+  

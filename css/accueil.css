@@ -1,0 +1,105 @@
+#site{background-color: #463f32;}
+
+footer{
+    color: #C2B7AD;
+}
+
+.submenu{
+    display: block;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: 1em;
+    }
+
+.rub{
+        width: 200px;
+        height: 200px;
+        border-radius: 50% 50%;
+        margin: auto;
+        
+    
+        
+}
+    
+.blanc{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: relative;
+}
+
+.fond{
+    position: relative;
+    opacity: 0.3;
+    background-size: 110% 110%;
+    background-position: center;
+margin-top: -200px;
+}
+
+.cat{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+margin-top: -200px;
+}
+
+@media screen and (min-width: 350px) {
+	.submenu {
+        height: 300px;
+	}
+    .rub, blanc {
+        height: 300px;
+        width: 300px;
+	}
+    .fond, .cat{
+        margin-top: -300px;
+    }
+} 
+
+@media screen and (min-width: 575px) {
+	.submenu {
+        height: 250px;
+	}
+    .rub, blanc {
+        height: 250px;
+        width: 250px;
+	}
+    .fond, .cat{
+        margin-top: -250px;
+    }
+} 
+
+@media screen and (min-width: 645px) {
+	.submenu {
+        height: 300px;
+	}
+    .rub, blanc {
+        height: 300px;
+        width: 300px;
+	}
+    .fond, .cat{
+        margin-top: -300px;
+    }
+} 
+   
+svg{
+	background: radial-gradient(ellipse 2% 80% at 100% -25%, #C2B7AD 100%, #463f32 100%);
+	}  
+    
+
+
+
+    
+#ouverture{
+    background-image: url('https://live.staticflickr.com/3316/3188029005_e3419054c6_m.jpg');
+
+}
+
+#solo{
+    background-image: url('https://live.staticflickr.com/3316/3188029005_e3419054c6_m.jpg');
+}
+
+#couple{
+    background-image: url('https://live.staticflickr.com/3316/3188029005_e3419054c6_m.jpg');
+}
