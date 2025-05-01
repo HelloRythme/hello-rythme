@@ -5,7 +5,7 @@
 <head>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -13,26 +13,34 @@
     <!-- End Google Tag Manager -->
 
     <!-- Tarteaucitron: CSS pour la bannière -->
-    <link rel="stylesheet" href="/tarteaucitron/tarteaucitron.css"/>
+    <link rel="stylesheet" href="/tarteaucitron/css/tarteaucitron.css"/>
 
     <!-- Tarteaucitron: Script principal -->
-    <script src="/tarteaucitron/tarteaucitron.js"></script>
+    <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
 
     <!-- Tarteaucitron: Configuration des services -->
-    <script>
+    <script type="text/javascript">
     tarteaucitron.init({
-        "privacyUrl": "/confidentialite",  // Lien vers ta page de confidentialité
+        privacyUrl: "/mentions-legales#confidentialite",  // Lien vers ta page de confidentialité
         "hashtag": "#tarteaucitron",       // Ancre pour la bannière
         "highPrivacy": true,               // Haute confidentialité
         "acceptAllCta": true,             // Bouton "Accepter tout"
         "orientation": "bottom",          // Position de la bannière
         "showAlertSmall": true,           // Bannière discrète
-        "cookieslist": true,              // Liste des cookies
+        "cookieslist": false, 
+        "removeCredit": true, 
+        "cookieName": "tarteaucitron", 
+        "moreInfoLink": false,
+        "mandatory": true, 
+        "handleBrowserDNTRequest": false, 
+        "DenyAllCta": false,             
     });
     </script>
 
+    <script src="/js/hide-tarteaucitron.js" defer></script>
+
     <!-- Services spécifiques (comme Google Analytics via GTM) -->
-    <script>
+    <script type="text/javascript">
     tarteaucitron.services.googleanalytics = {
         "key": "googleanalytics",
         "type": "analytic",
@@ -85,15 +93,13 @@
 
     <div id="site" class="row container-flex">
 
-        <div id="header"></div>
+        <header></header>
 
-        <div class="row container-flex d-flex sombre align-self-start" id="page">
+        <main class="row container-flex d-flex align-self-start">
 
-        </div>
+        </main>
 
-        <footer class="row container-flex d-flex sombre align-self-end">
-			<p>Mentions légales</p>
-		</footer>
+        <footer></footer>
 
     </div>
 

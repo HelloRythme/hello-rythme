@@ -32,7 +32,7 @@ svg{
 	z-index: 5;
 }
 
-#page {margin-top: 18em;}
+main {margin-top: 18em !important;}
 
 @media screen and (min-width: 576px) {
 	html {
@@ -42,18 +42,18 @@ svg{
 		top: 1.6em;
 	}
 	svg{top:3.6em;}
-	#page {margin-top: 11.9em;}
+	main {margin-top: 11.9em !important;}
   }
 
   @media screen and (min-width: 645px) {
 	svg{top:3.1em;}
-	#page {margin-top: 11.7em;}
+	main {margin-top: 11.7em !important;}
   }
 
 
 @media screen and (min-width: 700px) {
 	svg{top:2.9em;}
-	#page {margin-top: 12.4em;}
+	main {margin-top: 12.4em !important;}
   }
 
   @media screen and (min-width: 768px) {
@@ -61,22 +61,22 @@ svg{
 		scroll-padding-top:1.8em; 
 	  }
 	svg{top:2.6em;}
-	#page {margin-top: 12.7em;}
+	main {margin-top: 12.7em !important;}
   }
 
   @media screen and (min-width: 815px) {
 	svg{top:2.3em;}
-	#page {margin-top: 13em;}
+	main {margin-top: 13em !important;}
   }
 
   @media screen and (min-width: 864px) {
 	svg{top:2.2em;}
-	#page {margin-top: 13.6em;}
+	main {margin-top: 13.6em !important;}
   }
 
   @media screen and (min-width: 925px) {
 	svg{top:1.8em;}
-	#page {margin-top: 14.1em;}
+	main {margin-top: 14.1em !important;}
   }
 
   @media screen and (min-width: 992px) {
@@ -84,29 +84,32 @@ svg{
 		top: 0.8em;
 	}
 	svg{top:-0.2em;}
-	#page {margin-top: 12.5em;}
+	main {margin-top: 12.5em !important;}
   }
 
   @media screen and (min-width: 1085px) {
 	svg{top:-0.6em;}
-	#page {margin-top: 14.1em;}
+	main {margin-top: 14.1em !important;}
   }
 
   @media screen and (min-width: 1200px) {
 	svg{top:-1.4em;}
-	#page {margin-top: 16em;}
+	main {margin-top: 16em !important;}
   }
 
   @media screen and (min-width: 1400px) {
 	svg{top:-2em;}
-	#page {margin-top: 30em;}
+	main {margin-top: 30em !important;}
   }
 
 
 
 footer{
+	align-self: end;
 	text-align: right;
 	padding-right: 1em !important;
+	padding-bottom: 0.5em;
+	background-color: #C2B7AD;
 	}
 
 .clair {

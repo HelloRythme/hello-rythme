@@ -59,5 +59,5 @@ const musics = [
   ];
 
   function afficheRedirect(){
-    completedQuiz.innerHTML = "Bravo, tu as retrouvé toutes les paires ! Veux-tu tenter le même exercice avec les <a href='/danses/quiz/quiz-latines/'>danses latines</a> ? Ou passer directement au <a href='/danses/quiz/'>quiz final</a> ? (Attention, il est plus difficile!) Si tu n'as pas encore exploré toutes les vidéos, tu peux aussi revenir à la <a href='/danses/'>page de présentation des danses</a>.À moins que tu n'aies envie d'écouter encore plus de <a href='/danses/playlists/#danses-standards'>musiques</a> ?";
+    completedQuiz.innerHTML = "Bravo, tu as retrouvé toutes les paires ! Veux-tu tenter le même exercice avec les <a href='/danses/quiz/quiz-latines/'>danses latines</a> ? Ou passer directement au <a href='/danses/quiz/quiz/'>quiz final</a> ? (Attention, il est plus difficile!) Si tu n'as pas encore exploré toutes les vidéos, tu peux aussi revenir à la <a href='/danses/'>page de présentation des danses</a>.À moins que tu n'aies envie d'écouter encore plus de <a href='/danses/playlists/#danses-standards'>musiques</a> ?";
   }

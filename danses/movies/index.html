@@ -5,7 +5,7 @@
 <head>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -13,26 +13,34 @@
     <!-- End Google Tag Manager -->
 
     <!-- Tarteaucitron: CSS pour la bannière -->
-    <link rel="stylesheet" href="/tarteaucitron/tarteaucitron.css"/>
+    <link rel="stylesheet" href="/tarteaucitron/css/tarteaucitron.css"/>
 
     <!-- Tarteaucitron: Script principal -->
-    <script src="/tarteaucitron/tarteaucitron.js"></script>
+    <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
 
     <!-- Tarteaucitron: Configuration des services -->
-    <script>
+    <script type="text/javascript">
     tarteaucitron.init({
-        "privacyUrl": "/confidentialite",  // Lien vers ta page de confidentialité
+        privacyUrl: "/mentions-legales#confidentialite",  // Lien vers ta page de confidentialité
         "hashtag": "#tarteaucitron",       // Ancre pour la bannière
         "highPrivacy": true,               // Haute confidentialité
         "acceptAllCta": true,             // Bouton "Accepter tout"
         "orientation": "bottom",          // Position de la bannière
         "showAlertSmall": true,           // Bannière discrète
-        "cookieslist": true,              // Liste des cookies
+        "cookieslist": false, 
+        "removeCredit": true, 
+        "cookieName": "tarteaucitron", 
+        "moreInfoLink": false,
+        "mandatory": true, 
+        "handleBrowserDNTRequest": false, 
+        "DenyAllCta": false,             
     });
     </script>
 
+    <script src="/js/hide-tarteaucitron.js" defer></script>
+
     <!-- Services spécifiques (comme Google Analytics via GTM) -->
-    <script>
+    <script type="text/javascript">
     tarteaucitron.services.googleanalytics = {
         "key": "googleanalytics",
         "type": "analytic",
@@ -72,6 +80,7 @@
     <link rel="stylesheet" href="/css/site.css"/>
     <link rel="stylesheet" href="/css/nav.css"/>
     <link rel="stylesheet" href="/css/video.css"/>
+    <link rel="stylesheet" href="css/movies.css"/>
 
     <script src="/js/include.js" defer></script>
     <script src="/js/video.js" defer></script>
@@ -87,9 +96,9 @@
     
     <div id="site" class="row container-flex">
 
-        <div id="header"></div>
+        <header></header>
 
-        <div class="row container-flex d-flex align-self-start" id="page">
+        <main class="row container-flex d-flex align-self-start">
 
             <h1>Les danses au cinéma</h1>
 
@@ -113,7 +122,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Funny Face (1957)</h5>
                         <p>Fred Astaire & Audrey Hepburn</p>
-                        <iframe src="https://www.youtube.com/embed/oyJuH945H8k?si=KYBgtS0wqi8GjOyP&amp;controls=0&amp;start=125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/oyJuH945H8k?enablejsapi=1;si=KYBgtS0wqi8GjOyP&amp;controls=0&amp;start=125" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -121,7 +130,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Shall we dance? (2004)</h5>
                         <p>Richard Gere & Lisa Ann Walter</p>
-                        <iframe src="https://www.youtube.com/embed/FaSlQP79M-M?si=rwWnQapcBnf_qYjZ&amp;controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/FaSlQP79M-M?enablejsapi=1;si=rwWnQapcBnf_qYjZ&amp;controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -129,7 +138,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Shall we dance? (2004)</h5>
                         <p>Francesco Flumiani & Jennifer Lopez</p>
-                        <iframe src="https://www.youtube.com/embed/PWN2ntVDwoU?si=ow52rvtkoLEXrlZT&amp;controls=0&amp;start=57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/PWN2ntVDwoU?enablejsapi=1;si=ow52rvtkoLEXrlZT&amp;controls=0&amp;start=57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -137,7 +146,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Enchanted (2007)</h5>
                         <p>Patrick Dempsey & Amy Adams</p>
-                        <iframe src="https://www.youtube.com/embed/kH9kbcRCZH8?si=CMuay_nO1o8hbJPH&amp;controls=0&amp;start=57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/kH9kbcRCZH8?enablejsapi=1;si=CMuay_nO1o8hbJPH&amp;controls=0&amp;start=57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -150,7 +159,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Some like it hot (1959)</h5>
                         <p>Joe E. Brown & Jack Lemon</p>
-                        <iframe src="https://www.youtube.com/embed/hn_7PpyxqZM?si=LzDEoNeHGTZtno-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/hn_7PpyxqZM?enablejsapi=1;si=LzDEoNeHGTZtno-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -158,7 +167,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Addams Family Values (1993)</h5>
                         <p>Raúl Julia & Anjelica Huston</p>
-                        <iframe src="https://www.youtube.com/embed/NIDabDkcS8o?si=uSo32WV9OLC9SUVj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/NIDabDkcS8o?enablejsapi=1;si=uSo32WV9OLC9SUVj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -166,7 +175,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>True lies (1994)</h5>
                         <p>Arnold Schwarzenegger & Tia Carrere</p>
-                        <iframe src="https://www.youtube.com/embed/7ydRwCf9Qyw?si=oDNzlqwcRuEWKeG2&amp;controls=0&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/7ydRwCf9Qyw?enablejsapi=1;si=oDNzlqwcRuEWKeG2&amp;controls=0&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -174,7 +183,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>The Wedding Planner (2001)</h5>
                         <p>Matthew McConaughey & Jennifer Lopez</p>
-                        <iframe src="https://www.youtube.com/embed/ZLm_YN9j31g?si=_pvFrUzNDfcDrd1z&amp;controls=0&amp;start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/ZLm_YN9j31g?enablejsapi=1;si=_pvFrUzNDfcDrd1z&amp;controls=0&amp;start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -182,7 +191,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Frida (2003)</h5>
                         <p>Salma Hayek & Tia Carrere</p>
-                        <iframe src="https://www.youtube.com/embed/moe3i3AycwE?si=mnLREGfPMJorj52H&amp;controls=0&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/moe3i3AycwE?enablejsapi=1;si=mnLREGfPMJorj52H&amp;controls=0&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -190,7 +199,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Shall we dance? (2004)</h5>
                         <p>Richard Gere & Jennifer Lopez</p>
-                        <iframe src="https://www.youtube.com/embed/b24a_2NPleg?si=r-0bQyUlc_2AbWNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/b24a_2NPleg?enablejsapi=1;si=r-0bQyUlc_2AbWNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -198,7 +207,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Scent of a woman (1993)</h5>
                         <p>Al Pacino & Gabrielle Anwar</p>
-                        <iframe src="https://www.youtube.com/embed/s-AV3c5Ygvs?si=eX_AgQdBJkJh1qho&amp;controls=0&amp;start=95" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/s-AV3c5Ygvs?enablejsapi=1;si=eX_AgQdBJkJh1qho&amp;controls=0&amp;start=95" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -206,7 +215,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Dance with me (2005)</h5>
                         <p>Antonio Banderas & Katya Virshilas</p>
-                        <iframe src="https://www.youtube.com/embed/SJ0klwPIKBQ?si=ICJLCwnfsjChx7Ek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/SJ0klwPIKBQ?enablejsapi=1;si=ICJLCwnfsjChx7Ek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -214,7 +223,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Dance with me (2005)</h5>
                         <p>Elijah Kelley, Dante Basco & Jenna Dewan</p>
-                        <iframe src="https://www.youtube.com/embed/yjHMMotXzhM?si=2JahbiDGFfOyQBQQ&amp;controls=0&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/yjHMMotXzhM?enablejsapi=1;si=2JahbiDGFfOyQBQQ&amp;controls=0&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -222,7 +231,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Mr. and Mrs. Smith (2005)</h5>
                         <p>Brad Pitt & Angelina Jolie</p>
-                        <iframe src="https://www.youtube.com/embed/9Ja63b5O8Tk?si=Me8J3nJXj4s381Zj&amp;controls=0&amp;start=130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/9Ja63b5O8Tk?enablejsapi=1;si=Me8J3nJXj4s381Zj&amp;controls=0&amp;start=130" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
    
@@ -230,7 +239,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Easy virtue (2009)</h5>
                         <p>Colin Firth & Jessica Biel</p>
-                        <iframe src="https://www.youtube.com/embed/x5f5iYLLr8w?si=8W0Js3Dzn0W8hoY4&amp;controls=0&amp;start=109" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/x5f5iYLLr8w?enablejsapi=1;si=8W0Js3Dzn0W8hoY4&amp;controls=0&amp;start=109" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -243,7 +252,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Swing time (1936)</h5>
                         <p>Fred Astaire & Ginger Rogers</p>
-                        <iframe src="https://www.youtube.com/embed/06RlwN0nddQ?si=nBi7wpxvGVhUPFfv&amp;controls=0&amp;start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/06RlwN0nddQ?enablejsapi=1;si=nBi7wpxvGVhUPFfv&amp;controls=0&amp;start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -251,7 +260,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Shall we dance? (2004)</h5>
                         <p>Richard Gere & Lisa Ann Walter</p>
-                        <iframe src="https://www.youtube.com/embed/SH02DP7vOrQ?si=GBBIz2zWVJGv6DcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/SH02DP7vOrQ?enablejsapi=1;si=GBBIz2zWVJGv6DcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -264,7 +273,7 @@
                     <div class="row container-flex media-container container-flex m-auto">
                         <h5>Madame Bovary (1950)</h5>
                         <p>Jamse Mason & Jennifer Jones</p>
-                        <iframe src="https://www.youtube.com/embed/iNS8yd5JkBU?si=Q6QiaHaF9eoOvWLW&amp;controls=0&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/iNS8yd5JkBU?enablejsapi=1;si=Q6QiaHaF9eoOvWLW&amp;controls=0&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -272,7 +281,7 @@
                     <div class="row container-flex media-container container-flex m-auto">
                         <h5>War and Peace (1956)</h5>
                         <p>Henry Fonda & Audrey Hepburn</p>
-                        <iframe src="https://www.youtube.com/embed/M7PLRmnFOls?si=f3V4VkntV4XPFTaL&amp;controls=0&amp;start=76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/M7PLRmnFOls?enablejsapi=1;si=f3V4VkntV4XPFTaL&amp;controls=0&amp;start=76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -280,7 +289,7 @@
                     <div class="row container-flex media-container container-flex m-auto">
                         <h5>Mayerling (1967)</h5>
                         <p>Omar Sharif & Mony Dalmès</p>
-                        <iframe src="https://www.youtube.com/embed/mxMaVLImepY?si=0SwV_UzkZBCWG2Tp&amp;controls=0&amp;start=198" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/mxMaVLImepY?enablejsapi=1;si=0SwV_UzkZBCWG2Tp&amp;controls=0&amp;start=198" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -288,7 +297,7 @@
                     <div class="row container-flex media-container container-flex m-auto">
                         <h5>Beauty and the Beast (1991)</h5>
                         <p></p>
-                        <iframe src="https://www.youtube.com/embed/h0rfc33uk1A?si=WYmixfQ_3CmJENoC&amp;controls=0&amp;start=67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/h0rfc33uk1A?enablejsapi=1;si=WYmixfQ_3CmJENoC&amp;controls=0&amp;start=67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -296,7 +305,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Anna Karenine (1997)</h5>
                         <p>Sean Bean & Sophie Marceau</p>
-                        <iframe src="https://www.youtube.com/embed/LwpPs_1_J3c?si=vnlUKKrE9NhWp5nH&amp;controls=0&amp;start=54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/LwpPs_1_J3c?enablejsapi=1;si=vnlUKKrE9NhWp5nH&amp;controls=0&amp;start=54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -304,7 +313,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Cinderella (2015)</h5>
                         <p>Richard Madden & Lily James</p>
-                        <iframe src="https://www.youtube.com/embed/2QGGbT5HGxY?si=UUjqJP10VIehfDVG&amp;controls=0&amp;start=114" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/2QGGbT5HGxY?enablejsapi=1;si=UUjqJP10VIehfDVG&amp;controls=0&amp;start=114" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -312,7 +321,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>War and Peace (2016)</h5>
                         <p>James Norton & Lily James</p>
-                        <iframe src="https://www.youtube.com/embed/MeSsQmNRecQ?si=x6226mD_b5vkvjC9&amp;controls=0&amp;start=75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/MeSsQmNRecQ?enablejsapi=1;si=x6226mD_b5vkvjC9&amp;controls=0&amp;start=75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -365,7 +374,7 @@
                     <div class="media-container container-flex m-auto">
                         <h5>Roberta (1935)</h5>
                             <p>Fred Astaire & Ginger Rogers</p>
-                            <iframe src="https://www.youtube.com/embed/oWFPBsP0exo?si=Wl3nWwQt7cOcFMRn&amp;controls=0&amp;start=59" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loadin="lazy"></iframe>
+                            <iframe src="https://www.youtube.com/embed/oWFPBsP0exo?enablejsapi=1;si=Wl3nWwQt7cOcFMRn&amp;controls=0&amp;start=59" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loadin="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -381,7 +390,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Shall we dance? (2004)</h5>
                         <p>Stanley Tucci & Lisa Ann Walter</p>
-                        <iframe src="https://www.youtube.com/embed/MASxI2vxERs?si=ie-7w3tv9usJzXdz&amp;controls=0&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/MASxI2vxERs?enablejsapi=1;si=ie-7w3tv9usJzXdz&amp;controls=0&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -394,7 +403,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Rumba la vie (2022)</h5>
                         <p>Frank Dubosc & Louana Espinosa</p>
-                        <iframe src="https://www.youtube.com/embed/QMvcNTyyZRE?si=CE1_hxX9Rl9sypL8&amp;controls=0&amp;start=164" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/QMvcNTyyZRE?enablejsapi=1;si=CE1_hxX9Rl9sypL8&amp;controls=0&amp;start=164" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -407,7 +416,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>Strictly Ballroom (1992)</h5>
                         <p>Paul Mercurio & Tara Morice </p>
-                        <iframe src="https://www.youtube.com/embed/SZEeMP8tR1c?si=xQ68AGjknkds7zk9&amp;controls=0&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/SZEeMP8tR1c?enablejsapi=1;si=xQ68AGjknkds7zk9&amp;controls=0&amp;start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -415,7 +424,7 @@
                     <div class="row media-container container-flex m-auto">
                         <h5>The Mask of Zorro (1998)</h5>
                         <p>antonio Banderas & Catherine Zeta-Jones </p>
-                        <iframe src="https://www.youtube.com/embed/msg2aZrjhwA?si=SyP4bLbTj0oLxkgV&amp;controls=0&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/msg2aZrjhwA?enablejsapi=1;si=SyP4bLbTj0oLxkgV&amp;controls=0&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -423,7 +432,7 @@
                     <div class="media-container container-flex m-auto">
                         <h5>Shall we dance? (2004)</h5>
                         <p>Stanley Tucci & Lisa Ann Walter</p>
-                        <iframe src="https://www.youtube.com/embed/NUXt-stAcRw?si=2ZBXR33IePi-iLQf&amp;controls=0&amp;start=47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/NUXt-stAcRw?enablejsapi=1;si=2ZBXR33IePi-iLQf&amp;controls=0&amp;start=47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -436,7 +445,7 @@
                     <div class="row media-container container-flex m-auto justify-content-center">
                         <h5>Get Smart (2008)</h5>
                         <p>Steve Carell & Lindsay Hollister</p>
-                        <iframe src="https://www.youtube.com/embed/fy_NbP1WOsk?si=cCIknhsKB0s4QG09&amp;controls=0&amp;start=105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/fy_NbP1WOsk?enablejsapi=1;si=cCIknhsKB0s4QG09&amp;controls=0&amp;start=105" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -485,16 +494,14 @@
                     <div class="media-container container-flex m-auto">
                         <h5>My best friend's wedding (1997)</h5>
                         <p>Rupert Everett & Julia Roberts </p>
-                        <iframe src="https://www.youtube.com/embed/uwbTLBVWS2s?si=_O7hRqQQgwrfyFBj&amp;controls=0&amp;start=146" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                        <iframe src="https://www.youtube.com/embed/uwbTLBVWS2s?enablejsapi=1;si=_O7hRqQQgwrfyFBj&amp;controls=0&amp;start=146" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>    
             </div>
 
-        </div>
+        </main>
 
-        <footer class="row container-flex d-flex clair align-self-end">
-            <p>Mentions légales</p>
-        </footer>
+        <footer></footer>
 
     </div>
 </body>
