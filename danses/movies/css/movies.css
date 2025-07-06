@@ -11,29 +11,68 @@ iframe{
     position: relative;
     text-decoration: none;
   }
+
+  .vote-btn {
+    position: relative;
+    text-align: right;
+    top: 5em;
+    background: transparent;
+    border: none;
+    border-radius: 50% 50% 50% 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .vote-btn:hover{
+    background: transparent;
+    border: none;
+  }
   
   .video-thumbnail {
     position: relative;
     width: 100%;
     max-width: 600px; /* ajuste la taille max selon ton besoin */
     overflow: hidden;
-    border-radius: 12px; /* optionnel : coins arrondis */
   }
   
   .video-thumbnail img {
     width: 100%;
     height: auto;
     display: block;
+    filter: brightness(0.9);
   }
+
+  .video-thumbnail::before,
+.video-thumbnail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 15%;
+  background: #000;
+  z-index: 2;
+}
+
+.video-thumbnail::before {
+  top: 0;
+}
+
+.video-thumbnail::after {
+  bottom: 0;
+}
+
   
   .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 64px;
-    height: 64px;
-    background: rgba(255, 0, 0, 0.7);
-    clip-path: polygon(25% 20%, 25% 80%, 75% 50%);
+    display: flex;
+    align-items: center;
+    height: 45px;
+    background: rgba(255, 0, 0);
+    color: white;
+    font-size: 1.5em;
     transform: translate(-50%, -50%);
     cursor: pointer;
     transition: background 0.3s ease;
@@ -43,9 +82,185 @@ iframe{
     background: rgba(255, 254, 255, 0.7); /* un petit effet au hover */
   }
 
-  h3{
-    width: 80%;
-    background: rgb(194,183,173,0.3);
-    line-height: 2em;
-  }
-  
+.zone-film{
+  text-align: center;
+}
+
+.img-poster{
+  width: 200px;
+  height: 300px;
+}
+
+.zone-film p{
+  text-align: justify;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #463f32;
+  color: white;
+  transform: rotateY(180deg);
+} 
+
+.lien-film{
+  height: 100px;
+}
+
+.flip-card-back h3 {
+  font-size: 80%;
+}
+
+.flip-card-back h4 {
+  font-size: 70%;
+}
+
+.flip-card-back p {
+  font-size: 60%;
+}
+
+.flip-card-back a {
+  color: white !important;
+}
+
+.flip-card-back a:hover {
+  font-weight: normal !important;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.podium1, .podium2, .podium3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* On ne garde que .bas-podium pour construire le bloc */
+.haut-podium {
+  display: block;
+  position: relative;
+  z-index: 5; /* plus haut que les cubes */
+  margin-bottom: 20px; /* espace entre le nom et la marche */
+  transform: translateX(15px); 
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bas-podium {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(to bottom, #aaaaaa, #888888); /* Face avant avec lumière dégradée */
+  z-index: 1;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* ombre générale vers le bas */
+
+}
+
+/* Face supérieure : le dessus plat vu en biais */
+.bas-podium::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100px;
+  height: 20px;
+  background: linear-gradient(to right, #eeeeee, #cccccc); /* lumière sur le dessus */
+  transform: skewX(-45deg);
+  transform-origin: bottom left;
+  z-index: 2;
+}
+
+/* Face latérale droite */
+.bas-podium::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to bottom, #777777, #444444); /* ombre latérale */
+  transform: skewY(-45deg);
+  transform-origin: top left;
+  z-index: 0;
+  border-right: 1px solid #444;
+}
+
+/* Marches à différentes hauteurs */
+.podium1 .bas-podium {
+  height: 100px;
+}
+
+
+.podium2 .bas-podium {
+  height: 70px;
+}
+
+
+.podium3 .bas-podium {
+  height: 50px;
+}
+
+
+.place {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+

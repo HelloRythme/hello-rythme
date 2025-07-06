@@ -1,14 +1,39 @@
 #site{background-color: #463f32;}
 
 footer{
-    color: #C2B7AD;
     background-color: #463f32;
+    
+}
+
+footer a, #conditions{
+    color: #C2B7AD !important;
+}
+
+h1, h2, h4, ul, p{
+    color: white;
+}
+
+p {
+    font-size: 130%;
+}
+
+ul{
+    width: auto !important;
+    margin: auto;
+    padding-top: 0.5em;
+
+}
+
+#invite a{
+    color: white;
+    text-decoration: underline;
 }
 
 .submenu{
     display: block;
     justify-content: center;
     height: 200px;
+    margin-top: 3em;
     margin-bottom: 1em;
     }
 
@@ -32,9 +57,9 @@ footer{
 .fond{
     position: relative;
     opacity: 0.3;
-    background-size: 110% 110%;
-    background-position: center;
-margin-top: -200px;
+    background-size: cover;
+    background-position: center;    
+    margin-top: -200px;
 }
 
 .cat{
@@ -42,7 +67,11 @@ margin-top: -200px;
     display: flex;
     align-items: center;
     justify-content: center;
-margin-top: -200px;
+    margin-top: -200px;
+    font-size: 200%;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 @media screen and (min-width: 350px) {
@@ -56,7 +85,7 @@ margin-top: -200px;
     .fond, .cat{
         margin-top: -300px;
     }
-} 
+}
 
 @media screen and (min-width: 575px) {
 	.submenu {
@@ -69,7 +98,8 @@ margin-top: -200px;
     .fond, .cat{
         margin-top: -250px;
     }
-} 
+
+}
 
 @media screen and (min-width: 645px) {
 	.submenu {
@@ -82,25 +112,66 @@ margin-top: -200px;
     .fond, .cat{
         margin-top: -300px;
     }
-} 
+}
+
+
    
 svg{
 	background: radial-gradient(ellipse 2% 80% at 100% -25%, #C2B7AD 100%, #463f32 100%);
 	}  
     
-
+    .marquee-wrapper {
+        width: 100%;
+        overflow: hidden;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        margin-top: 1em;
+        box-sizing: border-box;
+        position: relative;
+      }
+  
+      .marquee {
+        display: flex;
+        width: max-content;
+        animation: scroll-left 40s linear infinite;
+        box-sizing: border-box;
+      }
+  
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+  
+      .marquee span {
+        padding: 0 2rem;
+        white-space: nowrap;
+        color: white;
+      }
 
 
     
 #ouverture{
-    background-image: url('https://live.staticflickr.com/3316/3188029005_e3419054c6_m.jpg');
+    background-image: url('/static/danse-mariage.jpg');
 
 }
 
 #solo{
-    background-image: url('https://live.staticflickr.com/3316/3188029005_e3419054c6_m.jpg');
+    background-image: url('/static/cours.jpg');
 }
 
 #couple{
-    background-image: url('https://live.staticflickr.com/3316/3188029005_e3419054c6_m.jpg');
+    background-image: url('/static/team-building.jpg');
+}
+
+#logo-blanc img{
+    max-width: 30%;
+    margin: auto;
+}
+
+#conditions{
+    padding-right: 1em !important;
 }

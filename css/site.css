@@ -1,108 +1,208 @@
+  
 html {
 	scroll-padding-top: 9.2em; /* Ajuste en fonction de la hauteur de ta barre sticky */
   }
   
 .row{
 	margin: 0 0 0 0 ;
-	padding: 0 0 0 0;
-	--bs-gutter-x: 0;
-	--bs-gutter-y: 0; 
+	padding: 0 0 0 0 ;
+	--bs-gutter-x: 0 ;
+	--bs-gutter-y: 0 ; 
 }
 
 body{
 	color: black;
+	font-family: 'Libre Baskerville', serif;
+	background: rgb(194,183,173,0.3);
 }
 
-#site{min-height:100vh;}
+#site{min-height:100vh;
+		max-width: 1440px;}
 
-nav{position: fixed;
-    z-index: 10;}
+header{ position: relative;
+		max-width:100%;
+		
+}
 
-svg{
+nav{justify-content: center;
+	position: fixed;
+    z-index: 10;
+	}
+
+#nav-inner{max-width: 1440px;
+
+}
+
+svg{max-width: 1440px;
 	position: absolute;
-	top: 10.5em;
+	top: 10em;
 	z-index: 3;
+	background-color: white;
 }
 
 
-#titre_site{
+#fond-clair{
 	position: absolute;
-	font-size: 200%;
-	top: 4.6em;
-	z-index: 5;
+	top: 0em;
 }
 
-main {margin-top: 18em !important;}
+.great-vibes-regular {
+	font-family: "Great Vibes", cursive;
+	font-weight: 400;
+	font-style: normal;
+	
+  }
+
+  .libre-baskerville-regular {
+	font-family: "Libre Baskerville", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  .libre-baskerville-bold {
+	font-family: "Libre Baskerville", serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+  
+  .libre-baskerville-regular-italic {
+	font-family: "Libre Baskerville", serif;
+	font-weight: 400;
+	font-style: italic;
+  }
+  
+.logo img{
+	max-width: 90%;
+}  
+
+
+#bandeau-titre{
+	position: absolute;	
+	z-index: 5;
+	top: 5em;
+	font-size: 200%;
+	letter-spacing: 12pt;
+	display: flexbox;
+}
+
+#titre-site{
+	font-family: Great Vibes;
+	text-align: center;
+	font-weight: bold;
+	color: #463f32 !important;
+	
+}
+
+
+main {
+	margin-top: 18em !important;
+	width: 100%;
+	background-color: white;}
+
+small{
+		font-size: 90%;
+	}
+
+h5{font-size: 110%;}
+
+@media screen and (min-width: 491px) {
+	html {
+		scroll-padding-top:9.2em; 
+	  }
+	#fond-clair{
+		height: 11em;
+	}
+	#bandeau-titre {
+		top: 5em;
+		font-size: 200%;
+		letter-spacing: 12pt;
+	}
+	svg{top:11em;}
+	main {margin-top: 18em !important;}
+	small{font-size: 90%;}
+  }
 
 @media screen and (min-width: 576px) {
 	html {
 		scroll-padding-top:3.5em; 
 	  }
-	#titre_site {
-		top: 1.6em;
+	#bandeau-titre {
+		top: 2.3em;
 	}
-	svg{top:3.6em;}
-	main {margin-top: 11.9em !important;}
+	#fond-clair{
+		height: 5em;
+	}
+	svg{top:5em;}
+	main {margin-top: 14.2em !important;}
+	small{font-size: 70%;}
+	h5{font-size: 90%;}
   }
 
-  @media screen and (min-width: 645px) {
-	svg{top:3.1em;}
-	main {margin-top: 11.7em !important;}
-  }
-
-
-@media screen and (min-width: 700px) {
-	svg{top:2.9em;}
-	main {margin-top: 12.4em !important;}
-  }
 
   @media screen and (min-width: 768px) {
 	html {
 		scroll-padding-top:1.8em; 
 	  }
-	svg{top:2.6em;}
-	main {margin-top: 12.7em !important;}
+	#fond-clair{
+		height: 4em;
+	}
+	svg{top:4em;}
+	main {margin-top: 14.6em !important;}
+	small{font-size: 60%;}
+	h5{font-size: 85%;}
   }
 
-  @media screen and (min-width: 815px) {
-	svg{top:2.3em;}
-	main {margin-top: 13em !important;}
+
+  @media screen and (min-width: 880px) {
+	#bandeau-titre {
+		top: 1.8em;
+		font-size: 260%;
+		letter-spacing: 18pt;
+	}
+	main {margin-top: 16.2em !important;}
+	small{font-size: 70%;}
+	h5{font-size: 90%;}
   }
 
-  @media screen and (min-width: 864px) {
-	svg{top:2.2em;}
-	main {margin-top: 13.6em !important;}
-  }
-
-  @media screen and (min-width: 925px) {
-	svg{top:1.8em;}
-	main {margin-top: 14.1em !important;}
-  }
 
   @media screen and (min-width: 992px) {
-	#titre_site {
-		top: 0.8em;
+	#bandeau-titre {
+		top: 1.5em;
+		font-size: 280%;
+		letter-spacing: 18pt;
 	}
-	svg{top:-0.2em;}
-	main {margin-top: 12.5em !important;}
+	main {margin-top: 17.5em !important;}
+	small{font-size: 60%;}
+	h5{font-size: 80%;}
   }
 
-  @media screen and (min-width: 1085px) {
-	svg{top:-0.6em;}
-	main {margin-top: 14.1em !important;}
+  @media screen and (min-width: 1099px) {
+	main {margin-top: 18.6em !important;}
+	small{font-size: 65%;}
+	h5{font-size: 90%;}
   }
 
   @media screen and (min-width: 1200px) {
-	svg{top:-1.4em;}
-	main {margin-top: 16em !important;}
+	#bandeau-titre {
+		top: 1.8em;
+		font-size: 300%;
+		letter-spacing: 20pt;
+	}
+	main {margin-top: 19.8em !important;}
+	small{font-size: 70%;}
+	h5{font-size: 100%;}
   }
 
-  @media screen and (min-width: 1400px) {
-	svg{top:-2em;}
-	main {margin-top: 30em !important;}
+  @media screen and (min-width: 1300px) {
+
+	main {margin-top: 21.8em !important;}
+	small{font-size: 80%;}
+	h5{font-size: 105%;}
   }
 
-
+h2{
+	margin-top: 1em !important;
+}
 
 footer{
 	align-self: end;
@@ -110,7 +210,19 @@ footer{
 	padding-right: 1em !important;
 	padding-bottom: 0.5em;
 	background-color: #C2B7AD;
+	padding-top: 1em;
 	}
+
+footer a{
+	margin-right: 2em;
+	color: #463f32;
+	font-size: 70%;
+}
+
+footer a:hover{
+	color: #463f32;
+	font-weight: bold;
+}
 
 .clair {
 background-color: #C2B7AD;
@@ -124,15 +236,16 @@ a {text-decoration: none;
 }
 
 a:hover{
+	
 	font-weight: bold;
 }
 
 a:focus {
-	outline: 2px solid #C2B7AD; /* jolie couleur de ton site */
-	outline-offset: 2px;
+	outline: 0.5px solid #C2B7AD; 
+	outline-offset: 0.5px;
   }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
 	text-align: center;
 }
 
@@ -153,6 +266,39 @@ button:hover {
 	background-color: #463f32;
 	color: #C2B7AD;
   }
+
+  .text-container{
+    width: 80%;
+    margin-top: 1.5em !important;
+	
+}
+
+.text-container p{
+	text-align: justify;
+}
+
+.dropdown-container{
+    display: none;
+    position: absolute;
+}
+
+#sommaire span{
+	margin-left: -2em;
+}
+
+
+#sommaire .dropdown:hover .dropdown-container {
+    display: inline-block;
+  }
+
+#sommaire ul {
+	list-style-type: none;
+	margin-left: 6em;
+}
+
+#sommaire ul li{
+	margin-left: 1em;
+}
 
 
 
