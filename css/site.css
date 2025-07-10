@@ -324,6 +324,12 @@ button:hover {
 	margin-left: 1em;
 }
 
+#logo img{
+	width: 10%;
+	max-width: 10em;
+	min-width: 5em;
+}
+
 
 
 
