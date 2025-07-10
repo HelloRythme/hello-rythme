@@ -92,9 +92,11 @@
     <link rel="stylesheet" href="/css/video.css"/>
     <link rel="stylesheet" href="css/movies.css"/>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="/js/include.js" defer></script>
     <script src="js/video.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -110,15 +112,23 @@
 
         <main class="row container-flex align-self-start justify-content-center px-4 py-2">
 
-            <h1>Les danses au cinéma</h1>
+            <h1>Les danses de salon au cinéma</h1>
 
             <section id="intro" class="row container-flex text-container justify-content-justify align-items-center p-2">
-                <p>INTROLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta sed risus a feugiat. Fusce semper quis dui nec commodo. Proin eros est, facilisis nec ipsum a, maximus tempor diam. Maecenas blandit dolor commodo orci laoreet, vitae rutrum ante fermentum. Maecenas ut vehicula ipsum, sed tincidunt augue. Proin at nunc elit. Curabitur ultricies nulla tempus orci consectetur, ut auctor orci posuere. In aliquet finibus sapien, cursus rutrum ex convallis a.</p>    
+                <p>Tu aimes le cinéma? Moi aussi! Surtout les comédies romantiques. Mais des scènes de danse de salon, on en retrouve très souvent, et dans tous les types de films : comédies musicales, films d'actions, drames... Parfois elles constituent la trame de l'intrigue, ou alors elles apparaissent seulement dans une scène ponctuelle. Regarder ces extraits te permettra de percevoir comment chaque type de musique convoque un imaginaire collectif particulier. De plus, contrairement à la <a href="/danses.html">danse sportive professionnelle</a>, les chorégraphies et musiques utilisées au cinéma ne sont pas codifiées et les réalisateurs s’inspirent très librement des danses de salon en les adaptant à l’esthétique du film. Cela peut te donner des idées! Mais si tu préfères laisser aller ton imagination sur la musique, tu peux aussi simplement écouter mes <a href="/playlists">playlists</a>.</p>    
             </section>
 
             <section class="row container-flex text-container" id="sommaire">
-                <span>Dans cette page:</span>
-                <a href="#palmares">Palmarès</a>
+                <span>Tu trouveras sur cette page:</span>
+                <div class="dropdown d-flex">
+                <a href="#palmares">Les palmarès</a>
+                    <div class="dropdown-container">
+                        <ul class="d-flex">
+                            <li><a href="#frequence">- Fréquence dans les films</a></li>
+                            <li><a href="#votes">- Vos vidéos préférées</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <a href="#films_danse">Films de danse</a>
                 <div class="dropdown d-flex">
                     <a href="#danses_standards">Danses standards</a>
@@ -158,15 +168,17 @@
 
             </section>
 
-            <section id="palmares" class="row container-flex justify-content-justify align-items-center p-2">
+            <section id="palmares" class="row container-flex justify-content-center align-items-center p-2">
+                <div class="text-container">
                 <h2>Les palmarès</h2>
+            </div>
                 <section id="frequence" class="row container-flex justify-content-center align-items-center p-2">
                     <h3>Danses de salon les plus fréquemment représentées au cinéma</h3>
 
                     <div class="podium d-flex container-flex m-auto">
                         <div class="podium2">
                             <div class="haut-podium">
-                                <a href="#podium_tango">Tango</a>
+                                <a href="#podium_tango"><img class="img-podium" src="/static/Tango.png"/>Tango</a>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">2</span>
@@ -174,7 +186,7 @@
                         </div>
                         <div class="podium1">
                             <div class="haut-podium">
-                                <a href="#podium_valses">Valse</a>
+                                <a href="#podium_valses"><img class="img-podium" src="/static/Valse.png"/>Valse</a>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">1</span>
@@ -182,7 +194,7 @@
                         </div>
                         <div class="podium3">
                             <div class="haut-podium">
-                                <a href="#podium_paso">paso-doble</a>
+                                <a href="#podium_paso"><img class="img-podium" src="/static/PasoDoble.png"/>Paso-doble</a>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">3</span>
@@ -191,29 +203,45 @@
                     </div>
 
                     <div id="" class="row text-container">
-                        <p id="podium_valses">
-                        La <strong>valse viennoise</strong> est la grande gagnante de ce palmarès au cinéma. Et c'est facile à comprendre! Tu vois de la valse viennoise dans toutes les scènes de bals des films historiques et dans les scènes de mariage. Son mouvement tournoyant et fluide permet de créer d'impressionnants effets à l’écran. C’est la danse qui fait rêver, celle des princesses de contes de fées, avec son rythme enivrant. Tu peux en regarder quelques extraits <a href="#valse_viennoise">ici</a>.<br> On peut lui associer la valse anglaise (à voir <a href="#valse_lente">ici</a>), plus douce, aussi présente dans les scènes de mariage, avec une touche plus intimiste; son rythme plus lent permet de plus grandes libertés chorégraphiques. Si tu cherches une danse qui en mette plein les yeux tout en gardant une touche de tendresse, une des deux valses est un choix sûr, chic et intemporel.
-                        </p>
-                        <p id="podium_tango">
-                        En deuxième position de ce palmarès: le <a href="#tango">tango</a>. Ce n'est pas un hasard si le tango revient souvent dans les films. Dès les premières notes, il capte l’attention : rythmé, envoûtant, un brin théâtral, il installe une tension qui fait vibrer l’écran — et la piste de danse. Le tango raconte une relation, sans mots, juste avec le corps, le regard, les silences. C’est sans doute pour ça que beaucoup de couples le choisissent aussi comme danse de mariage : parce qu’il est à la fois élégant, original et terriblement entraînant. Si tu veux une ouverture de bal qui surprend, qui émeut et qui reste gravée, le tango a tout pour plaire.
-                        </p>
-                        <p id="podium_paso">
-                        Et en troisième position: le <a href="#paso_doble">paso doble</a>. Seule danse latine de notre podium, le paso doble apparaît souvent au cinéma parce qu’il évoque immédiatement le spectacle, la tension dramatique et l’élégance un peu théâtrale. Inspiré de la corrida, il met en scène un duo puissant — souvent comparé à un torero et sa cape — et crée une atmosphère visuelle forte, presque cinématographique à lui seul. Avec ses pas marqués, ses postures fières et sa musique intense, il capte l’attention dès les premières secondes. C’est aussi pour ça qu’il séduit certains couples pour leur danse de mariage : original, peu attendu, mais incroyablement expressif. Le paso doble transforme l’ouverture de bal en véritable performance, idéale pour un duo qui veut oser quelque chose de différent, affirmé et mémorable.
-                        </p>
+                        <div class="col-sm-1 d-flex align-items-center"><img class="img-podium" src="/static/Valse.png"/>
+                        </div>
+                        <div class="col-sm-11 ps-2" >
+                            <p id="podium_valses">
+                        La <strong>valse viennoise</strong> est la grande gagnante de ce palmarès au cinéma. Et c'est facile à comprendre! Tu vois de la valse viennoise dans toutes les scènes de bals des films historiques et dans les scènes de mariage. Son mouvement tournoyant et fluide permet de créer d'impressionnants effets à l’écran. C’est la danse qui fait rêver, celle des princesses de contes de fées, avec son rythme enivrant. Tu peux en regarder quelques extraits <a href="#valse_viennoise">ici</a>.<br> On peut lui associer la <strong>valse lente</strong>, ou anglaise, (à voir <a href="#valse_lente">ici</a>), plus douce, aussi présente dans les scènes de mariage, avec une touche plus intimiste; son rythme plus lent permet de plus grandes libertés chorégraphiques. Si tu cherches une danse qui en mette plein les yeux tout en gardant une touche de tendresse, une des deux valses est un choix sûr, chic et intemporel.
+                            </p>
+                        </div>
                     </div>
-
+                    <div id="" class="row text-container">
+                        <div class="col-sm-11">
+                        <p id="podium_tango">
+                        Les valses sont suivies de près, dans ce palmarès, par le <a href="#tango">tango</a>, qui est aussi très souvent représenté dans les films. Dès les premières notes, il capte l’attention par son rythme et son aspect théâtral. Même s'il est dansé en public, ce qui est le plus souvent le cas, le tango focalise le regard sur un couple chargé d’intensité et de tension dramatique. Il jouit d'une immense popularité, reconnaissable instantanément tant par sa musique que par l’élégance de ses figures emblématiques. Si tu veux une ouverture de bal entraînante, qui surprend et émeut, le tango a tout pour plaire.
+                        </p>
+                        </div>
+                        <div class="col-sm-1 d-flex align-items-center"><img class="img-podium" src="/static/Tango.png"/>
+                        </div>
+                    </div>
+                    <div id="" class="row text-container">
+                        <div class="col-sm-1 d-flex align-items-center"><img class="img-podium" src="/static/PasoDoble.png"/>
+                        </div>
+                        <div class="col-sm-11 ps-2" >
+                        <p id="podium_paso">
+                        Et en troisième position: le <a href="#paso_doble">paso doble</a>. Seule danse latine de ce palmarès, le paso doble apparaît souvent au cinéma parce qu’il crée immédiatement le spectacle. Inspiré de la corrida, il met en scène un duo souvent comparé à un torero et sa cape. Avec ses pas marqués, ses postures fières et sa musique intense et entraînante, il capte l’attention dès les premières secondes. Original, peu attendu, mais incroyablement expressif, c'est le choix idéal si tu veux oser quelque chose de différent et spectaculaire.
+                        </p>
+                        </div>
+                    </div>
+                    <div id="" class="row text-container"><p></p>Aucune de ces trois-là ne te tente? Pas de souci! Que ce soit pour ton mariage ou juste pour apprendre, toutes les danses sont aussi intéressantes les unes que les autres. Ici, ce n'est que du cinéma...</p></div>
                 </section>
 
-                <section id="frequence" class="row container-flex justify-content-center align-items-center p-2">
+                <section id="votes" class="row container-flex justify-content-center align-items-center p-2">
                     <h3>Vos vidéos préférées</h3>
 
                     <div class="row p-2 text-container">
-                        <p>Tu as aimé une vidéo de cette page? Clique sur le coeur qui lui correspond pour participer au podium! </p></div>
+                        <p>Tu aimes une vidéo de cette page? Clique sur le coeur qui lui correspond pour participer à la composition de ce palmarès! </p></div>
 
                     <div class="podium d-flex container-flex m-auto">
                         <div class="podium2">
                             <div class="haut-podium">
-                                <div id="podium2"></div>
+                                <div><a id="podium1" href=""><p id="podium1-text"></p><img id="podium1-img" src="" class="video-podium"></a></div>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">2</span>
@@ -221,7 +249,7 @@
                         </div>
                         <div class="podium1">
                             <div class="haut-podium">
-                                <div id="podium1"></div>
+                                <div><a id="podium0" href=""><p id="podium0-text"></p><img id="podium0-img" src="" class="video-podium"></a></div>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">1</span>
@@ -229,7 +257,7 @@
                         </div>
                         <div class="podium3">
                             <div class="haut-podium">
-                                <div id="podium3"></div>
+                                <div><a id="podium2" href=""><p id="podium2-text"></p><img id="podium2-img" src="" class="video-podium"></a></div>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">3</span>
@@ -241,11 +269,11 @@
 
             <section id="films_danse" class="row container-flex justify-content-center align-items-center">
                 
-
+                <div class="text-container">
                 <h2>Les films de danse</h2>
 
-                <div class="row p-2 text-container">
-                    <p>Voici quelques films de cinéma dont l'intrigue tourne principalement autour des danses de salon. <mark> à compléter</mark> </p>
+                
+                    <p>Voici quelques films de cinéma dont l'intrigue tourne principalement autour des danses de salon. Passe ta souris sur l'affiche si tu veux en savoir plus sur un film. Sans surprise, nous les retrouvons parfois avec plusieurs extraits de danses plus bas sur cette page.</p>
                 </div>
 
                 <div class="row container-flex d-flex justify-content-center align-items-center">
@@ -260,9 +288,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=126.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Le Bal (1983)</h3>
-                                            <h4>Ettore Scola</h4>
-                                            <p>Ce film retrace 50 ans d'histoire française à travers les danses de salon dans une salle de bal parisienne, sans dialogues, mettant en avant les évolutions sociales et culturelles.</p>
+                                            <span class="titre-affiche">Le Bal (1983)</span><br>
+                                            <span class="real-affiche">Ettore Scola</span>
+                                            <p class="texte-affiche">Ce film retrace 50 ans d'histoire française à travers les danses de salon dans une salle de bal parisienne, sans dialogues, mettant en avant les évolutions sociales et culturelles.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -285,9 +313,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=7654.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Strictly Ballroom (1992)</h3>
-                                            <h4>"Ballroom dancing"<br>Baz Luhrmann</h4>
-                                            <p>Scott, danseur de salon talentueux mais rebelle, défie les règles strictes des compétitions en créant ses propres chorégraphies. Il s'associe à Fran, une débutante, pour concourir au prestigieux Pan-Pacific.</p>
+                                            <span class="titre-affiche">Strictly Ballroom (1992)<br>"Ballroom dancing"</span><br>
+                                                <span class="real-affiche">Baz Luhrmann</span>
+                                            <p class="texte-affiche">Scott, danseur de salon talentueux mais rebelle, défie les règles strictes des compétitions en créant ses propres chorégraphies. Il s'associe à Fran, une débutante, pour concourir au prestigieux Pan-Pacific.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -310,9 +338,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=20302.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Dance with me (1999)</h3>
-                                            <h4>"Danse Passion"<br>Randa Haines</h4>
-                                            <p>Rafael, un jeune Cubain, rejoint un studio de danse à Houston et y rencontre Ruby, une danseuse talentueuse mais distante. Tandis qu'ils se préparent pour une grande compétition à Las Vegas, leur relation se développe entre passion et retenue. Rafael découvre peu à peu son lien familial avec le directeur du studio. </p>
+                                            <span class="titre-affiche">Dance with me (1999)<br>"Danse Passion"</span><br>
+                                            <span class="real-affiche">Randa Haines</span>
+                                            <p class="texte-affiche">Rafael, un jeune Cubain, rejoint un studio de danse à Houston et y rencontre Ruby, une danseuse talentueuse mais distante. Tandis qu'ils se préparent pour une grande compétition à Las Vegas, leur relation se développe entre passion et retenue. Rafael découvre peu à peu son lien familial avec le directeur du studio. </p>
                                         </a>
                                     </div>
                                 </div>
@@ -320,7 +348,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p></p>
+                                <p class="mx-auto"><small>A retrouver sur cette page avec une <a href="#dance_with_me_samba" data-id="dance_with_me_samba" onclick = "jaune(this);">samba</a> et une <a href="#dance_with_me_rumba" data-id="dance_with_me_rumba" onclick = "jaune(this);">rumba</a></small></p>
                             </div>
                         </div>
                     </section>
@@ -335,9 +363,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=51895.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Shall we dance (2004)</h3>
-                                            <h4>"La nouvelle vie de Mr. Clarck"<br>Peter Chelsom</h4>
-                                            <p>John Clark, un avocat dévoué mais ennuyé par la routine, s'inscrit en secret à des cours de danse après avoir été fasciné par une professeure mélancolique aperçue à la fenêtre d'un studio.</p>
+                                            <span class="titre-affiche">Shall we dance? (2004)<br>"La nouvelle vie de Mr. Clarck"</span><br>
+                                            <span class="real-affiche">Peter Chelsom</span>
+                                            <p class="texte-affiche">John Clark, un avocat dévoué mais ennuyé par la routine, s'inscrit en secret à des cours de danse après avoir été fasciné par une professeure mélancolique aperçue à la fenêtre d'un studio.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -360,9 +388,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=66517.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</h3>
-                                            <h4>Randall Miller</h4>
-                                            <p>Frank, veuf, assiste à un cours de danse de salon pour honorer la promesse faite à un mourant. Ce geste l'amène à une transformation personnelle inattendue.</p>
+                                            <span class="titre-affiche">Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</span><br>
+                                            <span class="real-affiche">Randall Miller</span>
+                                            <p class="texte-affiche">Frank, veuf, assiste à un cours de danse de salon pour honorer la promesse faite à un mourant. Ce geste l'amène à une transformation personnelle inattendue.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -385,9 +413,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=59573.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Take the Lead (2006)</h3>
-                                            <h4>"Dance with me"<br>Liz Friedlander</h4>
-                                            <p>Inspiré de l'histoire vraie de Pierre Dulaine, un professeur de danse qui enseigne la danse de salon à des lycéens en difficulté, leur offrant une nouvelle perspective sur la vie.</p>
+                                            <span class="titre-affiche">Take the Lead (2006)<br>"Dance with me"</span><br>
+                                            <span class="real-affiche">Liz Friedlander</span>
+                                            <p class="texte-affiche">Inspiré de l'histoire vraie de Pierre Dulaine, un professeur de danse qui enseigne la danse de salon à des lycéens en difficulté, leur offrant une nouvelle perspective sur la vie.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -410,9 +438,9 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=280743.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <h3>Rumba la vie (2022)</h3>
-                                            <h4>Franck Dubosc</h4>
-                                            <p>Tony, un chauffeur de bus solitaire, reprend contact avec sa fille qu’il n’a jamais connue, professeure de danse. Pour se rapprocher d’elle, il s’inscrit incognito à ses cours de rumba.</p>
+                                            <span class="titre-affiche">Rumba la vie (2022)</span><br>
+                                            <span class="real-affiche">Franck Dubosc</span>
+                                            <p class="texte-affiche">Tony, un chauffeur de bus solitaire, reprend contact avec sa fille qu’il n’a jamais connue, professeure de danse. Pour se rapprocher d’elle, il s’inscrit incognito à ses cours de rumba.</p>
                                         </a>
                                     </div>
                                 </div>
@@ -420,7 +448,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto"><small>A retrouver sur cette page avec une <a href="#rumba_la_vie_rumba" data-id="rumba_la_vie_rumba" onclick = "jaune(this);">rumba</a>.</small></p>
+                                <p class="mx-auto"><small>A retrouver en ligne avec une <a href="https://youtu.be/QMvcNTyyZRE?list=RDQMvcNTyyZRE&start=164" target="_blank">rumba</a>.</small></p>
                             </div>
                         </div>
                     </section>
@@ -429,167 +457,269 @@
 
             </section>
 
-            <section id="danses_standards" class="row container-flex > justify-content-justify align-items-center p-2">
+            <section id="danses_standards" class="row container-flex > justify-content-center align-items-center p-2">
+
+                <div class="text-container">
                 <h2>Danses standards</h2>
-            
+            </div>
+
                 <section id="valse_lente" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Valse lente</h3> 
                     
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid1">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid1" data-danse="Valse lente" data-titre="Funny Face" data-id="V343k-tsba4">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Funny Face (1957)</h5>
-                            <p><small>Fred Astaire & Audrey Hepburn</small></p>
-                            <iframe src="https://www.youtube.com/embed/oyJuH945H8k?enablejsapi=1;si=KYBgtS0wqi8GjOyP&amp;controls=1&amp;start=125" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Fred Astaire & Audrey Hepburn</p>
+                            <div class="video-wrapper" data-id="V343k-tsba4" data-start="125">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/V343k-tsba4/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Funny Face (1957)</p>
                         </div>
                     </div>
 
-                    <div id="shall_we_dance_valse_lente" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film shall_we_dance_valse_lente">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid2">
+                    <div id="shall_we_dance_valse_lente" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film shall_we_dance_valse_lente">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid2" data-danse="Valse lente" data-titre="Shall we dance?" data-id="enSvt7jXxow">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Shall we dance? (2004)</h5>
-                            <p><small>Richard Gere & Lisa Ann Walter</small></p>
-                            <iframe src="https://www.youtube.com/embed/FaSlQP79M-M?enablejsapi=1;si=rwWnQapcBnf_qYjZ&amp;controls=1&amp;start=10" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Richard Gere & Lisa Ann Walter</p>
+                            <div class="video-wrapper" data-id="enSvt7jXxow" data-start="10">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/enSvt7jXxow/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Shall we dance? (2004)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film shall_we_dance_valse_lente">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid3">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film shall_we_dance_valse_lente">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid3" data-danse="Valse lente" data-titre="Shall we dance?" data-id="msuxtYLm2Q0">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Shall we dance? (2004)</h5>
-                            <p><small>Francesco Flumiani & Jennifer Lopez</small></p>
-                            <iframe src="https://www.youtube.com/embed/PWN2ntVDwoU?enablejsapi=1;si=ow52rvtkoLEXrlZT&amp;controls=1&amp;start=57" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Francesco Flumiani & Jennifer Lopez</p>
+                            <div class="video-wrapper" data-id="msuxtYLm2Q0" data-start="57">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/msuxtYLm2Q0/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Shall we dance? (2004)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid4">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid4" data-danse="Valse lente" data-titre="Enchanted" data-id="HRSj6b9QAd4">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Enchanted (2007)</h5>
-                            <p><small>Patrick Dempsey & Amy Adams</small></p>
-                            <iframe src="https://www.youtube.com/embed/kH9kbcRCZH8?enablejsapi=1;si=CMuay_nO1o8hbJPH&amp;controls=1&amp;start=57" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Patrick Dempsey & Amy Adams</p>
+                            <div class="video-wrapper" data-id="HRSj6b9QAd4" data-start="57">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/HRSj6b9QAd4/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Enchanted (2007)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid5">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Come dance with me (2021)</h5>
-                            <p><small>Andrew McCarthy & Michelle Nolden</small></p>
-                            <iframe src="https://www.youtube.com/embed/fw0igCRFwik?si=BbM586hJcCceU5FL;controls=1&amp" title="YouTube video player" frameborder="0" allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                </section>
+                    </section>
 
                 <section id="tango" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Tango</h3>   
                     
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid6">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid6" data-danse="Tango" data-titre="Some like it hot" data-id="WPisbRRyfHs">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Some like it hot (1959)</h5>
-                            <p><small>Joe E. Brown & Jack Lemon</small></p>
-                            <iframe src="https://www.youtube.com/embed/hn_7PpyxqZM?enablejsapi=1;si=LzDEoNeHGTZtno-M&ampcontrols=1;" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Joe E. Brown & Jack Lemon</p>
+                            <div class="video-wrapper" data-id="WPisbRRyfHs" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/WPisbRRyfHs/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Some like it hot (1959)</p>
                         </div>
                     </div>
 
-                    <div id="le_bal_tango" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film le_bal_tango">
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid7">
+                    <div id="le_bal_tango" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film le_bal_tango">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid7" data-danse="Tango" data-titre="Le bal" data-id="ekDsMht7boc">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Le bal (1983)</h5>
-                            <p><small><br></small></p>
-                            <iframe src="https://www.youtube.com/embed/ofm5JTQUmh4?si=bpY45GyJ06FipbRY&amp;controls=1;start=74" title="YouTube video player" frameborder="0" allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Claudio Bigagli & Aurélie Soubiran</p>
+                            <div class="video-wrapper" data-id="ekDsMht7boc" data-start="74">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/ekDsMht7boc/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">Le bal (1983)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid8">
+                    <div id="le_bal_tango" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film le_bal_tango">
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid54" data-danse="Tango" data-titre="Never say never again" data-id="QuKjWv91j7A">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Addams Family Values (1993)</h5>
-                            <p><small>Raúl Julia & Anjelica Huston</small></p>
-                            <iframe src="https://www.youtube.com/embed/NIDabDkcS8o?enablejsapi=1;si=uSo32WV9OLC9SUVj&amp;controls=1" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Sean Connery & Kim Basinger</p>
+                            <div class="video-wrapper" data-id="QuKjWv91j7A" data-start="0">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/QuKjWv91j7A/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">Never say never again (1983)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid9">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid8" data-danse="Tango" data-titre="Addams Family Values" data-id="ULReNHxYioA">    
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>True lies (1994)</h5>
-                            <p><small>Arnold Schwarzenegger & Tia Carrere</small></p>
-                            <iframe src="https://www.youtube.com/embed/7ydRwCf9Qyw?enablejsapi=1;si=oDNzlqwcRuEWKeG2&amp;controls=1&amp;start=15" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Raúl Julia & Anjelica Huston</p>
+                            <div class="video-wrapper" data-id="ULReNHxYioA" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/ULReNHxYioA/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Addams Family Values (1993)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid10">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid9" data-danse="Tango" data-titre="True Lies" data-id="O-5SG6nFpR0">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>The Wedding Planner (2001)</h5>
-                            <p><small>Matthew McConaughey & Jennifer Lopez</small></p>
-                            <iframe src="https://www.youtube.com/embed/ZLm_YN9j31g?enablejsapi=1;si=_pvFrUzNDfcDrd1z&amp;controls=1&amp;start=35" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Arnold Schwarzenegger & Tia Carrere</p>
+                            <div class="video-wrapper" data-id="O-5SG6nFpR0" data-start="15">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/O-5SG6nFpR0/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">True lies (1994)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid11">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid52" data-danse="Tango" data-titre="Moulin rouge" data-id="B5cDJ76pGkg">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Frida (2003)</h5>
-                            <p><small>Salma Hayek & Tia Carrere</small></p>
-                            <iframe src="https://www.youtube.com/embed/moe3i3AycwE?enablejsapi=1;si=mnLREGfPMJorj52H&amp;controls=1&amp;start=100" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Jacek Koman & Caroline O’Connor</p>
+                            <div class="video-wrapper" data-id="B5cDJ76pGkg" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/B5cDJ76pGkg/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Moulin rouge! (2001)</p>
                         </div>
                     </div>
 
-                    <div id="shall_we_dance_tango" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film shall_we_dance_tango">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid12">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid10" data-danse="Tango" data-titre="The Wedding Planner" data-id="OqDbi2FXKf0">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Shall we dance? (2004)</h5>
-                            <p><small>Richard Gere & Jennifer Lopez</small></p>
-                            <iframe src="https://www.youtube.com/embed/b24a_2NPleg?enablejsapi=1;si=r-0bQyUlc_2AbWNQ" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Matthew McConaughey & Jennifer Lopez</p>
+                            <div class="video-wrapper" data-id="OqDbi2FXKf0" data-start="35">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/OqDbi2FXKf0/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The Wedding Planner (2001)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid13">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid11" data-danse="Tango" data-titre="Frida" data-id="bsXa2TeUh1k">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Scent of a woman (1993)</h5>
-                            <p><small>Al Pacino & Gabrielle Anwar</small></p>
-                            <iframe src="https://www.youtube.com/embed/s-AV3c5Ygvs?enablejsapi=1;si=eX_AgQdBJkJh1qho&amp;controls=1&amp;start=95" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Salma Hayek & Ashley Judd</p>
+                            <div class="video-wrapper" data-id="bsXa2TeUh1k" data-start="144">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/bsXa2TeUh1k/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>                           
+                            <p class="titre-film">Frida (2003)</p>
                         </div>
                     </div>
 
-                    <div id="take_the_lead_tango" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film take_the_lead_tango">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid14">
+                    <div id="shall_we_dance_tango" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film shall_we_dance_tango">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid12" data-danse="Tango" data-titre="Shall we dance?" data-id="VmH-9nFlTEg">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Take the lead (2005)</h5>
-                            <p><small>Antonio Banderas & Katya Virshilas</small></p>
-                            <iframe src="https://www.youtube.com/embed/SJ0klwPIKBQ?enablejsapi=1;si=ICJLCwnfsjChx7Ek&amp;controls=1&amp;start=35" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Richard Gere & Jennifer Lopez</p>
+                            <div class="video-wrapper" data-id="VmH-9nFlTEg" data-start="100">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/VmH-9nFlTEg/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Shall we dance? (2004)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film take_the_lead_tango">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid15">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid13" data-danse="Tango" data-titre="Scent of a woman" data-id="6YBS3hIVvYw">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Take the lead (2005)</h5>
-                            <p><small>Elijah Kelley, Dante Basco & Jenna Dewan</small></p>
-                            <iframe src="https://www.youtube.com/embed/yjHMMotXzhM?enablejsapi=1;si=2JahbiDGFfOyQBQQ&amp;controls=1&amp;start=26" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Al Pacino & Gabrielle Anwar</p>
+                            <div class="video-wrapper" data-id="6YBS3hIVvYw" data-start="98">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/6YBS3hIVvYw/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Scent of a woman (1993)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid16">
+                    <div id="take_the_lead_tango" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film take_the_lead_tango">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid14" data-danse="Tango" data-titre="Take the lead" data-id="ayhpygDngjM">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Mr. and Mrs. Smith (2005)</h5>
-                            <p><small>Brad Pitt & Angelina Jolie</small></p>
-                            <iframe src="https://www.youtube.com/embed/9Ja63b5O8Tk?enablejsapi=1;si=Me8J3nJXj4s381Zj&amp;controls=1&amp;start=130" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Antonio Banderas & Katya Virshilas</p>  
+                            <div class="video-wrapper" data-id="ayhpygDngjM" data-start="35">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/ayhpygDngjM/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Take the lead (2005)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film take_the_lead_tango">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid15" data-danse="Tango" data-titre="Take the lead" data-id="sz4JSAQo_tI">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Elijah Kelley, Dante Basco & Jenna Dewan</p>
+                            <div class="video-wrapper" data-id="sz4JSAQo_tI" data-start="26">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/sz4JSAQo_tI/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Take the lead (2005)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid16" data-danse="Tango" data-titre="Mr. and Mrs. Smith" data-id="EBzXqT3NyOo">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Brad Pitt & Angelina Jolie</p>
+                            <div class="video-wrapper" data-id="EBzXqT3NyOo" data-start="130">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/EBzXqT3NyOo/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Mr. and Mrs. Smith (2005)</p>
                         </div>
                     </div>
     
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid17">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid17" data-danse="Tango" data-titre="Easy virtue" data-id="slbLJwRPU2E">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Easy virtue (2009)</h5>
-                            <p><small>Colin Firth & Jessica Biel</small></p>
-                            <iframe src="https://www.youtube.com/embed/sReQCkYB7CA?si=7QGnarJw4vC1FMIP&amp;start=93" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Colin Firth & Jessica Biel</p>
+                            <div class="video-wrapper" data-id="slbLJwRPU2E" data-start="125">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/slbLJwRPU2E/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Easy virtue (2009)</p>
                         </div>
                     </div>
 
@@ -598,139 +728,221 @@
                 <section id="valse_viennoise" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Valse viennoise</h3>   
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row container-flex media-container container-flex m-auto" data-id="vid18">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid18" data-danse="Valse viennoise" data-titre="Gone with the wind" data-id="yZgWnEEcJY8">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Gone with the wind (1950)</h5>
-                            <p><small>Clark Gable & Vivien Leigh</small></p>
-                            <iframe src="https://www.youtube.com/embed/3r9iyEphOv8?si=alODRTAKUayMkCIX&amp;start=54" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row container-flex media-container container-flex m-auto" data-id="vid19">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Madame Bovary (1950)</h5>
-                            <p><small>Jamse Mason & Jennifer Jones</small></p>
-                            <iframe src="https://www.youtube.com/embed/iNS8yd5JkBU?enablejsapi=1;si=Q6QiaHaF9eoOvWLW&amp;controls=1&amp;start=26" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row container-flex media-container container-flex m-auto" data-id="vid20">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>War and Peace (1956)</h5>
-                            <p><small>Henry Fonda & Audrey Hepburn</small></p>
-                            <iframe src="https://www.youtube.com/embed/M7PLRmnFOls?enablejsapi=1;si=f3V4VkntV4XPFTaL&amp;controls=1&amp;start=76" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div style="display: none;" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row container-flex media-container container-flex m-auto" data-id="vid21">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Mayerling (1967)</h5>
-                            <p><small>Omar Sharif & Mony Dalmès</small></p>
-                            <iframe src="https://www.youtube.com/embed/mxMaVLImepY?enablejsapi=1;si=0SwV_UzkZBCWG2Tp&amp;controls=1&amp;start=198" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row container-flex media-container container-flex m-auto" data-id="vid22">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>The Slipper and the Rose (1976)</h5>
-                            <p><small>Richard Chamberlain & Gemma Craven</small></p>
-                            <iframe src="https://www.youtube.com/embed/aaiLc45ve-E?si=BziW5cug7mH-NI84&amp;start=85" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row container-flex media-container container-flex m-auto" data-id="vid23">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Beauty and the Beast (1991)</h5>
-                            <p><small><br></small></p>
-                            <iframe src="https://www.youtube.com/embed/h0rfc33uk1A?enablejsapi=1;si=WYmixfQ_3CmJENoC&amp;controls=1&amp;start=67" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto" data-id="vid24">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Anna Karenine (2012)</h5>
-                            <p><small>Aaron Taylor-Johnson & Keira Knightley</small></p>
-                            <iframe src="https://www.youtube.com/embed/_zaazpsM6KI?si=fbwAj9xRUkjJscqs&amp;start=256" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto" data-id="vid25">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Cinderella (2015)</h5>
-                            <p><small>Richard Madden & Lily James</small></p>
-                            <iframe src="https://www.youtube.com/embed/2QGGbT5HGxY?enablejsapi=1;si=UUjqJP10VIehfDVG&amp;controls=1&amp;start=114" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto" data-id="vid26">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>War and Peace (2016)</h5>
-                            <p><small>James Norton & Lily James</small></p>
-                            <iframe src="https://www.youtube.com/embed/MeSsQmNRecQ?enablejsapi=1;si=x6226mD_b5vkvjC9&amp;controls=1&amp;start=75" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="row container-flex justify-content-justify align-items-center p-2">
-                        <p>Tu peux aussi regarder directement sur Youtube:</p>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                        <div class="row media-container container-flex m-auto" data-id="vid27">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>The King and I (1956)</h5>
-                            <p><small>Yul Brynner & Deborah Kerr</small></p>
-                            <div class="video-wrapper" data-id="gJgmp18aQz4" data-start="60">
+                            <p class="danseurs">Clark Gable & Vivien Leigh</p>
+                            <div class="video-wrapper" data-id="yZgWnEEcJY8" data-start="54">
                                 <div class="video-thumbnail" onclick="loadVideo(this)">
-                                    <img src="https://img.youtube.com/vi/uTswXtZ3prA/hqdefault.jpg" alt="Miniature YouTube">
+                                    <img src="https://img.youtube.com/vi/yZgWnEEcJY8/hqdefault.jpg" alt="Miniature YouTube">
                                     <button class="play-button">▶</button>
                                 </div>
                             </div>
+                            <p class="titre-film">Gone with the wind (1950)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid19" data-danse="Valse viennoise" data-titre="Madame Bovary" data-id="QZicvAAQzgc">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Jamse Mason & Jennifer Jones</p>
+                            <div class="video-wrapper" data-id="QZicvAAQzgc" data-start="26">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/QZicvAAQzgc/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Madame Bovary (1950)</p>
                         </div>
                     </div>
 
-                    <div class="row container-flex justify-content-justify align-items-center p-2">
-                        <div class="col-xm-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                            <div class="row container-flex media-container m-auto" title="The King and I (1956) - Yul Brynner & Deborah Kerr" >
-                                <a href="https://www.youtube.com/watch?v=QgVPnWmUqd4" target="_blank" class="video-link">
-                                    <div class="video-thumbnail">
-                                        <img src="https://img.youtube.com/vi/QgVPnWmUqd4/hqdefault.jpg" alt="dance movies viennese waltz king and I yul brynner deborah kerr">
-                                        <div class="play-button"></div>
-                                    </div>
-                                </a>
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid20" data-danse="Valse viennoise" data-titre="War and Peace" data-id="TCNAw9K7UTQ">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Henry Fonda & Audrey Hepburn</p>
+                            <div class="video-wrapper" data-id="TCNAw9K7UTQ" data-start="77">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/TCNAw9K7UTQ/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-xm-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                            <div class="row container-flex media-container m-auto" title="The Great Race (1965)" data-id="vid28">
-                                <a href="https://www.youtube.com/watch?v=1Bk6aMNCNko" target="_blank" class="video-link">
-                                    <div class="video-thumbnail">
-                                        <img src="https://img.youtube.com/vi/1Bk6aMNCNko/hqdefault.jpg" alt="dance movies viennese waltz great race jack lemmon tony curtis natalie wood youtube">
-                                        <div class="play-button"></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-xm-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                            <div class="row container-flex media-container m-auto " title="Beauty and the Beast (2017) - Dan Stevens & Emma Watson " data-id="vid29">
-                                <a href="https://www.youtube.com/watch?v=aYdNOndwNcs" target="_blank" class="video-link">
-                                    <div class="video-thumbnail">
-                                        <img src="https://img.youtube.com/vi/aYdNOndwNcs/hqdefault.jpg" alt="dance movies viennese waltz beauty and beast emma watson dan stevens youtube">
-                                        <div class="play-button"></div>
-                                    </div>
-                                </a>
-                            </div>
+                            <p class="titre-film">War and Peace (1956)</p>
                         </div>
                     </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto" id="vid27" data-danse="Valse viennoise" data-titre="The King and I" data-id="c9l_Zj7A9eA">   
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Yul Brynner & Deborah Kerr</p>
+                            <div class="video-wrapper" data-id="c9l_Zj7A9eA" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/c9l_Zj7A9eA/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The King and I (1956)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container m-auto" id="vid46" data-danse="Valse viennoise" data-titre="Le Guépard" data-id="VundKlOgF7A">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Burt Lancaster & Claudia Cardinale</p>
+                            <div class="video-wrapper" data-id="VundKlOgF7A" data-start="31">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/VundKlOgF7A/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Le Guépard (1963)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container m-auto" id="vid56" data-danse="Valse viennoise" data-titre="My fair Lady" data-id="TjrSGZqZqG8">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Theodore Bikel & Audrey Hepburn</p>
+                            <div class="video-wrapper" data-id="TjrSGZqZqG8" data-start="24">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/TjrSGZqZqG8/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">My fair Lady (1964)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container m-auto" id="vid28" data-danse="Valse viennoise" data-titre="The Great Race" data-id="7lYC5HVBt-Y">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs"><br></p>
+                            <div class="video-wrapper" data-id="7lYC5HVBt-Y" data-start="07">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/7lYC5HVBt-Y/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The Great Race (1965)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid21" data-danse="Valse viennoise" data-titre="Mayerling" data-id="8ItA6hmEcjg">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Omar Sharif & Catherine Deneuve</p>
+                            <div class="video-wrapper" data-id="8ItA6hmEcjg" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/8ItA6hmEcjg/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Mayerling (1968)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid55" data-danse="Valse viennoise" data-titre="The Godfather" data-id="iPg3EoEfscc">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Marlon Brando & Talia Shire</p>
+                            <div class="video-wrapper" data-id="iPg3EoEfscc" data-start="11">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/iPg3EoEfscc/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The Godfather (1972)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid22" data-danse="Valse viennoise" data-titre="The Slipper and the Rose" data-id="Q9_aa9qK2A0">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Richard Chamberlain & Gemma Craven</p>
+                            <div class="video-wrapper" data-id="Q9_aa9qK2A0" data-start="85">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/Q9_aa9qK2A0/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The Slipper and the Rose (1976)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container container-flex m-auto" id="vid23" data-danse="Valse viennoise" data-titre="Beauty and the Beast" data-id="lZSVwwEO7vA">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs"><br></p>
+                            <div class="video-wrapper" data-id="lZSVwwEO7vA" data-start="67">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/lZSVwwEO7vA/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">Beauty and the Beast (1991)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto" id="vid24" data-danse="Valse viennoise" data-titre="Anna Karenina" data-id="NgDCVMhA8Jc">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Aaron Taylor-Johnson & Keira Knightley</p>
+                            <div class="video-wrapper" data-id="NgDCVMhA8Jc" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/NgDCVMhA8Jc/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Anna Karenina (2012)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto" id="vid25" data-danse="Valse viennoise" data-titre="Cinderella" data-id="-QZ_-IJaP4o">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Richard Madden & Lily James</p>
+                            <div class="video-wrapper" data-id="-QZ_-IJaP4o" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/-QZ_-IJaP4o/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Cinderella (2015)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto" id="vid26" data-danse="Valse viennoise" data-titre="War and Peace" data-id="0YLEYeC4IRY">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">James Norton & Lily James</p>
+                            <div class="video-wrapper" data-id="0YLEYeC4IRY" data-start="75">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/0YLEYeC4IRY/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">War and Peace (2016)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row media-container container-flex m-auto" id="vid29" data-danse="Valse viennoise" data-titre="Beauty and the Beast" data-id="cnt1rhaY_9Y">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Dan Stevens & Emma Watson</p>
+                            <div class="video-wrapper" data-id="cnt1rhaY_9Y" data-start="134">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/cnt1rhaY_9Y/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Beauty and the Beast (2017)</p>
+                        </div>
+                    </div>
+
+                                      
+
+                         
+
+                        
 
                 </section>
 
@@ -738,12 +950,17 @@
                 <section id="slow_fox" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Slow fox trot</h3>   
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="media-container container-flex m-auto" data-id="vid30">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Roberta (1935)</h5>
-                                <p><small>Fred Astaire & Ginger Rogers</small></p>
-                                <iframe src="https://www.youtube.com/embed/oWFPBsP0exo?enablejsapi=1;si=Wl3nWwQt7cOcFMRn&amp;controls=1&amp;start=59" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto" id="vid30" data-danse="Slow Fox Trot" data-titre="Roberta" data-id="DrRQ0cnwS4w">
+                                <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Fred Astaire & Ginger Rogers</p>
+                            <div class="video-wrapper" data-id="DrRQ0cnwS4w" data-start="59">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/DrRQ0cnwS4w/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">Roberta (1935)</p>
                         </div>
                     </div>
                 </section>
@@ -751,21 +968,45 @@
                 <section id="quickstep" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Quickstep</h3>   
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto" data-id="vid31">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto" id="vid50" data-danse="Quickstep" data-titre="Taxi!" data-id="eNOYvmlV0-8">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Swing time (1936)</h5>
-                            <p><small>Fred Astaire & Ginger Rogers</small></p>
-                            <iframe src="https://www.youtube.com/embed/06RlwN0nddQ?enablejsapi=1;si=nBi7wpxvGVhUPFfv&amp;controls=1&amp;start=23" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">James Cagney & Loretta Young</p>
+                            <div class="video-wrapper" data-id="gmhGxsAQG3w" data-start="30">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/gmhGxsAQG3w/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Taxi! (1932)</p>
                         </div>
                     </div>
 
-                    <div id="shall_we_dance_quickstep" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film shall_we_dance_quickstep">   
-                        <div class="row media-container container-flex m-auto" data-id="vid32">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto" id="vid31" data-danse="Quickstep" data-titre="Swing Time" data-id="eNOYvmlV0-8">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Shall we dance? (2004)</h5>
-                            <p><small>Richard Gere & Lisa Ann Walter</small></p>
-                            <iframe src="https://www.youtube.com/embed/SH02DP7vOrQ?enablejsapi=1;si=GBBIz2zWVJGv6DcI&amp;controls=1" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Fred Astaire & Ginger Rogers</p>
+                            <div class="video-wrapper" data-id="eNOYvmlV0-8" data-start="23">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/eNOYvmlV0-8/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Swing time (1936)</p>
+                        </div>
+                    </div>
+
+                    <div id="shall_we_dance_quickstep" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film shall_we_dance_quickstep">   
+                        <div class="row media-container container-flex m-auto" id="vid32" data-danse="Quickstep" data-titre="Shall we dance?" data-id="OWM2bL1P6KA">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Richard Gere & Lisa Ann Walter</p>
+                            <div class="video-wrapper" data-id="OWM2bL1P6KA" data-start="14">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/OWM2bL1P6KA/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Shall we dance? (2004)</p>
                         </div>
                     </div>
 
@@ -773,19 +1014,25 @@
 
             </section>
 
-            <section id="danses_latines" class="container-flex > justify-content-justify align-items-center p-2">
+            <section id="danses_latines" class="row container-flex d-flex justify-content-center align-items-center p-2">
+                <div class="text-container">
                 <h2>Danses latines</h2>
-            
+            </div>
     
                 <section id="cha-cha" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Cha cha</h3>   
 
-                    <div id="shall_we_dance_cha_cha" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film shall_we_dance_cha_cha">  
-                        <div class="row media-container container-flex m-auto" data-id="vid33">
+                    <div id="shall_we_dance_cha_cha" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film shall_we_dance_cha_cha">  
+                        <div class="row media-container container-flex m-auto" id="vid33" data-danse="Cha cha" data-titre="Shall we dance?" data-id="74imc0zlq9Q">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Shall we dance? (2004)</h5>
-                            <p><small>Stanley Tucci & Lisa Ann Walter</small></p>
-                            <iframe src="https://www.youtube.com/embed/MASxI2vxERs?enablejsapi=1;si=ie-7w3tv9usJzXdz&amp;controls=1&amp;start=2" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Stanley Tucci & Lisa Ann Walter</p>
+                            <div class="video-wrapper" data-id="74imc0zlq9Q" data-start="2">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/74imc0zlq9Q/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Shall we dance? (2004)</p>
                         </div>
                     </div>
 
@@ -794,83 +1041,112 @@
                 <section id="samba" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Samba</h3>   
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto justify-content-center" data-id="vid34">
+                    <div id="dance_with_me_samba" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film dance_with_me_samba">
+                        <div class="row container-flex media-container m-auto" title="Dance with me (1997)" id="vid35" data-danse="Samba" data-titre="Dance with me" data-id="sL8JyukCc4Y">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Get Smart (2008)</h5>
-                            <p><small>Steve Carell & Lindsay Hollister</small></p>
-                            <iframe src="https://www.youtube.com/embed/fy_NbP1WOsk?enablejsapi=1;si=cCIknhsKB0s4QG09&amp;controls=1&amp;start=105" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <p>Et directement sur YouTube:</p>
-                    <div class="row container-flex justify-content-justify align-items-center p-2">
-
-                        <div class="col-xm-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                            <div class="row container-flex media-container m-auto" title="Dance with me (1997)" data-id="vid35">
-                                <a href="https://www.youtube.com/watch?v=qJ043GpvyGs" target="_blank" class="video-link">
-                                    <div class="video-thumbnail">
-                                        <img src="https://img.youtube.com/vi/qJ043GpvyGs/hqdefault.jpg" alt="dance movies samba dance with me">
-                                        <div class="play-button"></div>
-                                    </div>
-                                </a>
+                            <p class="danseurs"><br></p>
+                            <div class="video-wrapper" data-id="sL8JyukCc4Y" data-start="47">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/sL8JyukCc4Y/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
                             </div>
+                            <p class="titre-film">Dance with me (1997)</p>
                         </div>
-
                     </div>
 
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto justify-content-center" id="vid34" data-danse="Samba" data-titre="Get Smart" data-id="SU10bnc3aoE">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Steve Carell & Lindsay Hollister</p>
+                            <div class="video-wrapper" data-id="SU10bnc3aoE" data-start="113">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/SU10bnc3aoE/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Get Smart (2008)</p>
+                        </div>
+                    </div>
+
+                    
                 </section>
 
                 <section id="rumba" class="row container-flex d-flex justify-content-around align-items-center p-2">
                     <h3>Rumba</h3>   
 
-                    <div id="dance_with_me_rumba" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film dance_with_me_rumba">  
-                        <div class="row media-container container-flex m-auto" data-id="vid36">
+                    <div id="dance_with_me_rumba" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film dance_with_me_rumba">  
+                        <div class="row media-container container-flex m-auto" id="vid36" data-danse="Rumba" data-titre="Dance with me" data-id="vj97DS3Y_mc">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Dance with me (1999)</h5>
-                            <p><small>Chayanne & Vanessa L. Williams</small></p>
-                            <iframe src="https://www.youtube.com/embed/uTswXtZ3prA?start=12" title="YouTube video player" frameborder="0" allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">  
-                        <div class="row media-container container-flex m-auto" data-id="vid37">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Rumba la vie (2022)</h5>
-                            <p><small>Frank Dubosc & Louana Espinosa</small></p>
-                            <iframe src="https://www.youtube.com/embed/QMvcNTyyZRE?enablejsapi=1;si=CE1_hxX9Rl9sypL8&amp;controls=1&amp;start=164" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Chayanne & Vanessa L. Williams</p>
+                            <div class="video-wrapper" data-id="vj97DS3Y_mc" data-start="12">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/vj97DS3Y_mc/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Dance with me (1999)</p>
                         </div>
                     </div>
 
                 </section>
 
-                <section id="paso_doble" class="row container-flex d-flex justify-content-around align-items-center p-2">
-                    <h3>Paso Doble</h3>   
+                <section id="paso_doble" class="row container-flex d-flex justify-content-around  p-2">
+                    <h3>Paso Doble</h3>  
+                    
+                    <div id="kissing_bandit_paso_doble" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film kissing_bandit_paso_doble">   
+                        <div class="row media-container container-flex m-auto" id="vid45" data-danse="Paso doble" data-titre="The Kissing Bandit" data-id="XFTzfEoudLU">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Ricardo Montalbán, Cyd Charisse & Ann Miller</p>
+                            <div class="video-wrapper align-self-bottom" data-id="XFTzfEoudLU" data-start="0">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/XFTzfEoudLU/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The Kissing Bandit (1948)</p>
+                        </div>
+                    </div>
                 
-                    <div id="strictly_ballroom_paso_doble" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film strictly_ballroom_paso_doble">   
-                        <div class="row media-container container-flex m-auto" data-id="vid38">
+                    <div id="strictly_ballroom_paso_doble" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film strictly_ballroom_paso_doble">   
+                        <div class="row media-container container-flex m-auto" id="vid38" data-danse="Paso doble" data-titre="Strictly Ballroom" data-id="KmpCS6sp204">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Strictly Ballroom (1992)</h5>
-                            <p><small>Paul Mercurio & Tara Morice</small></p>
-                            <iframe src="https://www.youtube.com/embed/SZEeMP8tR1c?enablejsapi=1;si=xQ68AGjknkds7zk9&amp;controls=1&amp;start=60" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Paul Mercurio & Tara Morice</p>
+                            <div class="video-wrapper" data-id="KmpCS6sp204" data-start="139">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/KmpCS6sp204/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Strictly Ballroom (1992)</p>
                         </div>
                     </div>
 
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">   
-                        <div class="row media-container container-flex m-auto" data-id="vid39">
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">   
+                        <div class="row media-container container-flex m-auto" id="vid39" data-danse="Paso doble" data-titre="The Mask of Zorro" data-id="roPgq2uvs5M">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>The Mask of Zorro (1998)</h5>
-                            <p><small>Antonio Banderas & Catherine Zeta-Jones</small></p>
-                            <iframe src="https://www.youtube.com/embed/msg2aZrjhwA?enablejsapi=1;si=SyP4bLbTj0oLxkgV&amp;controls=1&amp;start=2" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Antonio Banderas & Catherine Zeta-Jones</p>
+                            <div class="video-wrapper" data-id="roPgq2uvs5M" data-start="2">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/roPgq2uvs5M/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">The Mask of Zorro (1998)</p>
                         </div>
                     </div>
 
-                    <div id="shall_we_dance_paso_doble" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film shall_we_dance_paso_doble">  
-                        <div class="media-container container-flex m-auto" data-id="vid40">
+                    <div id="shall_we_dance_paso_doble" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film shall_we_dance_paso_doble">  
+                        <div class="row media-container container-flex m-auto" id="vid40" data-danse="Paso doble" data-titre="Shall we dance?" data-id="nuRmnCe0om8">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Shall we dance? (2004)</h5>
-                            <p><small>Stanley Tucci & Lisa Ann Walter</small></p>
-                            <iframe src="https://www.youtube.com/embed/NUXt-stAcRw?enablejsapi=1;si=2ZBXR33IePi-iLQf&amp;controls=1&amp;start=47" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">Stanley Tucci & Lisa Ann Walter</p>
+                            <div class="video-wrapper" data-id="nuRmnCe0om8" data-start="47">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/nuRmnCe0om8/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Shall we dance? (2004)</p>
                         </div>
                     </div>
 
@@ -878,91 +1154,177 @@
 
             
 
-                <section id="jive" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                <section id="jive" class="row container-flex d-flex justify-content-around p-2">
                     <h3>Jive</h3> 
-                    
-                    <div id="marilyn_hotchkiss_jive" class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film marilyn_hotchkiss_jive">  
-                        <div class="media-container container-flex m-auto" data-id="vid41">
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <div class="row container-flex media-container m-auto " id="vid43" data-danse="Jive" data-titre="La Vérité" data-id="y0JlWWcT8PY">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</h5>
-                            <p><small>Donnie Wahlberg & Marisa Tomei</small></p>
-                            <iframe src="https://www.youtube.com/embed/l4ivuB55HVo?si=r1VHuK4wWdb-Js55&amp;controls=1" title="YouTube video player" frameborder="0" allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film marilyn_hotchkiss_jive">  
-                        <div class="media-container container-flex m-auto" data-id="vid42">
-                            <button class="vote-btn" title="0">❤️</button>
-                            <h5>Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</h5>
-                            <p><small>Robert Carlyle & Marisa Tomei</small></p>
-                            <iframe src="https://www.youtube.com/embed/Sbkx_NBdzKo?si=SBtarY-GTezfIRn7&amp;controls=1" title="YouTube video player" frameborder="0" allow="fullscreen;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                    </div>
-
-                    <p>Directement sur YouTube:</p>
-                    <div class="row container-flex justify-content-justify align-items-center p-2">
-
-                        <div class="col-xm-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">
-                            <div class="row container-flex media-container m-auto" title="La Vérité (1960) - giorgio Gaber & Brigitte Bardot" data-id="vid43">
-                                <a href="https://www.youtube.com/watch?v=kcPuJx1vcPs" target="_blank" class="video-link">
-                                    <div class="video-thumbnail">
-                                        <img src="https://img.youtube.com/vi/kcPuJx1vcPs/hqdefault.jpg" alt="dance movies jive bardot gaber vérité">
-                                        <div class="play-button"></div>
-                                    </div>
-                                </a>
+                            <p class="danseurs">Giorgio Gaber & Brigitte Bardot</p>
+                            <div class="video-wrapper" data-id="y0JlWWcT8PY" data-start="14">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/y0JlWWcT8PY/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
                             </div>
+                            <p class="titre-film">La Vérité (1960)</p>
                         </div>
                     </div>
+                    
+                    <div id="marilyn_hotchkiss_jive" class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film marilyn_hotchkiss_jive">  
+                        <div class="row media-container container-flex m-auto" id="vid41" data-danse="Jive" data-titre="Marilyn Hotchkiss' Ballroom Dancing & Charm School" data-id="jw0HVTTMD-U">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Donnie Wahlberg & Marisa Tomei</p>
+                            <div class="video-wrapper" data-id="jw0HVTTMD-U" data-start="17">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/jw0HVTTMD-U/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                            </div>
+                            <p class="titre-film">Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film marilyn_hotchkiss_jive">  
+                        <div class="row media-container container-flex m-auto" id="vid42" data-danse="Jive" data-titre="Marilyn Hotchkiss' Ballroom Dancing & Charm School" data-id="PQCLb95HKc4">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Robert Carlyle & Marisa Tomei</p> 
+                            <div class="video-wrapper" data-id="PQCLb95HKc4" data-start="8">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/PQCLb95HKc4/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                            </div>
+                            <p class="titre-film">Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</p>
+                            
+                        </div>
+                    </div>
+
+                    
+                    
+
                     
                 </section>
 
             </section>
 
-            <section id="autres_danses" class="row container-flex d-flex justify-content-around align-items-center p-2">
+            <section id="autres_danses" class="row container-flex d-flex justify-content-around p-2">
                 
                 <div class="intro text-container">
                     <h2>Autres danses</h2>
-                    <p>INTROLorem</p>
+                    <p>Et voici quelques extraits d'autres types de danse de salon plus ou moins proches des danses sportives.</p>
                 </div>
 
-                <section id="rock_4temps" class="row container-flex d-flex justify-content-around align-items-center p-2">
-                    <h3>Rock 4 temps</h3>   
-                    
-                    <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4 py-4 film">    
-                        <div class="media-container container-flex m-auto" data-id="vid44">
+                <div class="row container-flex d-flex justify-content-around p-2">  
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">    
+                        <h3>Jitterbug</h3> 
+                        <div class="row media-container container-flex m-auto" id="vid53" data-danse="Jitterbug" data-titre="It's a wonderful life" data-id="f_WBISbsiso">
                             <button class="vote-btn" title="0">❤️</button>
-                            <h5>My best friend's wedding (1997)</h5>
-                            <p><small>Rupert Everett & Julia Roberts</small></p>
-                            <iframe src="https://www.youtube.com/embed/uwbTLBVWS2s?enablejsapi=1;si=_O7hRqQQgwrfyFBj&amp;controls=1&amp;start=146" title="YouTube video player" frameborder="0"  allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                            <p class="danseurs">James Stewart & Donna Reed</p>
+                            <div class="video-wrapper autres-danses" data-id="f_WBISbsiso" data-start="56">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/f_WBISbsiso/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">It's a wonderful life (1946)</p>
+                        </div>
+                    </div> 
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">    
+                        <h3>Mambo</h3> 
+                        <div class="row media-container container-flex m-auto" id="vid47" data-danse="Mambo" data-titre="Voulez-vous danser avec moi?" data-id="q0t1iLrQ8lw">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Hervé Vidal & Brigitte Bardot</p>
+                            <div class="video-wrapper autres-danses" data-id="q0t1iLrQ8lw" data-start="9">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/q0t1iLrQ8lw/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">Voulez-vous danser avec moi? (1959)</p>
+                        </div>
+                    </div> 
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">    
+                        <h3>Lindy Hop</h3>   
+
+                        <div class="row media-container container-flex m-auto" id="vid49" data-danse="Lindy Hop" data-titre="Swing Kids" data-id="2IkdHWFIDPc">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs"><br></p>
+                            <div class="video-wrapper  autres-danses" data-id="2IkdHWFIDPc" data-start="18">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/2IkdHWFIDPc/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">Swing Kids (1993)</p>
+                        </div>
+                    </div> 
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">    
+                        <h3>Rock 4 temps</h3>   
+
+                        <div class="row media-container container-flex m-auto" id="vid44" data-danse="Rock 4 temps" data-titre="My best friend's wedding" data-id="INn7ZjTJOLI">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Rupert Everett & Julia Roberts</p>
+                            <div class="video-wrapper  autres-danses" data-id="INn7ZjTJOLI" data-start="146">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/INn7ZjTJOLI/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">My best friend's wedding (1997)</p>
                         </div>
                     </div>  
-                </section> 
+
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                        <h3>Tango argentin</h3> 
+                        <div class="row media-container container-flex m-auto" data-id="U6YQWMVUAMo" id="vid51" data-danse="Tango argentin" data-titre="The Tango lesson">
+                            <button class="vote-btn" title="0">❤️</button>
+                            <p class="danseurs">Pablo Veron, Gustavo Naveira, Fabián Salas & Sally Potter</p>
+                            <div class="video-wrapper  autres-danses" data-id="U6YQWMVUAMo" data-start="85">
+                                    <div class="video-thumbnail" onclick="loadVideo(this)">
+                                        <img src="https://img.youtube.com/vi/U6YQWMVUAMo/hqdefault.jpg" alt="Miniature YouTube">
+                                        <button class="play-button">▶</button>
+                                    </div>
+                                </div>
+                                <p class="titre-film">The Tango lesson (1997)</p>
+                        </div>
+                    </div> 
                 
                 
-                <section id="salsa" class="row container-flex d-flex justify-content-around align-items-center p-2">
-                    <h3>Salsa</h3>   
+                    <div class="col-xm-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
+                    <h3>Salsa</h3> 
+                    <div class="row media-container container-flex m-auto" id="vid48" data-danse="Salsa" data-titre="Cuban Fury" data-id="Bv5lsz4I3y8">
+                        <button class="vote-btn" title="0">❤️</button>
+                        <p class="danseurs">Nick Frost & Rashida Jones</p>
+                        <div class="video-wrapper  autres-danses" data-id="Bv5lsz4I3y8" data-start="23">
+                                <div class="video-thumbnail" onclick="loadVideo(this)">
+                                    <img src="https://img.youtube.com/vi/Bv5lsz4I3y8/hqdefault.jpg" alt="Miniature YouTube">
+                                    <button class="play-button">▶</button>
+                                </div>
+                            </div>
+                            <p class="titre-film">Cuban Fury (2014)</p>
+                    </div>
+                </div> 
                     
- 
+                      
+                        
+                        
+                   
+</div>
                 </section> 
             </section>
 
-        </main>
+            <div class="row p-2"><small>Toutes les images et vidéos présentées sur cette page restent la propriété exclusive de leurs auteurs, ayants droit ou studios respectifs. Elles sont utilisées ici à des fins culturelles, pédagogiques et informatives, dans le cadre de l'illustration de l'usage des danses de couple au cinéma. Si vous êtes titulaire de droits et souhaitez faire modifier ou retirer un contenu, vous pouvez nous contacter à l'adresse suivante : contact@hellorythme-danse.fr.</small></div>
 
+        </main>
+        <div id="flying-hearts-container"></div>
         <footer></footer>
 
     </div>
+    
 </body>
 </html>
-
-<script type="text/javascript">
-    function jaune(e){
-        const films = document.getElementsByClassName("film");
-        for(var i = 0; i < films.length; i++){
-            films[i].style.backgroundColor = "none";
-        }
-        const films_liens = document.getElementsByClassName(e.getAttribute("data-id"));
-        for(var i = 0; i < films_liens.length; i++){
-            films_liens[i].style.backgroundColor = "yellow";
-        }
-    }
-</script>

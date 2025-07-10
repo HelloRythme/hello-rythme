@@ -11,9 +11,11 @@ html {
 }
 
 body{
+	position: absolute;
 	color: black;
 	font-family: 'Libre Baskerville', serif;
 	background: rgb(194,183,173,0.3);
+	z-index: 0;
 }
 
 #site{min-height:100vh;
@@ -72,7 +74,9 @@ svg{max-width: 1440px;
   }
   
 .logo img{
+
 	max-width: 90%;
+
 }  
 
 
@@ -97,7 +101,8 @@ svg{max-width: 1440px;
 main {
 	margin-top: 18em !important;
 	width: 100%;
-	background-color: white;}
+	background-color: white;
+}
 
 small{
 		font-size: 90%;
@@ -202,6 +207,7 @@ h5{font-size: 110%;}
 
 h2{
 	margin-top: 1em !important;
+	margin-bottom: 0.5em;
 }
 
 footer{
@@ -210,7 +216,8 @@ footer{
 	padding-right: 1em !important;
 	padding-bottom: 0.5em;
 	background-color: #C2B7AD;
-	padding-top: 1em;
+	padding-top: 0.3em;
+	height: 2em;
 	}
 
 footer a{
@@ -245,9 +252,26 @@ a:focus {
 	outline-offset: 0.5px;
   }
 
-h1, h2, h3, h4, h5 {
+h1, h3 {
 	text-align: center;
 }
+
+h2 {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #463f32;
+	border-bottom: 2px solid #C2B7AD;
+	padding-bottom: 4px;
+	margin-top: 1.5em;
+  }
+  
+  h3 {
+	font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #463f32;
+  margin-top: 1em;
+  }
 
 
 button {
