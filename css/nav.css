@@ -1,9 +1,14 @@
 nav div{
     color: black;
     text-align: center;
+   
 }
 
-
+#nav-inner{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
+}
 
 nav .dropdown-container{
   z-index: 1;

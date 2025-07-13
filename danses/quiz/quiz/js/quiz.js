@@ -30,7 +30,7 @@ const quiz1Questions = [
 
     questions.forEach((question, index) => {
       const div = document.createElement('div');
-      div.className = 'question col-xm-10 col-sm-6 col-md-5 col-lg-3 container-flex p-2';
+      div.className = 'question col-10 col-sm-6 col-md-5 col-lg-3 container-flex p-2';
       div.dataset.id = question.id;
 
 
@@ -71,7 +71,7 @@ const quiz1Questions = [
 
     //Bouton
   const divBouton = document.createElement('div');
-  divBouton.className = 'col-xm-10 col-sm-6 col-md-5 col-lg-3 container-flex align-self-center p-2';
+  divBouton.className = 'col-10 col-sm-6 col-md-5 col-lg-3 container-flex align-self-center p-2';
   const boutonCorrection = document.createElement('button');
   boutonCorrection.id = "verify-btn-quiz1";
   boutonCorrection.innerHTML = "Vérifier mes réponses";

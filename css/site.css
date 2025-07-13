@@ -1,6 +1,9 @@
-  
 html {
+	max-width: 100%;
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0 ;
 	scroll-padding-top: 9.2em; /* Ajuste en fonction de la hauteur de ta barre sticky */
+	overflow-x: hidden;
   }
   
 .row{
@@ -16,19 +19,29 @@ body{
 	font-family: 'Libre Baskerville', serif;
 	background: rgb(194,183,173,0.3);
 	z-index: 0;
+	max-width: 100%;
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0 ;
 }
 
 #site{min-height:100vh;
-		max-width: 1440px;}
+}
 
 header{ position: relative;
-		max-width:100%;
+	width: 100%;
+	max-width:100%;
+		
 		
 }
 
 nav{justify-content: center;
 	position: fixed;
     z-index: 10;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0 ;
+	top: 0;
 	}
 
 #nav-inner{max-width: 1440px;
@@ -123,7 +136,7 @@ h5{font-size: 110%;}
 		letter-spacing: 12pt;
 	}
 	svg{top:11em;}
-	main {margin-top: 18em !important;}
+	main {margin-top: 17em !important;}
 	small{font-size: 90%;}
   }
 
@@ -138,7 +151,23 @@ h5{font-size: 110%;}
 		height: 5em;
 	}
 	svg{top:5em;}
-	main {margin-top: 14.2em !important;}
+	main {margin-top: 12em !important;}
+	small{font-size: 70%;}
+	h5{font-size: 90%;}
+  }
+
+  @media screen and (min-width: 711px) {
+	html {
+		scroll-padding-top:3.5em; 
+	  }
+	#bandeau-titre {
+		top: 2.3em;
+	}
+	#fond-clair{
+		height: 5em;
+	}
+	svg{top:5em;}
+	main {margin-top: 12.7em !important;}
 	small{font-size: 70%;}
 	h5{font-size: 90%;}
   }
@@ -152,7 +181,7 @@ h5{font-size: 110%;}
 		height: 4em;
 	}
 	svg{top:4em;}
-	main {margin-top: 14.6em !important;}
+	main {margin-top: 13.1em !important;}
 	small{font-size: 60%;}
 	h5{font-size: 85%;}
   }
@@ -164,7 +193,7 @@ h5{font-size: 110%;}
 		font-size: 260%;
 		letter-spacing: 18pt;
 	}
-	main {margin-top: 16.2em !important;}
+	main {margin-top: 14.5em !important;}
 	small{font-size: 70%;}
 	h5{font-size: 90%;}
   }
@@ -176,13 +205,13 @@ h5{font-size: 110%;}
 		font-size: 280%;
 		letter-spacing: 18pt;
 	}
-	main {margin-top: 17.5em !important;}
+	main {margin-top: 15.8em !important;}
 	small{font-size: 60%;}
 	h5{font-size: 80%;}
   }
 
   @media screen and (min-width: 1099px) {
-	main {margin-top: 18.6em !important;}
+	main {margin-top: 17.6em !important;}
 	small{font-size: 65%;}
 	h5{font-size: 90%;}
   }
@@ -193,14 +222,14 @@ h5{font-size: 110%;}
 		font-size: 300%;
 		letter-spacing: 20pt;
 	}
-	main {margin-top: 19.8em !important;}
+	main {margin-top: 18.8em !important;}
 	small{font-size: 70%;}
 	h5{font-size: 100%;}
   }
 
   @media screen and (min-width: 1300px) {
 
-	main {margin-top: 21.8em !important;}
+	main {margin-top: 20.3em !important;}
 	small{font-size: 80%;}
 	h5{font-size: 105%;}
   }
@@ -248,8 +277,8 @@ a:hover{
 }
 
 a:focus {
-	outline: 0.5px solid #C2B7AD; 
-	outline-offset: 0.5px;
+	outline: 0.1px dotted #C2B7AD; 
+	outline-offset: 0.1px;
   }
 
 h1, h3 {
@@ -273,6 +302,15 @@ h2 {
   margin-top: 1em;
   }
 
+  h4 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #6e6253;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-left: 4px solid #C2B7AD;
+  padding-left: 8px;
+}
 
 button {
 	background-color: #C2B7AD;

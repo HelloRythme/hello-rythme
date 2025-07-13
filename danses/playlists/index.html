@@ -89,9 +89,11 @@
     <link rel="icon" href="/static/favicon.png">
 	<link rel="stylesheet" href="/css/site.css"/>
     <link rel="stylesheet" href="/css/nav.css"/>
+    <link rel="stylesheet" href="css/playlists.css"/>
 
     <script src="/js/include.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/playlists.js" defer></script>
 
   </head>
 
@@ -109,103 +111,717 @@
 
             <h1>Playlists</h1>
 
-            <div class="row container-flex > justify-content-justify align-items-center p-2">
+            <section id="intro" class="row container-flex text-container justify-content-justify align-items-center p-2">
                 <p>INTROLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta sed risus a feugiat. Fusce semper quis dui nec commodo. Proin eros est, facilisis nec ipsum a, maximus tempor diam. Maecenas blandit dolor commodo orci laoreet, vitae rutrum ante fermentum. Maecenas ut vehicula ipsum, sed tincidunt augue. Proin at nunc elit. Curabitur ultricies nulla tempus orci consectetur, ut auctor orci posuere. In aliquet finibus sapien, cursus rutrum ex convallis a.</p>
                 <div class="row container-flex" id="sommaire">
-                    <p>Dans cette page:</p>
+                    <p>Tu trouveras sur cette page:</p>
                     <a href="#danses_standards">Danses standards</a><br/>
                     <a href="#danses_latines">Danses latines</a><br/>
                 </div>
-            </div>
+            </section>
 
-            <div id="danses_standards" class="row container-flex > justify-content-justify align-items-center p-2">
+            <section id="danses_standards" class="row container-flex text-container justify-content-justify align-items-center p-2">
                 <h2>Danses standards</h2>
-            </div>
 
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Valse lente</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">
-                    <div class="media-container container-flex m-auto">
+                <section id="Valse lente" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Valse lente</h3>   
+                    <div class="sw row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/5RkRXGGRP33dTkap9loPcT" title="Valse lente: Nat King Cole - Fascination" aria-label="Ecouter la valse lente: Nat King Cole - Fascination">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0226447a2fa6ac60b320230445" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/0XNeANPI5Ru5u6gmmunWdS" title="Valse lente: Commodores - Three times a Lady" aria-label="Ecouter la valse lente: Commodores - Three times a Lady">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a47127db3e929f64a2795666" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/7DFawVSjI88xR9mjnWwURg" title="Valse lente: Simply Red - If you don't know me by now" aria-label="Ecouter la valse lente: Simply Red - If you don't know me by now">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e028f8dc242b396ddc31c01d36c" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/03OArDwBMEgtTDcty84Rcp" title="Valse lente: Engelbert Humperdinck - The last waltz" aria-label="Ecouter la valse lente: Engelbert Humperdinck - The last waltz">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02527b286ffda49e09166a6c0e" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/1XwAKjAZ1xDZOcuyZoqce4" title="Valse lente: Audrey Hepburn - Moon river (Breakfast at Tiffany's)" aria-label="Ecouter la valse lente: Audrey Hepburn - Moon river (Breakfast at Tiffany's)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02c2f4e782ca6f0877acc95253" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/3XFkhxO5jo2hBOWNzIQ9UB" title="Valse lente: Jon McLaughlin - So Close (Enchanted)" aria-label="Ecouter la valse lente: Jon McLaughlin - So Close (Enchanted)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0215c3e5b8ebd6e282604c7e6f" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/0za6HhjZw6LwCIDdBl92Vm" title="Valse lente: Nino Rota - A time for us (Romeo and Juliette)" aria-label="Ecouter la valse lente: Nino Rota - A time for us (Romeo and Juliette)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0265f15b2a958473d28c12662b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/5vXEPFOkx6eugLNxg4YauT" title="Valse lente: Whitney Houston - You light up my life" aria-label="Ecouter la valse lente: Engelbert Humperdinck - Whitney Houston - You light up my life">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02f3f9873a0142ed043ef99543" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/3uErbNGaNIPJkRlMrLxR9Z" title="Valse lente: Apocalyptica - Nothing else matters" aria-label="Ecouter la valse lente: Apocalyptica - Nothing else matters">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02aafd1a955eda9a0f8bbf50a1" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/2nMeu6UenVvwUktBCpLMK9" title="Valse lente: Lana Del Rey - Young and beautiful" aria-label="Ecouter la valse lente: Lana Del Rey - Young and beautiful">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02d7fb3e4c63020039d1cff6b2" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/6RKuyWarJu8SMrflntmyXx" title="Valse lente: Edith Piaf - La vie en rose" aria-label="Ecouter la valse lente: Edith Piaf - La vie en rose">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e023d69a1082b9d676263912178" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/7vBb8Ls4yNkNah0Lbo5jTY" title="Valse lente: Edith Piaf - Hymne à l'amour" aria-label="Ecouter la valse lente: Edith Piaf - Hymne à l'amour">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e021079324669af64330a164ec4" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/6G1Prx5bZTrvYLjHeD5CvK" title="Valse lente: Francis Cabrel - Je t'aimais, je t'aime, je t'aimerai" aria-label="Ecouter la valse lente: Francis Cabrel - Je t'aimais, je t'aime, je t'aimerai">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02e469df85fd7e606fa00f684b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sw" data-src="https://open.spotify.com/embed/track/5H9PjygodoXzyX45g7Pm6n" title="Valse lente: Daniel Levi - L'envie d'aimer" aria-label="Ecouter la valse lente: Daniel Levi - L'envie d'aimer">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e022775fca6968b2e411c6a8581" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Tango</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">  
-                    <div class="media-container container-flex m-auto">
+                <section id="tango" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Tango</h3>   
+                    <div class="tg row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/580PXWvX8B4l0i9HeaMj2M" title="Tango: Eric Bouvelle - La Cumparsita" aria-label="Ecouter le tango: Eric Bouvelle - La Cumparsita">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02b82f8fd927086f73e366eb29" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/4T5JgLxkMBn4LB7pFHR5sa" title="Tango: Ángel Villoldo - El Choclo" aria-label="Ecouter le tango: Ángel Villoldo - El Choclo">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e028713b41c8ce77787d441eb72" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/2LLA1oNT7AdJpnkCaM8NrS" title="Tango: Jacob Gade - Jalousie" aria-label="Ecouter le tango: Jacob Gade - Jalousie">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e021ebefaddb5af6b92433b6756" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/4kjvZ1uizpvwjjJZIu2gnK" title="Tango: Carlos Gardel - Por una cabeza" aria-label="Ecouter le tango: Carlos Gardel - Por una cabeza">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a7e7e375f85bf1d83cf2d64f" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/2aXDWWlbLUapMZnYNDErmv" title="Tango: José Feliciano - El tango de Roxanne (Moulin Rouge!)" aria-label="Ecouter le tango: José Feliciano - El tango de Roxanne (Moulin Rouge!)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02e6e0891de00a924b0f186d0c" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/402qqyHjcEFFEyB08Uhb5x" title="Tango: John Powell - El tango de los assassinos (Mr. & Mrs. Smith)" aria-label="Ecouter le tango: John Powell - El tango de los assassinos (Mr. & Mrs. Smith)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0245c9a85bdfaf8a16e7fd97ee" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/0znL3d7w3EQ0LlmjuN1BR5" title="Tango: Gotan Project - Vuelvo al sur" aria-label="Ecouter le tango: Gotan Project - Vuelvo al sur">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a156c4368f82ec161d155a0b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/65MDo5mxRY45IHpyVkLEU5" title="Tango: Gotan Project - Santa Maria" aria-label="Ecouter le tango: Gotan Project - Santa Maria">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a156c4368f82ec161d155a0b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/1Sr0201YyWpEJDI6eF1inM" title="Tango: Bajofondo - Pa'Bailar" aria-label="Ecouter le tango: Bajofondo - Pa'Bailar">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02deeebbb0ee066f3857500a64" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/4yUSjNYND4pjm0jZTeKaxs" title="Tango: Loreena McKennitt - Tango to Evora" aria-label="Ecouter le tango: Loreena McKennitt - Tango to Evora">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a686f0bde0b9040fdc7b260f" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/5TlSw8HyxbUeOdQlb8zVbg" title="Tango: Grace Jones - Libertango" aria-label="Ecouter le tango: Grace Jones - Libertango">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02d92cab266ee9b56df8550fbc" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/7imA2WXuaVCmBJ702gQAT6" title="Tango: Jacques Brel - Rosa" aria-label="Ecouter le tango: Jacques Brel - Rosa">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02f1668aa14a44693de767e03a" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                 <div class="audio-thumbnail tg" data-src="https://open.spotify.com/embed/track/55h5I8qMHfj3Jbl8bNAeoY" title="Tango: Guy Marchand - Moi je suis tango" aria-label="Ecouter le tango: Guy Marchand - Moi je suis tango">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02ecefde8b0d34050630ee04b8" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Quickstep</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">
-                    <div class="media-container container-flex m-auto">
+                <section id="quickstep" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Quickstep</h3> 
+                    <div class="qs row container-flex mt-2 gallery">
+
+                        <h4>Grands classiques</h4>   
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/2haqPCPMNy1HfcWhPzC0mJ" title="Quickstep: Benny Goodman - Sing sing sing" aria-label="Ecouter le quickstep: Benny Goodman - Sing sing sing">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e025f344c5594d0e2bf7ef95528" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>  
+
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/0rnSWQN9CovvUy2JCrzzhz" title="Quickstep: Robbie Williams - Puttin' on the Ritz" aria-label="Ecouter le quickstep: Robbie Williams - Puttin' on the Ritz">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e022e60ff0f37e6504fcc503981" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+                                
+                                
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/1GERVZcph8qx09OR7Wo1UV" title="Quickstep: Tony Bennet, Lady Gaga - It don't mean a thing" aria-label="Ecouter le quickstep: Tony Bennet, Lady Gaga - It don't mean a thing">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e024883efb117dd51c4f3f88e93" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/4QxDOjgpYtQDxxbWPuEJOy" title="Quickstep: Nat King Cole - L-O-V-E" aria-label="Ecouter le quickstep: Nat King Cole - L-O-V-E">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e028daeb3002870ebba8e8d1387" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/54EEuKcvf9lvytQ7r8n8hG" title="Quickstep: Andrews Sisters - Bei mir bist du schon" aria-label="Ecouter le quickstep: Andrews Sisters - Bei mir bist du schon">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02249b5560c875413bfefe1075" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/2EeVPGHq2I7fjeDfT6LEYX" title="Quickstep: Louis Prima - I wan'na be like you (The Jungle book)" aria-label="Ecouter le quickstep: Louis Prima - I wan'na be like you (The Jungle book)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02d897c1143b832479966b407d" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/79AyWlHO1dc55d9fBq3y91" title="Quickstep: Allen Savedoff - Steppin' out with my baby (Easter parade)" aria-label="Ecouter le quickstep: Allen Savedoff - Steppin' out with my baby (Easter parade)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e021bd9aa8ec3a5d934c31dc76f" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/1CCuMgDauGruOwxrSh9NSW" title="Quickstep: Pratt & McClain - Happy Days (Happy Days)" aria-label="Ecouter le quickstep: Pratt & McClain - Happy Days (Happy Days)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02f84a59ceacfffb24744430e7" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/0B9x2BRHqj3Qer7biM3pU3" title="Quickstep: John Travolta, Olivia Newton-John - You're the one that I want" aria-label="Ecouter le quickstep: John Travolta, Olivia Newton-John - You're the one that I want">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>                              
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/1fX0h6SaZBXwmr4haRvirQ" title="Quickstep: Vaya Con Dios - Nah Neh Nah" aria-label="Ecouter le quickstep: Vaya Con Dios - Nah Neh Nah">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e020e900fbc8cb94d536589e11a" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/6kopmMZiyLmw7h66uXcXR7" title="Quickstep: Mark Ronson, Amy Winehouse - Valerie" aria-label="Ecouter le quickstep: Mark Ronson, Amy Winehouse - Valerie">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e026a5beb0500ad6e3b0f7aea22" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/2HoqbEOXgbDSLZ5XCePEXt" title="Quickstep: Ray Charles - Hit the road Jack" aria-label="Ecouter le quickstep: Ray Charles - Hit the road Jack">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02afb055fcddab0300b316b54a" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/6xdLJrVj4vIXwhuG8TMopk" title="Quickstep: Queen - Crazy little thing called love" aria-label="Ecouter le quickstep: Queen - Crazy little thing called love">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02056e90910cbaf5c5b892aeba" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/1qmJbXpVLydNcN6VTR40GU" title="Quickstep: Cherry Poppin'Daddies - Zoot Suit Root" aria-label="Ecouter le quickstep: Cherry Poppin'Daddies - Zoot Suit Root">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0278f0c650c7a4f7eed7e3e7e3" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/359TSLfG30WauDV96x2PxJ" title="Quickstep: Charles Aznavour - Je m'voyais déjà" aria-label="Ecouter le quickstep: Charles Aznavour - Je m'voyais déjà">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0212194819a8525ce023511a2a" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+                                <div class="audio-thumbnail qs" data-src="https://open.spotify.com/embed/track/3UbYcqr1QkuLgqnADaxqQJ" title="Quickstep: Yves Montand - C'est si bon" aria-label="Ecouter le quickstep: Yves Montand - C'est si bon">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a9dd65f20fbb1fd776f02fbe" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Valse viennoise</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">
-                    <div class="media-container container-flex m-auto">
+                <section id="slow fox" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Slow fox</h3>   
+                    <div class="sf row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="sf container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/33jt3kYWjQzqn3xyYQ5ZEh" title="Slow foxtrot: Ella Fitzgerald, Louis Armstrong - Cheek to cheek" aria-label="Ecouter le slow foxtrot: Ella Fitzgerald, Louis Armstrong - Cheek to cheek">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02a0b669c5273f36ffefcf1ebc" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/0elmUoU7eMPwZX1Mw1MnQo" title="Slow foxtrot: Frank Sinatra - The way you look tonight" aria-label="Ecouter le slow foxtrot: Frank Sinatra - The way you look tonight">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02ff0dae802acb38075786b58c" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/6L4rp9CET9EwPyB33b110Q" title="Slow foxtrot: Nat King Cole - Let's face the music and dance" aria-label="Ecouter le slow foxtrot: Nat King Cole - Let's face the music and dance">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0213a4061dbdf86b299eede08b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/683b4ikwa62JevCjwrmfg6" title="Slow foxtrot: Van Morrison - Moondance" aria-label="Ecouter le slow foxtrot: Van Morrison - Moondance">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e022a1ffd75bb148e58ce2a6cac" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/03BrEhpXQHHyEMctjrtJTK" title="Slow foxtrot: Michael Bublé - I've got you under my skin" aria-label="Ecouter le slow foxtrot: Michael Bublé - I've got you under my skin">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02c6ad2b2b62b581a23a7c1759" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/6jGnykaS6TkWp15utXSAeI" title="Slow foxtrot: Norah Jones - Come away with me (Maid in Manhattan)" aria-label="Ecouter le slow foxtrot: Norah Jones - Come away with me (Maid in Manhattan)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02c648a42b5dad72c8aafceeec" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/0zaAUrSvMYrBGcLcmWKcxy" title="Slow foxtrot: Robbie Williams - Beyond the sea (Finding Nemo)" aria-label="Ecouter le slow foxtrot: Robbie Williams - Beyond the sea (Finding Nemo)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02dd5593f99402c3c85f67af22" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/4X23WZuazYlqeG1IcvDHIu" title="Slow foxtrot: Harry Connick Jr. - It had to be you (When Harry met Sally)" aria-label="Ecouter le slow foxtrot: Harry Connick Jr. - It had to be you (When Harry met Sally)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e0268861c705a295333ab0d313c" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/0juPSJLFnLFim7BK6VzTes" title="Slow foxtrot: Henry Mancini - The Pink Panther Theme (The Pink Panther)" aria-label="Ecouter le slow foxtrot: Henry Mancini - The Pink Panther Theme (The Pink Panther)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02e97407bb9fdb339614c3c7c1" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/3mFzIFFFmEXTQs6BDAK2ZZ" title="Slow foxtrot: Leonard Cohen - Dance me to the end of love" aria-label="Ecouter le slow foxtrot: Leonard Cohen - Dance me to the end of love">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e028c56267153920f9c0df36c5b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/41GeHFz9Rga2ZigTfd7UPh" title="Slow foxtrot: Nicole Croisille, Pierre Barouh - Un homme et une femme" aria-label="Ecouter le slow foxtrot: Nicole Croisille, Pierre Barouh - Un homme et une femme">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02301978d322e71bffff78daf0" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail sf" data-src="https://open.spotify.com/embed/track/6LryRmHPjkdq3hRNAdO9KB" title="Slow foxtrot: Charles Aznavour - For me Formidable" aria-label="Ecouter le slow foxtrot: Charles Aznavour - For me Formidable">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02648c5cf5e81c7392ec6ef81b" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Slow fox trot</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">
-                    <div class="media-container container-flex m-auto">
+
+                <section id="valse viennoise" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Valse viennoise</h3> 
+                    <div class="vw row container-flex mt-2 gallery">  
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail vw" data-src="https://open.spotify.com/embed/track/3R6EfyXjiB45b2K6SpM7X1" title="Valse viennoise: Dmitri Shostakovich - Waltz n°2" aria-label="Ecouter la valse viennoise: Dmitri Shostakovich - Waltz n°2">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02440cfc1498a6e530048688d0" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail vw" data-src="https://open.spotify.com/embed/track/2T2QQk9birVDhTPaO0Pbnm" title="Valse viennoise: Emile Waldteufel - Skater's Waltz" aria-label="Ecouter la valse viennoise: Emile Waldteufel - Skater's Waltz">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02267cf525c6f2b5280065c8a9" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="audio-thumbnail vw" data-src="https://open.spotify.com/embed/track/2T2QQk9birVDhTPaO0Pbnm" title="Valse viennoise: Johann Strauss II- Le Danube bleu" aria-label="Ecouter la valse viennoise: Johann Strauss II- Le Danube bleu">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02267cf525c6f2b5280065c8a9" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <div class="audio-thumbnail vw" data-src="https://open.spotify.com/embed/track/0tgbCryXx5BTpRXnGEWab4" title="Valse viennoise: Andrew Lloyd Webber - Waltz for Eva and Che (Evita)" aria-label="Ecouter la valse viennoise: Andrew Lloyd Webber - Waltz for Eva and Che (Evita)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e02e1dd5effbae0361b01bc6ad0" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+
+                                <div class="audio-thumbnail vw" data-src="https://open.spotify.com/embed/track/7MIN37CiVP1lVjqKNmLMWk" title="Valse viennoise: Yann Tiersen - La valse d'Amélie (Le fabuleux destin d'Amélie Poulain)" aria-label="Ecouter la valse viennoise: Yann Tiersen - La valse d'Amélie (Le fabuleux destin d'Amélie Poulain)">
+                                    <img src="https://i.scdn.co/image/ab67616d00001e021b7844a8c73c4d48f0bca1de" alt="Cover">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <div id="danses_latines" class="container-flex > justify-content-justify align-items-center p-2">
+
+
+            </section>
+
+            <section id="danses_latines" class="container-flex text-container justify-content-justify align-items-center p-2">
                 <h2>Danses latines</h2>
-            </div>
+            
   
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Samba</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">    
-                    <div class="media-container container-flex m-auto">
+                <section id="cha cha" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Cha cha</h3>   
+                    <div class="cc row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
                     </div>
+                </section>
+
+                <section id="rumba" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Rumba</h3>   
+                    <div class="rb row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="paso doble" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Paso Doble</h3>   
+                    <div class="pd row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="samba" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Samba</h3>   
+                    <div class="sb row container-flex mt-2 gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="jive" class="row container-flex d-flex justify-content-around align-items-center p-2">
+                    <h3>Jive</h3>   
+                    <div class="jv row container-flex mt-2 gallery gallery">
+                        <h4>Grands classiques</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Musiques de film ou de série</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>Modernes</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+
+                        <h4>En français</h4>
+                        <div class="container-flex scroll-gallery-wrapper">
+                            <div class="container-flex scroll-gallery">
+                                <button class="scroll-arrow left" aria-label="Gauche">←</button>
+                                
+                                
+                                <button class="scroll-arrow right" aria-label="Droite">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <div id="spotify-modal" class="spotify-modal">
+                <div class="spotify-modal-content">
+                    <button class="spotify-modal-close">✕</button>
+                    <iframe id="spotify-iframe" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                 </div>
             </div>
 
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Cha cha</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">   
-                    <div class="media-container container-flex m-auto">
-                    </div>
-                </div>
+            <div class="row container-flex justify-content-center" id="logo">
+                <img src="/static/logo.png" alt="logo hello-rythme ecole de danse">
             </div>
-
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Rumba</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">  
-                    <div class="media-container container-flex m-auto">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Paso Doble</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">   
-                    <div class="media-container container-flex m-auto">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row container-flex d-flex justify-content-around align-items-center p-2">
-                <h3>Samba</h3>   
-                <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 container-flex justify-content-center mb-4">  
-                    <div class="media-container container-flex m-auto">
-                    </div>
-                </div>
-            </div>
-
         </main>
 
         <footer></footer>
@@ -214,3 +830,26 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+
+function affiche(){
+
+let largeurEcran = window.innerWidth; 
+console.log(largeurEcran);
+
+
+
+}
+
+
+window.addEventListener('load', function() {
+affiche();
+});
+
+window.addEventListener('resize', function() {
+
+affiche();
+});
+	
+</script>

@@ -204,20 +204,28 @@ font-weight: bold;
 .podium {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   gap: 10px;
   margin-top: 60px;
+  max-width: 100%;
+}
+
+.img-podium{
+  max-height: 150px;
+  margin: auto;
 }
 
 .img-podium, .video-podium{
   max-width: 100%;
 }
 
+
 .podium1, .podium2, .podium3 {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  
 }
 
 /* On ne garde que .bas-podium pour construire le bloc */
