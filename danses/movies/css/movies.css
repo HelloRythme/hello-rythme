@@ -39,7 +39,6 @@ margin-top: 0 !important;
   .vote-btn {
     position: relative;
     text-align: center;
-    top: 0.7em;
     background: transparent;
     border: none;
     font-size: 1.2rem;
@@ -94,6 +93,7 @@ margin-top: 0 !important;
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
     height: 45px;
     background: rgba(255, 0, 0);
     color: white;
@@ -101,6 +101,8 @@ margin-top: 0 !important;
     transform: translate(-50%, -50%);
     cursor: pointer;
     transition: background 0.3s ease;
+    border: none;
+    border-radius: 10px;
   }
   
   .video-thumbnail:hover .play-button {
@@ -238,7 +240,7 @@ font-weight: bold;
   font-weight: bold;
   text-align: center;
   width: 150px;
-  background: #fff;
+  background: rgba(247, 239, 229);
   padding: 5px;
   border-radius: 4px;
 }

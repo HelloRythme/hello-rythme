@@ -9,8 +9,12 @@ footer a, #conditions{
     color: #C2B7AD !important;
 }
 
-h1, h2, h4, ul, p{
-    color: white;
+main, h2{
+    color: rgba(247, 239, 229) !important;
+}
+
+h2{
+    letter-spacing: 3px !important;
 }
 
 p {
@@ -25,7 +29,7 @@ ul{
 }
 
 #invite a{
-    color: white;
+    color: rgba(247, 239, 229);
     text-decoration: underline;
 }
 
@@ -165,11 +169,6 @@ svg{
 
 #couple{
     background-image: url('/static/team-building.jpg');
-}
-
-#logo-blanc img{
-    max-width: 30%;
-    margin: auto;
 }
 
 #conditions{

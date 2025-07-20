@@ -1,0 +1,260 @@
+
+let essentia;
+const fileInput = document.getElementById("audio-file");
+  const outputDiv = document.getElementById("output");
+
+EssentiaWASM().then(function (EssentiaWasm) {
+  essentia = new Essentia(EssentiaWasm);
+  console.log("[Essentia] Version :", essentia.version);
+  console.log("[Essentia] Algorithmes disponibles :", essentia.algorithmNames);
+  console.log(Object.keys(essentia).sort());
+}).catch(err => {
+  console.error("[Essentia] Erreur de chargement :", err);
+});
+
+function peakPicking(onsetCurve, threshold = 0.3, minGap = 3) {
+  const peaks = [];
+
+  for (let i = 1; i < onsetCurve.size() - 1; i++) {
+    const prev = onsetCurve.get(i - 1);
+    const curr = onsetCurve.get(i);
+    const next = onsetCurve.get(i + 1);
+
+    if (curr > threshold && curr > prev && curr > next) {
+      if (peaks.length === 0 || i - peaks[peaks.length - 1] > minGap) {
+        peaks.push(i);
+      }
+    }
+  }
+
+  return peaks;
+}
+
+function detectTimeSignatureFromOnsets(segment, sampleRate) {
+
+
+  const onsetEnvelope = [];
+  const onsetTimes = [];
+  let audioFrames;
+
+  try{
+
+    audioFrames = essentia.FrameGenerator(
+    segment, // audio data as float32 typed array
+    2048, // frameSize
+    1024 // hopSize
+);
+
+console.log("Nombre de frames :", audioFrames.size());
+  } catch (e) {
+    console.error("Erreur FrameGenerator :", e);
+  }
+
+
+for (let i = 0; i < audioFrames.size(); i++) {
+  const audioFrame = audioFrames.get(i);
+  console.log(`🧩 Frame ${i}, type:`, audioFrame.constructor.name);
+
+  // Windowing
+  const windowedSignal = essentia.Windowing(audioFrame,
+   'hann');
+  console.log(windowedSignal, windowedSignal.constructor.name);
+const rawVector = windowedSignal.frame;
+console.log(rawVector);
+// Vérifie le type :
+console.log("✅ Type réel :", rawVector.constructor.name); //
+
+  // Spectrum
+  const spectrum = essentia.Spectrum(rawVector);
+  console.log(spectrum); // aperçu du spectre
+const rawSpectrum = spectrum.spectrum;
+console.log('roro', rawSpectrum);
+
+  // Onset Detection
+  const onsetDetection = essentia.OnsetDetection(rawSpectrum, rawSpectrum, 'hfc'
+ );
+  console.log(`⚡ OnsetDetection:`, onsetDetection);
+
+  onsetEnvelope.push(onsetDetection.complex);
+}
+
+ 
+
+const peaks = peakPicking(onsetEnvelope);
+console.log("Pics détectés :", peaks);
+
+  
+
+    // Convertir les indices de pics en temps
+  for (let i = 0; i < peaks.onsets.size(); i++) {
+    const onsetIndex = peaks.onsets.get(i);
+    const time = onsetIndex * hopSize / sampleRate;
+    onsetTimes.push(time);
+  }
+
+  if (onsetTimes.length < 4) {
+    return "indéterminée (trop peu d'onsets)";
+  }
+
+  // 3. Calculer les intervalles
+  const intervals = [];
+  for (let i = 1; i < onsetTimes.length; i++) {
+    intervals.push(onsetTimes[i] - onsetTimes[i - 1]);
+  }
+
+  // 4. Grouper les intervalles (normaliser + regrouper)
+  const avgInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+  const pattern = [];
+
+  for (let i = 0; i < intervals.length; i++) {
+    const group = Math.round(intervals[i] / avgInterval);
+    pattern.push(group);
+  }
+
+  // 5. Chercher des motifs
+  const joined = pattern.join("");
+
+  const isWaltz = joined.match(/(123){2,}/); // 3 temps réguliers
+  const isFourFour = joined.match(/(1111){2,}/); // 4 temps réguliers
+
+  if (isWaltz && !isFourFour) return "3/4 (valse)";
+  if (isFourFour && !isWaltz) return "4/4";
+  if (isFourFour && isWaltz) return "Ambigu (3/4 et 4/4)";
+  return "indéterminée";
+}
+
+
+document.getElementById("audio-file").addEventListener("change", async function () {
+  const input = document.getElementById("audio-file");
+  const file = input.files[0];
+  const output = document.getElementById("output");
+  output.innerHTML = "Analyse en cours... Cela peut prendre quelques minutes.";
+  const audioPlayer = document.getElementById("audioPlayer");
+
+  const fileURL = URL.createObjectURL(file);
+  audioPlayer.src = fileURL;
+  audioPlayer.style.display = "block";
+  audioPlayer.play();
+
+  if (!file) {
+    output.innerHTML = "Veuillez sélectionner un fichier audio.";
+    return;
+  }
+
+  const arrayBuffer = await file.arrayBuffer();
+  const audioContext = new AudioContext();
+  const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+  const sampleRate = audioBuffer.sampleRate;
+  const channelData = audioBuffer.getChannelData(0);
+  const cleanData = Float32Array.from(channelData).filter(x => !isNaN(x));
+  const totalDurationSec = audioBuffer.duration;
+
+  const skipIntroSec = 10;
+  const segmentDurationSec = 30;
+  const usableDurationSec = totalDurationSec - skipIntroSec;
+
+  if (usableDurationSec < segmentDurationSec * 2) {
+     output.innerHTML = "⏱️ Le fichier est trop court pour une analyse fiable (minimum ≈ 2 minutes).";
+    return;
+  }
+
+  const numSegments = 4;
+  const interval = (usableDurationSec - segmentDurationSec) / (numSegments - 1);
+
+  const segments = [];
+   const onsetRates = [];
+   const energies = [];
+
+  for (let i = 0; i < numSegments; i++) {
+    const segmentStartSec = skipIntroSec + i * interval;
+    const startSample = Math.floor(segmentStartSec * sampleRate);
+    const endSample = Math.min(startSample + segmentDurationSec * sampleRate, cleanData.length);
+
+    const segment = cleanData.slice(startSample, endSample);
+    const vector = essentia.arrayToVector(segment);
+     console.log("vector:", vector);
+  console.log("vector size:", vector.size());
+  for (let i = 0; i < vector.size(); i++) {
+  const val = vector.get(i);
+  if (typeof val !== 'number' || isNaN(val)) {
+    console.warn(`Valeur invalide à l'index ${i}:`, val);
+  }
+}
+    const bpmResult = essentia.RhythmExtractor2013(vector);
+   
+
+    segments.push({
+      bpm: bpmResult.bpm,
+      confidence: bpmResult.confidence,
+      start: segmentStartSec,
+      index: i + 1,
+    });
+
+    console.log(
+      `🎧 Segment ${i + 1}: ${segmentStartSec}s → BPM: ${bpmResult.bpm}, Confiance: ${bpmResult.confidence}`
+    );
+
+ try {
+      const onsetResult = essentia.OnsetRate(vector);
+      const energy = essentia.Energy(vector).energy;
+      console.log("Énergie brute :", energy);
+      const energyResult = energy / vector.size();
+      console.log("Énergie normalisée :", energyResult);
+      onsetRates.push(onsetResult.onsetRate);
+      energies.push(energyResult);
+    } catch (e) {
+      console.warn(`[Essentia] Erreur sur le segment ${i + 1} :`, e.message);
+    }
+
+    const signature = detectTimeSignatureFromOnsets(segment, sampleRate);
+    console.log(`Segment ${i + 1} : signature rythmique probable → ${signature}`);
+  }
+
+
+  // Sélection du meilleur
+  const meilleur = segments.reduce((best, current) =>
+    current.confidence > best.confidence ? current : best, { confidence: 0 }
+  );
+
+  const bpmCorrige = Math.ceil(meilleur.bpm) + 10;
+  const fiable = meilleur.confidence > 3.5;
+  
+  const mean = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
+
+  const avgOnsetRate = mean(onsetRates);
+  const avgEnergy = mean(energies);
+
+  console.log("✅ Moyenne des OnsetRate :", avgOnsetRate);
+  console.log("✅ Moyenne des Énergies :", avgEnergy);
+
+  let danse = "inconnue";
+  let details = "";
+
+  if (bpmCorrige < 95 && avgOnsetRate < 2.5) {
+    if (Math.abs(bpmCorrige - 90) < 10) {
+      danse = "Valse lente ou Slow";
+    } else {
+      danse = "Slow ou Boléro";
+    }
+  } else if (bpmCorrige >= 100 && bpmCorrige <= 115 && avgOnsetRate >= 3.5) {
+    danse = "Rumba ou Chachacha";
+  } else if (bpmCorrige > 115 && bpmCorrige <= 135 && avgOnsetRate > 4) {
+    danse = "Rock ou Swing";
+  } else if (bpmCorrige > 140 && avgEnergy > 0.01 && avgOnsetRate > 5) {
+    danse = "Salsa ou Quickstep";
+  } else if (bpmCorrige > 90 && bpmCorrige < 110 && avgEnergy > 0.01 && avgOnsetRate < 3.5) {
+    danse = "Tango ou Paso Doble";
+  }
+
+  output.innerHTML = `
+    <strong>Essentia a analysé ${segments.length} segments de 30s de la piste.</strong><br>
+    🎵 <strong>BPM détecté :</strong> environ <strong>${bpmCorrige}</strong><br>
+    ${fiable
+      ? "✅ Cette estimation semble <strong>fiable</strong>."
+      : "⚠️ L’indice de fiabilité de cette estimation n’est <strong>pas très élevé</strong>. Autour de 100 BPM, on est souvent à la limite entre une musique ressentie comme lente (sous 100) et une musique entraînante ou rapide (au-dessus). Si le BPM détecté n'est pas du tout dans la bonne tranche, vous pouvez multiplier ou diviser le résultat par 2 pour obtenir un résultat vraisemblabement plus proche de la réalité."
+    }<br>
+    <strong>Style de danse probable :</strong> <u>${danse}</u><br>
+  `;
+});
+
+formData.append("audio", segment, `segment${i + 1}.wav`);

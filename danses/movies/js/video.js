@@ -146,7 +146,7 @@ const y = rect.top + rect.height / 2;
             const targetA = document.getElementById("podium"+i);
             const targetAtext = document.getElementById("podium"+i+"-text");
             const targetAimg = document.getElementById("podium"+i+"-img");
-            targetAtext.innerHTML = danse +"<br>"+titre+"<br>"+entry.vote_count+" votes. Tu aimes cette vidéo? Clique!";
+            targetAtext.innerHTML = danse +"<br>"+titre+"<br>"+entry.vote_count+" votes.";
             targetAimg.setAttribute("src", "https://img.youtube.com/vi/"+URL+"/hqdefault.jpg");
             targetA.setAttribute("href", "#"+entry.video_id);
             targetA.setAttribute("onclick", "yellow("+entry.video_id+");");

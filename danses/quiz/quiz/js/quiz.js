@@ -3,7 +3,7 @@ const quiz1Questions = [
     { id: 2, spotifyEmbed: "https://open.spotify.com/embed/track/7GHKA8GIMcND6c5nN1sFnD", correctType: "Latine", correctDance: "Cha cha" },
     { id: 3, spotifyEmbed: "https://open.spotify.com/embed/track/528QhCT2v3HgD71RmrSUNW", correctType: "Latine", correctDance: "Rumba" },
     { id: 4, spotifyEmbed: "https://open.spotify.com/embed/track/3Wrjm47oTz2sjIgck11l5e", correctType: "Latine", correctDance: "Jive" },
-    { id: 5, spotifyEmbed: "https://open.spotify.com/embed/track/4VqPOruhp5EdPBeR92t6lQ", correctType: "Latine", correctDance: "Paso doble" },
+    { id: 5, spotifyEmbed: "https://open.spotify.com/embed/track/709CndJJB3GTUhQD0LLFse", correctType: "Latine", correctDance: "Paso doble" },
     { id: 6, spotifyEmbed: "https://open.spotify.com/embed/track/4I8Mc5kqPcaK3tWSTNDC70", correctType: "Standard", correctDance: "Valse lente" },
     { id: 7, spotifyEmbed: "https://open.spotify.com/embed/track/0B9x2BRHqj3Qer7biM3pU3", correctType: "Standard", correctDance: "Quickstep" },
     { id: 8, spotifyEmbed: "https://open.spotify.com/embed/track/6jGnykaS6TkWp15utXSAeI", correctType: "Standard", correctDance: "Slow fox trot" },

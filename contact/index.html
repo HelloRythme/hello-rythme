@@ -90,10 +90,13 @@
 	<link rel="stylesheet" href="/css/site.css"/>
     <link rel="stylesheet" href="/css/nav.css"/>
     <link rel="stylesheet" href="css/contact.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <script src="/js/include.js" defer></script>
-    <script src="js/response.js" defer></script>
+    <script src="js/contact.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -107,16 +110,45 @@
 
         <header class="row container-flex align-self-start d-flex justify-content-center"></header>
 
-        <main class="row container-flex d-flex align-self-start justify-content-center">
+        <main class="row container-flex align-self-start justify-content-center pt-4">
 
-            
-
-            <section class="contact-section row justify-content-center">
-                <div class="row text-container p-2">
-                <h1>Formulaire de contact</h1>
+            <div id="titre-page"><h1>Contact</h1></div>
                 
-                <p>N’hésitez pas à m'écrire pour toute question ou demande liée à mes cours, événements ou services de chorégraphie de mariage.</p>
-            
+                <section id="intro" class="row container-flex text-container justify-content-justify align-items-center p-2">
+                    <p>N’hésitez pas à me contacter pour toute question ou demande liée à mes cours, événements ou services de chorégraphie de mariage, ou pour vos remarques concernant ce site.</p>
+                    <div class="form-check d-flex">
+                        <input class="form-check-input" type="checkbox" id="acceptTerms">
+                        <label class="form-check-label ms-2" for="acceptTerms">
+                        En prenant contact, je certifie avoir pris connaissance du <a href="/concept">fonctionnement et des valeurs de l’école</a>, en ce qui concerne le cadre des cours et la charte de respect mutuel.
+                        </label>
+                    </div>
+                </section>
+
+                
+            <section id="contact" class="row container-flex text-container justify-content-justify align-items-center p-2">
+                <h2>Pour me contacter</h2>
+                <div class="contact-icons d-flex gap-3 mt-3">
+                    <div class="icon-circle text-white">
+                     <i class="fas fa-phone-alt"></i> 
+                    </div>
+                    <a href="tel:+33664929268" class="" title="Téléphone">06 64 92 92 68</a>
+                </div>
+
+                <div class="contact-icons d-flex gap-3 mt-3">
+                    <div class="icon-circle text-white">
+                    <i class="fas fa-envelope"></i>
+                    </div>
+                    <a href="mailto:contact@hellorythme-danse.fr" class="" title="Email">contact@hellorythme-danse.fr</a>
+                </div>
+
+                <div class="contact-icons d-flex gap-3 mt-3">
+                    <div class="icon-circle text-white">
+                    <i class="fas fa-keyboard"></i>
+                    </div>
+                    <div>
+                    <p class="lien" id="formulaire">Afficher le formulaire de contact</p></div>
+                </div>
+
                 <form id="contact-form" action="https://formspree.io/f/meokwpej" method="POST">
                 <p><label for="nom">Nom - Prénom :</label>
                 <input type="text" id="nom" name="Nom" required></p>
@@ -134,6 +166,7 @@
                     <option value="Demande d'informations">Demande d'informations</option>
                     <option value="Inscription à un cours">Inscription à un cours</option>
                     <option value="Chorégraphie de mariage">Chorégraphie de mariage</option>
+                    <option value="Réservation de la salle">Réservation de la salle</option>
                     <option value="Partenariat ou projet artistique">Partenariat ou projet artistique</option>
                     <option value="Autre">Autre</option>
                 </select></p>
@@ -143,13 +176,12 @@
 
                 <input type="text" name="_gotcha" style="display:none">
             
-                <button type="submit">Envoyer</button>
-            </div>
+                <button type="submit" id="send">Envoyer</button>
                 </form>
                 <div id="form-response" class="col-sm-6"></div>
             </section>
 
-            <div class="row container-flex justify-content-center" id="logo">
+            <div class="row container-flex justify-content-end pe-4" id="logo">
                 <img src="/static/logo.png" alt="logo hello-rythme ecole de danse">
             </div>
             </main>

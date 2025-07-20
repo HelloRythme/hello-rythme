@@ -21,3 +21,18 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       responseDiv.textContent = "Une erreur est survenue, veuillez réessayer. Si cela ne fonctionne pas, vous pouvez m'écrire directement à: contact@hellorythme-danse.fr.";
     });
   });
+
+   document.addEventListener('DOMContentLoaded', function () {
+    const checkbox = document.getElementById('acceptTerms');
+    const contactSection = document.getElementById('contact');
+
+    checkbox.addEventListener('change', function () {
+      contactSection.style.visibility = this.checked ? 'visible' : 'hidden';
+    });
+
+    document.getElementById("formulaire").addEventListener("click", function () {
+    const form = document.getElementById("contact-form");
+    form.style.display = form.style.display === "none" ? "block" : "none";
+    });
+
+  });

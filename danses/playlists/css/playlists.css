@@ -123,6 +123,7 @@ display: none;
 
 .sw h4{
     border-left: 4px solid lightBlue;
+    padding-left: 0.5em;
 }
 
 .tg{
@@ -131,6 +132,7 @@ display: none;
 
 .tg h4{
     border-left: 4px solid #D32F2F;
+    padding-left: 0.5em;
 }
 
 .vw{
@@ -139,6 +141,7 @@ display: none;
 
 .vw h4{
     border-left: 4px solid #7986CB;
+    padding-left: 0.5em;
 }
 
 .sf{
@@ -147,6 +150,7 @@ display: none;
 
 .sf h4{
     border-left: 4px solid #81C784;
+    padding-left: 0.5em;
 }
 
 .qs{
@@ -155,6 +159,7 @@ display: none;
 
 .qs h4{
     border-left: 4px solid #FBC02D;
+    padding-left: 0.5em;
 }
 
 .sb{
@@ -163,6 +168,7 @@ display: none;
 
 .sb h4{
     border-left: 4px solid #FB8C00;
+    padding-left: 0.5em;
 }
 
 .cc{
@@ -171,6 +177,7 @@ display: none;
 
 .cc h4{
     border-left: 4px solid #EC407A;
+    padding-left: 0.5em;
 }
 
 .jv{
@@ -179,6 +186,7 @@ display: none;
 
 .jv h4{
     border-left: 4px solid #26C6DA;
+    padding-left: 0.5em;
 }
 
 .rb{
@@ -187,6 +195,7 @@ display: none;
 
 .rb h4{
     border-left: 4px solid #8E24AA;
+    padding-left: 0.5em;
 }
 
 .pd{
@@ -195,9 +204,36 @@ display: none;
 
 .pd h4{
     border-left: 4px solid #E64A19;
+    padding-left: 0.5em;
 }
 
+.musique {
+  list-style: none;
+  margin-left: 3em;
+}
 
+.musique li {
+  padding-left: 1.6em;
+  position: relative;
+}
+
+.musique .bpm::before {
+  content: "🎵";
+  position: absolute;
+  left: 0;
+}
+
+.musique .mesure::before {
+  content: "⏱️";
+  position: absolute;
+  left: 0;
+}
+
+.musique .style::before {
+  content: "💃";
+  position: absolute;
+  left: 0;
+}
 
 
 
