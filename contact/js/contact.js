@@ -30,9 +30,16 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       contactSection.style.visibility = this.checked ? 'visible' : 'hidden';
     });
 
-    document.getElementById("formulaire").addEventListener("click", function () {
-    const form = document.getElementById("contact-form");
-    form.style.display = form.style.display === "none" ? "block" : "none";
+    const bouton = document.getElementById("formulaire");
+    const formulaire = document.getElementById("contact-form");
+    console.log(formulaire.style.display);
+
+    bouton.addEventListener("click", function () {
+      if (formulaire.style.display === "none" || formulaire.style.display === "") {
+        formulaire.style.display = "block";
+      } else {
+        formulaire.style.display = "none";
+      }
     });
 
   });

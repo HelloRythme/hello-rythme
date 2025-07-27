@@ -1,3 +1,7 @@
+*{
+	background-color: none !important;
+}
+
 html {
 	max-width: 100%;
 	margin: 0 0 0 0 ;
@@ -25,7 +29,7 @@ body{
 }
 
 #site{
-	width: 100%;
+	min-width: 491px;
 	max-width: 1440px;
 	margin: auto;
 }
@@ -119,11 +123,24 @@ main {
 	z-index: 1;
 }
 
-small{
-		font-size: 90%;
+.mini{
+		font-size: 50%;
 	}
+.normal{font-size: 90%;
+}
 
-h5{font-size: 110%;}
+.just{
+  text-align: justify;
+}
+
+h4{font-size: 100%;}
+h3{font-size: 105%;}
+h2{font-size: 120%;}
+
+.cat{
+	color: #463f32;
+}
+
 
 @media screen and (min-width: 491px) {
 	html {
@@ -139,7 +156,6 @@ h5{font-size: 110%;}
 	}
 	svg{top:11em;}
 	main {margin-top: 17em !important;}
-	small{font-size: 90%;}
   }
 
 @media screen and (min-width: 576px) {
@@ -154,7 +170,11 @@ h5{font-size: 110%;}
 	}
 	svg{top:5em;}
 	main {margin-top: 12em !important;}
-	small{font-size: 70%;}
+	.mini{font-size: 50%;}
+	.normal{font-size: 100%;}
+	h4{font-size: 110%;}
+	h3{font-size: 115%;}
+    h2{font-size: 125%;}
 	h5{font-size: 90%;}
   }
 
@@ -170,7 +190,8 @@ h5{font-size: 110%;}
 	}
 	svg{top:5em;}
 	main {margin-top: 12.7em !important;}
-	small{font-size: 70%;}
+	.mini{font-size: 60%;}
+	.normal{font-size: 100%;}
 	h5{font-size: 90%;}
   }
 
@@ -187,7 +208,8 @@ h5{font-size: 110%;}
 	}
 	svg{top:4em;}
 	main {margin-top: 13.1em !important;}
-	small{font-size: 60%;}
+	.mini{font-size: 60%;}
+	.normal{font-size: 100%;}
 	h5{font-size: 85%;}
   }
 
@@ -199,7 +221,8 @@ h5{font-size: 110%;}
 		letter-spacing: 18pt;
 	}
 	main {margin-top: 14.5em !important;}
-	small{font-size: 70%;}
+	.mini{font-size: 70%;}
+	.normal{font-size: 100%;}
 	h5{font-size: 90%;}
   }
 
@@ -211,13 +234,13 @@ h5{font-size: 110%;}
 		letter-spacing: 18pt;
 	}
 	main {margin-top: 15.8em !important;}
-	small{font-size: 60%;}
+	.mini{font-size: 60%;}
 	h5{font-size: 80%;}
   }
 
   @media screen and (min-width: 1099px) {
 	main {margin-top: 17.6em !important;}
-	small{font-size: 65%;}
+	.mini{font-size: 65%;}
 	h5{font-size: 90%;}
   }
 
@@ -227,14 +250,14 @@ h5{font-size: 110%;}
 		letter-spacing: 20pt;
 	}
 	main {margin-top: 18.8em !important;}
-	small{font-size: 70%;}
+	.mini{font-size: 70%;}
 	h5{font-size: 100%;}
   }
 
   @media screen and (min-width: 1300px) {
 
 	main {margin-top: 20.3em !important;}
-	small{font-size: 80%;}
+	.mini{font-size: 80%;}
 	h5{font-size: 105%;}
   }
 
@@ -281,8 +304,8 @@ a:hover{
 }
 
 a:focus {
-	outline: 0.1px dotted #C2B7AD; 
-	outline-offset: 0.1px;
+	outline: 0.1px dotted (247, 239, 229); 
+	outline-offset: 0.01px;
   }
 
 h1, h3 {
@@ -290,7 +313,6 @@ h1, h3 {
 }
 
 h2 {
-	font-size: 1.8em;
 	font-weight: bold;
 	color: #463f32;
 	border-bottom: 2px solid #C2B7AD;
@@ -299,7 +321,6 @@ h2 {
   }
   
   h3 {
-	font-size: 1.1em;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #463f32;
@@ -307,7 +328,6 @@ h2 {
   }
 
   h4 {
-  font-size: 1em;
   font-weight: normal;
   color: #6e6253;
   margin-top: 0.5em;
@@ -318,19 +338,20 @@ h2 {
 
 .bouton-site {
 	background-color: #C2B7AD;
-	color: #463f32;
-	border: 0.5px solid #463f32;
+	color: white;
 	border-radius: 8px;
 	padding: 10px 20px;
 	font-size: 16px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: background-color 0.3s, color 0.3s;
+	border: none;
   }
   
 .bouton-site:hover {
 	background-color: #463f32;
 	color: #C2B7AD;
+	font-weight: bold;
   }
 
   .text-container{
@@ -377,6 +398,13 @@ h2 {
 	min-width: 5em;
 	width: 10%;
 }
+
+.mini{
+	font-size: 60%;
+}
+
+
+
 
 
 

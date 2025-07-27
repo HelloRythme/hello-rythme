@@ -94,8 +94,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="/js/include.js" defer></script>
-    <script src="js/video.js" defer></script>
+    <script type="module" src="js/video.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     
 
 </head>
@@ -115,48 +116,48 @@
             <div id="titre-page"><h1>Les danses de salon au cinéma</h1></div>
 
             <section id="intro" class="row container-flex text-container justify-content-justify align-items-center p-2">
-                <p>Tu aimes le cinéma? Moi aussi! Surtout les comédies romantiques. Mais des scènes de danse de salon, on en retrouve très souvent, et dans tous les types de films : comédies musicales, films d'actions, drames... Parfois elles constituent la trame de l'intrigue, ou alors elles apparaissent seulement dans une scène ponctuelle. Regarder ces extraits te permettra de percevoir comment chaque type de musique convoque un imaginaire collectif particulier. De plus, contrairement à la <a href="/danses.html">danse sportive professionnelle</a>, les chorégraphies et musiques utilisées au cinéma ne sont pas codifiées et les réalisateurs s’inspirent très librement des danses de salon en les adaptant à l’esthétique du film. Cela peut te donner des idées! Mais si tu préfères laisser aller ton imagination sur la musique, tu peux aussi simplement écouter mes <a href="/danses/playlists">playlists</a>.</p>    
+                <p class="normal">Tu aimes le cinéma? Moi aussi! Surtout les comédies romantiques. Mais des scènes de danse de salon, on en retrouve très souvent, et dans tous les types de films : comédies musicales, films d'actions, drames... Parfois elles constituent la trame de l'intrigue, ou alors elles apparaissent seulement dans une scène ponctuelle. Regarder ces extraits te permettra de percevoir comment chaque type de musique convoque un imaginaire collectif particulier. De plus, contrairement à la <a href="/danses.html">danse sportive professionnelle</a>, les chorégraphies et musiques utilisées au cinéma ne sont pas codifiées et les réalisateurs s’inspirent très librement des danses de salon en les adaptant à l’esthétique du film. Cela peut te donner des idées! Mais si tu préfères laisser aller ton imagination sur la musique, tu peux aussi simplement écouter mes <a href="/danses/playlists">playlists</a>.</p>    
             </section>
 
-            <section class="row container-flex text-container" id="sommaire">
-                <span>Tu trouveras sur cette page:</span>
+            <section class="row container-flex text-container" id="sommaire" class="normal">
+                <span class="normal">Tu trouveras sur cette page:</span><br>
                 <div class="plan dropdown d-flex">
-                <a href="#palmares">Les palmarès</a>
+                <a class="normal" href="#palmares">Les palmarès</a>
                     <div class="dropdown-container">
                         <ul class="d-flex">
-                            <li ><a href="#frequence">- Fréquence dans les films</a></li>
-                            <li ><a href="#votes">- Vos vidéos préférées</a></li>
+                            <li ><a class="normal" href="#frequence">- Fréquence dans les films</a></li>
+                            <li ><a class="normal"  href="#votes">- Vos vidéos préférées</a></li>
                         </ul>
                     </div>
                 </div>
-                <a class="plan" href="#films_danse">Films de danse</a>
-                <div class="plan dropdown d-flex">
-                    <a href="#danses_standards">Danses standards</a>
+                <a class="plan normal" href="#films_danse">Films de danse</a>
+                <div class="dropdown d-flex">
+                    <a class="plan normal" href="#danses_standards">Danses standards</a>
                     <div class="dropdown-container list-danses">
                         <ul class="d-flex">
-                            <li ><a href="#valse_lente"> - Valse lente</a></li>
-                            <li ><a href="#tango"> - Tango</a></li>
-                            <li ><a href="#valse_viennoise"> - Valse viennoise</a></li>
-                            <li ><a href="#slow_foxtrot"> - Slow Foxtrot</a></li>
-                            <li ><a href="#quickstep"> - Quickstep</a></li>       
+                            <li ><a class="normal" href="#valse_lente"> - Valse lente</a></li>
+                            <li ><a class="normal" href="#tango"> - Tango</a></li>
+                            <li ><a class="normal" href="#valse_viennoise"> - Valse viennoise</a></li>
+                            <li ><a class="normal" href="#slow_foxtrot"> - Slow Foxtrot</a></li>
+                            <li ><a class="normal" href="#quickstep"> - Quickstep</a></li>       
                         </ul>
                     </div>
                 </div>
 
-                <div class="plan dropdown d-flex">
-                    <a href="#danses_latines" class="dropdown">Danses latines</a>
+                <div class="dropdown d-flex">
+                    <a class="plan normal" href="#danses_latines" class="dropdown">Danses latines</a>
                     <div class="dropdown-container">
                         <ul class="d-flex">
-                            <li ><a href="#cha_cha"> - Cha-cha-cha</a></li>
-                            <li ><a href="#samba"> - Samba</a></li>
-                            <li ><a href="#rumba"> - Rumba</a></li>
-                            <li ><a href="#paso_doble"> - Paso Doble</a></li>
-                            <li ><a href="#jive"> - Jive</a></li> 
+                            <li ><a class="normal" href="#cha_cha"> - Cha-cha-cha</a></li>
+                            <li ><a class="normal" href="#samba"> - Samba</a></li>
+                            <li ><a class="normal" href="#rumba"> - Rumba</a></li>
+                            <li ><a class="normal" href="#paso_doble"> - Paso Doble</a></li>
+                            <li ><a class="normal" href="#jive"> - Jive</a></li> 
                         </ul>      
                     </div>
                 </div>
 
-                <a  class="plan" href="#autres_danses">Autres styles de danses</a>
+                <a  class="plan normal" href="#autres_danses">Autres styles de danses</a>
 
 
             </section>
@@ -171,7 +172,7 @@
                     <div class="podium d-flex justify-content-center flex-column flex-sm-row container-flex m-auto align-items-center align-items-sm-end">
                         <div class="podium2 order-2 order-sm-1">
                             <div class="haut-podium">
-                                <a href="#podium_tango"><img class="img-podium" src="/static/Tango.png"/><br>Tango</a>
+                                <a href="#podium_tango"><img class="img-podium" src="/static/Tango.png"/></p><p class="normal">Tango</a>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">2</span>
@@ -179,7 +180,7 @@
                         </div>
                         <div class="podium1 order-1 order-sm-2">
                             <div class="haut-podium">
-                                <a href="#podium_valses"><img class="img-podium" src="/static/Valse.png"/><br>Valse</a>
+                                <a href="#podium_valses"><img class="img-podium" src="/static/Valse.png"/></p><p class="normal">Valse</a>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">1</span>
@@ -187,7 +188,7 @@
                         </div>
                         <div class="podium3 order-3 order-sm-3">
                             <div class="haut-podium">
-                                <a href="#podium_paso"><img class="img-podium" src="/static/PasoDoble.png"/><br>Paso-doble</a>
+                                <a href="#podium_paso"><img class="img-podium" src="/static/PasoDoble.png"/></p><p class="normal">Paso-doble</a>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">3</span>
@@ -199,8 +200,8 @@
                         <div class="col-12 col-md-1 d-flex align-items-center"><img class="img-podium" src="/static/Valse.png"/>
                         </div>
                         <div class="col-12 col-md-11 ps-2" >
-                            <p id="podium_valses">
-                        La <strong>valse viennoise</strong> est la grande gagnante de ce palmarès au cinéma. Et c'est facile à comprendre! Tu vois de la valse viennoise dans toutes les scènes de bals des films historiques et dans les scènes de mariage. Son mouvement tournoyant et fluide permet de créer d'impressionnants effets à l’écran. C’est la danse qui fait rêver, celle des princesses de contes de fées, avec son rythme enivrant. Tu peux en regarder quelques extraits <a href="#valse_viennoise">ici</a>.<br> On peut lui associer la <strong>valse lente</strong>, ou anglaise, (à voir <a href="#valse_lente">ici</a>), plus douce, aussi présente dans les scènes de mariage, avec une touche plus intimiste; son rythme plus lent permet de plus grandes libertés chorégraphiques. Si tu cherches une danse qui en mette plein les yeux tout en gardant une touche de tendresse, une des deux valses est un choix sûr, chic et intemporel.
+                            <p id="podium_valses" class="normal">
+                        La <strong>valse viennoise</strong> est la grande gagnante de ce palmarès au cinéma. Et c'est facile à comprendre! Tu vois de la valse viennoise dans toutes les scènes de bals des films historiques et dans les scènes de mariage. Son mouvement tournoyant et fluide permet de créer d'impressionnants effets à l’écran. C’est la danse qui fait rêver, celle des princesses de contes de fées, avec son rythme enivrant. Tu peux en regarder quelques extraits <a href="#valse_viennoise">ici</a>.</p><p class="normal"> On peut lui associer la <strong>valse lente</strong>, ou anglaise, (à voir <a href="#valse_lente">ici</a>), plus douce, aussi présente dans les scènes de mariage, avec une touche plus intimiste; son rythme plus lent permet de plus grandes libertés chorégraphiques. Si tu cherches une danse qui en mette plein les yeux tout en gardant une touche de tendresse, une des deux valses est un choix sûr, chic et intemporel.
                             </p>
                         </div>
                     </div>
@@ -208,7 +209,7 @@
                         <div class="col-12 col-md-1 d-flex align-items-center"><img class="img-podium" src="/static/Tango.png"/>
                         </div>
                         <div class="col-12 col-md-11 ps-2">
-                        <p id="podium_tango">
+                        <p id="podium_tango" class="normal">
                         Les valses sont suivies de près, dans ce palmarès, par le <a href="#tango">tango</a>, qui est aussi très souvent représenté dans les films. Dès les premières notes, il capte l’attention par son rythme et son aspect théâtral. Même s'il est dansé en public, ce qui est le plus souvent le cas, le tango focalise le regard sur un couple chargé d’intensité et de tension dramatique. Il jouit d'une immense popularité, reconnaissable instantanément tant par sa musique que par l’élégance de ses figures emblématiques. Si tu veux une ouverture de bal entraînante, qui surprend et émeut, le tango a tout pour plaire.
                         </p>
                         </div>
@@ -218,24 +219,24 @@
                         <div class="col-12 col-md-1 d-flex align-items-center"><img class="img-podium" src="/static/PasoDoble.png"/>
                         </div>
                         <div class="col-12 col-md-11 ps-2" >
-                        <p id="podium_paso">
+                        <p id="podium_paso" class="normal">
                         Et en troisième position: le <a href="#paso_doble">paso doble</a>. Seule danse latine de ce palmarès, le paso doble apparaît souvent au cinéma parce qu’il crée immédiatement le spectacle. Inspiré de la corrida, il met en scène un duo souvent comparé à un torero et sa cape. Avec ses pas marqués, ses postures fières et sa musique intense et entraînante, il capte l’attention dès les premières secondes. Original, peu attendu, mais incroyablement expressif, c'est le choix idéal si tu veux oser quelque chose de différent et spectaculaire.
                         </p>
                         </div>
                     </div>
-                    <div id="" class="row text-container"><p></p>Aucune de ces trois-là ne te tente? Pas de souci! Que ce soit pour ton mariage ou juste pour apprendre, toutes les danses sont aussi intéressantes les unes que les autres. Ici, ce n'est que du cinéma...</p></div>
+                    <div id="" class="row text-container"><p class="normal"></p>Aucune de ces trois-là ne te tente? Pas de souci! Que ce soit pour ton mariage ou juste pour apprendre, toutes les danses sont aussi intéressantes les unes que les autres. Ici, ce n'est que du cinéma...</p></div>
                 </section>
 
                 <section id="votes" class="row container-flex justify-content-center align-items-center p-2">
                     <h3>Vos vidéos préférées</h3>
 
                     <div class="row p-2 text-container">
-                        <p>Tu aimes une vidéo de cette page? Clique sur le coeur qui lui correspond pour participer à la composition de ce palmarès! </p></div>
+                        <p class="normal">Tu aimes une vidéo de cette page? Clique sur le coeur qui lui correspond pour participer à la composition de ce palmarès! </p></div>
 
                     <div class="podium d-flex justify-content-center flex-column flex-sm-row container-flex m-auto align-items-center align-items-sm-end">
                         <div class="podium2 order-2 order-sm-1">
                             <div class="haut-podium">
-                                <div><a id="podium1" href=""><p id="podium1-text"></p><img id="podium1-img" src="" class="video-podium"></a></div>
+                                <div><a id="podium1" href=""><p id="podium1-text" class="normal"></p><img id="podium1-img" src="" class="video-podium"></a></div>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">2</span>
@@ -243,7 +244,7 @@
                         </div>
                         <div class="podium1 order-1 order-sm-2">
                             <div class="haut-podium">
-                                <div><a id="podium0" href=""><p id="podium0-text"></p><img id="podium0-img" src="" class="video-podium"></a></div>
+                                <div><a id="podium0" href=""><p id="podium0-text" class="normal"></p><img id="podium0-img" src="" class="video-podium"></a></div>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">1</span>
@@ -251,7 +252,7 @@
                         </div>
                         <div class="podium3 order-3 order-sm-3">
                             <div class="haut-podium">
-                                <div><a id="podium2" href=""><p id="podium2-text"></p><img id="podium2-img" src="" class="video-podium"></a></div>
+                                <div><a id="podium2" href=""><p id="podium2-text" class="normal"></p><img id="podium2-img" src="" class="video-podium"></a></div>
                             </div>
                             <div class="bas-podium">
                                 <span class="place">3</span>
@@ -267,7 +268,7 @@
                 <h2>Les films de danse</h2>
 
                 
-                    <p>Voici quelques films de cinéma dont l'intrigue tourne principalement autour des danses de salon. Passe ta souris sur l'affiche si tu veux en savoir plus sur un film. Sans surprise, nous les retrouvons parfois avec plusieurs extraits de danses plus bas sur cette page.</p>
+                    <p class="normal">Voici quelques films de cinéma dont l'intrigue tourne principalement autour des danses de salon. Passe ta souris sur l'affiche si tu veux en savoir plus sur un film. Sans surprise, nous les retrouvons parfois avec plusieurs extraits de danses plus bas sur cette page.</p>
                 </div>
 
                 <div class="row container-flex d-flex justify-content-center align-items-center">
@@ -282,7 +283,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=126.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Le Bal (1983)</span><br>
+                                            <span class="titre-affiche">Le Bal (1983)</span></p><p class="normal">
                                             <span class="real-affiche">Ettore Scola</span>
                                             <p class="texte-affiche">Ce film retrace 50 ans d'histoire française à travers les danses de salon dans une salle de bal parisienne, sans dialogues, mettant en avant les évolutions sociales et culturelles.</p>
                                         </a>
@@ -291,8 +292,8 @@
                             </div>
                         </div>
                         <div class="row container-flex d-flex justify-content-center align-items-start">
-                            <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto "><small>A retrouver sur cette page avec un <a href="#le_bal_tango" data-id="le_bal_tango" onclick = "jaune(this);">tango</a>.</small></p>
+                            <div class="p-2 d-flex lien-film justify-content-center">
+                                <p class="mx-auto"><span class="mini">A retrouver sur cette page avec un <a href="#le_bal_tango" data-id="le_bal_tango" onclick = "jaune(this);">tango</a>.</span></p>
                             </div>
                         </div>
                     </section>
@@ -307,7 +308,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=7654.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Strictly Ballroom (1992)<br>"Ballroom dancing"</span><br>
+                                            <span class="titre-affiche">Strictly Ballroom (1992)</p><p class="normal">"Ballroom dancing"</span></p><p class="normal">
                                                 <span class="real-affiche">Baz Luhrmann</span>
                                             <p class="texte-affiche">Scott, danseur de salon talentueux mais rebelle, défie les règles strictes des compétitions en créant ses propres chorégraphies. Il s'associe à Fran, une débutante, pour concourir au prestigieux Pan-Pacific.</p>
                                         </a>
@@ -317,7 +318,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto"><small>A retrouver sur cette page avec un <a href="#strictly_ballroom_paso_doble" data-id="strictly_ballroom_paso_doble" onclick = "jaune(this);">paso doble</a>.</small></p>                               
+                                <p class="mx-auto"><span class="mini">A retrouver sur cette page avec un <a href="#strictly_ballroom_paso_doble" data-id="strictly_ballroom_paso_doble" onclick = "jaune(this);">paso doble</a>.</p></p>                               
                             </div>  
                         </div>  
                     </section>
@@ -332,7 +333,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=20302.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Dance with me (1999)<br>"Danse Passion"</span><br>
+                                            <span class="titre-affiche">Dance with me (1999)</p><p class="normal">"Danse Passion"</span></p><p class="normal">
                                             <span class="real-affiche">Randa Haines</span>
                                             <p class="texte-affiche">Rafael, un jeune Cubain, rejoint un studio de danse à Houston et y rencontre Ruby, une danseuse talentueuse mais distante. Tandis qu'ils se préparent pour une grande compétition à Las Vegas, leur relation se développe entre passion et retenue. Rafael découvre peu à peu son lien familial avec le directeur du studio. </p>
                                         </a>
@@ -342,7 +343,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto"><small>A retrouver sur cette page avec une <a href="#dance_with_me_samba" data-id="dance_with_me_samba" onclick = "jaune(this);">samba</a> et une <a href="#dance_with_me_rumba" data-id="dance_with_me_rumba" onclick = "jaune(this);">rumba</a></small></p>
+                                <p class="mx-auto"><span class="mini">A retrouver sur cette page avec une <a href="#dance_with_me_samba" data-id="dance_with_me_samba" onclick = "jaune(this);">samba</a> et une <a href="#dance_with_me_rumba" data-id="dance_with_me_rumba" onclick = "jaune(this);">rumba</a></p></p>
                             </div>
                         </div>
                     </section>
@@ -357,7 +358,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=51895.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Shall we dance? (2004)<br>"La nouvelle vie de Mr. Clarck"</span><br>
+                                            <span class="titre-affiche">Shall we dance? (2004)</p><p class="normal">"La nouvelle vie de Mr. Clarck"</span></p><p class="normal">
                                             <span class="real-affiche">Peter Chelsom</span>
                                             <p class="texte-affiche">John Clark, un avocat dévoué mais ennuyé par la routine, s'inscrit en secret à des cours de danse après avoir été fasciné par une professeure mélancolique aperçue à la fenêtre d'un studio.</p>
                                         </a>
@@ -367,7 +368,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto"><small>A retrouver sur cette page avec deux <a href="#shall_we_dance_valse_lente" data-id="shall_we_dance_valse_lente" onclick = "jaune(this);">valses lentes</a>, un <a href="#shall_we_dance_tango" data-id="shall_we_dance_tango" onclick = "jaune(this);">tango</a>, un <a href="#shall_we_dance_quickstep" data-id="shall_we_dance_quickstep" onclick = "jaune(this);">quickstep</a>, un <a href="#shall_we_dance_cha_cha" data-id="shall_we_dance_cha_cha" onclick = "jaune(this);">cha-cha-cha</a> et un <a href="#shall_we_dance_paso_doble" data-id="shall_we_dance_paso_doble" onclick = "jaune(this);">paso doble</a>.</small></p>
+                                <p class="mx-auto"><span class="mini">A retrouver sur cette page avec deux <a href="#shall_we_dance_valse_lente" data-id="shall_we_dance_valse_lente" onclick = "jaune(this);">valses lentes</a>, un <a href="#shall_we_dance_tango" data-id="shall_we_dance_tango" onclick = "jaune(this);">tango</a>, un <a href="#shall_we_dance_quickstep" data-id="shall_we_dance_quickstep" onclick = "jaune(this);">quickstep</a>, un <a href="#shall_we_dance_cha_cha" data-id="shall_we_dance_cha_cha" onclick = "jaune(this);">cha-cha-cha</a> et un <a href="#shall_we_dance_paso_doble" data-id="shall_we_dance_paso_doble" onclick = "jaune(this);">paso doble</a>.</p></p>
                             </div>
                         </div>
                     </section>
@@ -382,7 +383,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=66517.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</span><br>
+                                            <span class="titre-affiche">Marilyn Hotchkiss' Ballroom Dancing & Charm School (2005)</span></p><p class="normal">
                                             <span class="real-affiche">Randall Miller</span>
                                             <p class="texte-affiche">Frank, veuf, assiste à un cours de danse de salon pour honorer la promesse faite à un mourant. Ce geste l'amène à une transformation personnelle inattendue.</p>
                                         </a>
@@ -392,7 +393,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">  
-                                <p class="mx-auto"><small>A retrouver sur cette page avec deux <a href="#marilyn_hotchkiss_jive" data-id="marilyn_hotchkiss_jive" onclick = "jaune(this);">jive</a>.</small></p>
+                                <p class="mx-auto"><span class="mini">A retrouver sur cette page avec deux <a href="#marilyn_hotchkiss_jive" data-id="marilyn_hotchkiss_jive" onclick = "jaune(this);">jive</a>.</p></p>
                             </div>                           
                         </div>
                     </section>
@@ -407,7 +408,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=59573.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Take the Lead (2006)<br>"Dance with me"</span><br>
+                                            <span class="titre-affiche">Take the Lead (2006)</p><p class="normal">"Dance with me"</span></p><p class="normal">
                                             <span class="real-affiche">Liz Friedlander</span>
                                             <p class="texte-affiche">Inspiré de l'histoire vraie de Pierre Dulaine, un professeur de danse qui enseigne la danse de salon à des lycéens en difficulté, leur offrant une nouvelle perspective sur la vie.</p>
                                         </a>
@@ -417,7 +418,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto"><small>A retrouver sur cette page avec deux <a href="#take_the_lead_tango" data-id="take_the_lead_tango" onclick = "jaune(this);">tangos</a>.</small></p>
+                                <p class="mx-auto"><span class="mini">A retrouver sur cette page avec deux <a href="#take_the_lead_tango" data-id="take_the_lead_tango" onclick = "jaune(this);">tangos</a>.</p></p>
                             </div>
                         </div>
                     </section>
@@ -432,7 +433,7 @@
                                 <div class="justify-content-center flip-card-back">
                                     <div class="m-auto p-2">
                                         <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=280743.html" title="Voir les détails sur Allociné" target="_blank">
-                                            <span class="titre-affiche">Rumba la vie (2022)</span><br>
+                                            <span class="titre-affiche">Rumba la vie (2022)</span></p><p class="normal">
                                             <span class="real-affiche">Franck Dubosc</span>
                                             <p class="texte-affiche">Tony, un chauffeur de bus solitaire, reprend contact avec sa fille qu’il n’a jamais connue, professeure de danse. Pour se rapprocher d’elle, il s’inscrit incognito à ses cours de rumba.</p>
                                         </a>
@@ -442,7 +443,7 @@
                         </div>
                         <div class="row container-flex justify-content-center">
                             <div class="p-2 d-flex lien-film">
-                                <p class="mx-auto"><small>A retrouver en ligne avec une <a href="https://youtu.be/QMvcNTyyZRE?list=RDQMvcNTyyZRE&start=164" target="_blank">rumba</a>.</small></p>
+                                <p class="mx-auto"><span class="mini">A retrouver en ligne avec une <a href="https://youtu.be/QMvcNTyyZRE?list=RDQMvcNTyyZRE&start=164" target="_blank">rumba</a>.</p></p>
                             </div>
                         </div>
                     </section>
@@ -809,7 +810,7 @@
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
                         <div class="row container-flex media-container m-auto" id="vid28" data-danse="Valse viennoise" data-titre="The Great Race" data-id="7lYC5HVBt-Y">
                             <button class="vote-btn" title="0">❤️</button>
-                            <p class="danseurs"><br></p>
+                            <p class="danseurs"></p><p class="normal"></p>
                             <div class="video-wrapper" data-id="7lYC5HVBt-Y" data-start="07">
                                 <div class="video-thumbnail" onclick="loadVideo(this)">
                                     <img src="https://img.youtube.com/vi/7lYC5HVBt-Y/hqdefault.jpg" alt="Miniature YouTube">
@@ -865,7 +866,7 @@
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film">
                         <div class="row container-flex media-container container-flex m-auto" id="vid23" data-danse="Valse viennoise" data-titre="Beauty and the Beast" data-id="lZSVwwEO7vA">
                             <button class="vote-btn" title="0">❤️</button>
-                            <p class="danseurs"><br></p>
+                            <p class="danseurs"></p><p class="normal"></p>
                             <div class="video-wrapper" data-id="lZSVwwEO7vA" data-start="67">
                                     <div class="video-thumbnail" onclick="loadVideo(this)">
                                         <img src="https://img.youtube.com/vi/lZSVwwEO7vA/hqdefault.jpg" alt="Miniature YouTube">
@@ -1038,7 +1039,7 @@
                     <div id="dance_with_me_samba" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 container-flex justify-content-center mb-0 py-0 film dance_with_me_samba">
                         <div class="row container-flex media-container m-auto" title="Dance with me (1997)" id="vid35" data-danse="Samba" data-titre="Dance with me" data-id="sL8JyukCc4Y">
                             <button class="vote-btn" title="0">❤️</button>
-                            <p class="danseurs"><br></p>
+                            <p class="danseurs"></p><p class="normal"></p>
                             <div class="video-wrapper" data-id="sL8JyukCc4Y" data-start="47">
                                 <div class="video-thumbnail" onclick="loadVideo(this)">
                                     <img src="https://img.youtube.com/vi/sL8JyukCc4Y/hqdefault.jpg" alt="Miniature YouTube">
@@ -1206,7 +1207,7 @@
                 
                 <div class="intro text-container">
                     <h2>Autres danses</h2>
-                    <p>Et voici quelques extraits d'autres types de danse de salon plus ou moins proches des danses sportives.</p>
+                    <p class="normal">Et voici quelques extraits d'autres types de danse de salon plus ou moins proches des danses sportives.</p>
                 </div>
 
                 <div class="row container-flex d-flex justify-content-around p-2">  
@@ -1246,7 +1247,7 @@
 
                         <div class="row media-container container-flex m-auto" id="vid49" data-danse="Lindy Hop" data-titre="Swing Kids" data-id="2IkdHWFIDPc">
                             <button class="vote-btn" title="0">❤️</button>
-                            <p class="danseurs"><br></p>
+                            <p class="danseurs"></p><p class="normal"></p>
                             <div class="video-wrapper  autres-danses" data-id="2IkdHWFIDPc" data-start="18">
                                     <div class="video-thumbnail" onclick="loadVideo(this)">
                                         <img src="https://img.youtube.com/vi/2IkdHWFIDPc/hqdefault.jpg" alt="Miniature YouTube">
@@ -1306,7 +1307,7 @@
                 </section> 
             </section>
 
-            <div class="row text-container container-flex mt-4"><small>Toutes les images et vidéos présentées sur cette page restent la propriété exclusive de leurs auteurs, ayants droit ou studios respectifs. Elles sont utilisées ici à des fins culturelles, pédagogiques et informatives, dans le cadre de l'illustration de l'usage des danses de couple au cinéma. Si vous êtes titulaire de droits et souhaitez faire modifier ou retirer un contenu, vous pouvez nous contacter à l'adresse suivante : contact@hellorythme-danse.fr.</small></div>
+            <div class="row text-container container-flex mt-4"><p class="mini">Toutes les images et vidéos présentées sur cette page restent la propriété exclusive de leurs auteurs, ayants droit ou studios respectifs. Elles sont utilisées ici à des fins culturelles, pédagogiques et informatives, dans le cadre de l'illustration de l'usage des danses de couple au cinéma. Si vous êtes titulaire de droits et souhaitez faire modifier ou retirer un contenu, vous pouvez nous contacter à l'adresse suivante : contact@hellorythme-danse.fr.</p></div>
 
             <div class="row container-flex justify-content-end pe-4" id="logo">
                 <img src="/static/logo.png" alt="logo hello-rythme ecole de danse">

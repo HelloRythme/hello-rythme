@@ -24,7 +24,10 @@
   padding: 1em 1em 1em 1em;
   font-size: 0.95rem;
   color: #463f32;
-  justify-content: justify;
+}
+
+.faq.answer p{
+  text-align: justify;
 }
 
 .faq-question .arrow {
@@ -34,3 +37,5 @@
 .faq-question.active .arrow {
   transform: rotate(90deg);
 }
+
+

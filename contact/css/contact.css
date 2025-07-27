@@ -8,7 +8,11 @@ form {
   }
 
   textarea{
-    width: 80%;
+    width: 100%;
+  }
+
+select, option, input{
+font-size: 90%;
   }
 
   #send {
@@ -31,7 +35,7 @@ form {
 
   #contact-form{
     display: none;
-    margin-auto;
+    margin:auto;
   }
 
 
@@ -69,7 +73,12 @@ i{
 }
 
 .lien{
-  
+  cursor: pointer;
+  color: #463f32;
+}
+
+.lien:hover{
+  font-weight: bold;
 }
 
 

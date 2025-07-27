@@ -115,10 +115,10 @@
             <div id="titre-page"><h1>Contact</h1></div>
                 
                 <section id="intro" class="row container-flex text-container justify-content-justify align-items-center p-2">
-                    <p>N’hésitez pas à me contacter pour toute question ou demande liée à mes cours, événements ou services de chorégraphie de mariage, ou pour vos remarques concernant ce site.</p>
+                    <p class="normal">N’hésitez pas à me contacter pour toute question ou demande liée à mes cours, événements ou services de chorégraphie de mariage, ou pour vos remarques concernant ce site.</p>
                     <div class="form-check d-flex">
                         <input class="form-check-input" type="checkbox" id="acceptTerms">
-                        <label class="form-check-label ms-2" for="acceptTerms">
+                        <label class="form-check-label ms-2 normal" for="acceptTerms">
                         En prenant contact, je certifie avoir pris connaissance du <a href="/concept">fonctionnement et des valeurs de l’école</a>, en ce qui concerne le cadre des cours et la charte de respect mutuel.
                         </label>
                     </div>
@@ -141,26 +141,28 @@
                     <a href="mailto:contact@hellorythme-danse.fr" class="" title="Email">contact@hellorythme-danse.fr</a>
                 </div>
 
-                <div class="contact-icons d-flex gap-3 mt-3">
+                <div id="formulaire" class="contact-icons d-flex gap-3 mt-3 align-items-center">
                     <div class="icon-circle text-white">
-                    <i class="fas fa-keyboard"></i>
+                        <i class="fas fa-keyboard"></i>
                     </div>
-                    <div>
-                    <p class="lien" id="formulaire">Afficher le formulaire de contact</p></div>
+                    <div class=""></p><p class="normal">
+                        <p class="lien">Afficher le formulaire de contact</p>
+                    </div>
                 </div>
-
-                <form id="contact-form" action="https://formspree.io/f/meokwpej" method="POST">
-                <p><label for="nom">Nom - Prénom :</label>
+                
+                <div class="row d-flex justify-content-center">
+                <form id="contact-form" class="col-12 col-md-8" action="https://formspree.io/f/meokwpej" method="POST">
+                <p class="normal"><label for="nom">Nom - Prénom :</label>
                 <input type="text" id="nom" name="Nom" required></p>
             
-                <p><label for="email">Adresse e-mail :</label>
+                <p class="normal"><label for="email">Adresse e-mail :</label>
                 <input type="email" id="email" name="Email" required></p>
 
-                <p><label for="telephone">Téléphone (facultatif) :</label>
-                <input type="tel" id="telephone" name="Téléphone" placeholder="06 12 34 56 78" pattern="[0-9\s+]{10,15}"><br>
-                <small>Ce numéro ne sera utilisé que pour vous recontacter si vous trouvez cela plus pratique que par messagerie.</small></p>
+                <p class="normal"><label for="telephone">Téléphone (facultatif) :</label>
+                <input type="tel" id="telephone" name="Téléphone" placeholder="06 12 34 56 78" pattern="[0-9\s+]{10,15}"></p><p class="normal">
+                <p class="mini">Ce numéro ne sera utilisé que pour vous recontacter si vous trouvez cela plus pratique que par messagerie.</p></p>
                 
-                <p><label for="objet">Objet de votre message :</label>
+                <p class="normal"><label for="objet">Objet de votre message :</label>
                 <select id="objet" name="Objet" required>
                     <option value="" disabled selected>Choisissez un objet</option>
                     <option value="Demande d'informations">Demande d'informations</option>
@@ -171,14 +173,15 @@
                     <option value="Autre">Autre</option>
                 </select></p>
             
-                <p><label for="message">Message :</label><br>
+                <p class="normal"><label for="message">Message :</label></p><p class="normal">
                 <textarea id="message" name="Message" rows="6" required></textarea></p>
 
                 <input type="text" name="_gotcha" style="display:none">
             
-                <button type="submit" id="send">Envoyer</button>
+                <button type="submit" class="bouton-site" id="send">Envoyer</button>
                 </form>
                 <div id="form-response" class="col-sm-6"></div>
+                </div>
             </section>
 
             <div class="row container-flex justify-content-end pe-4" id="logo">

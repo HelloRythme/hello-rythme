@@ -30,7 +30,7 @@ const quiz1Questions = [
 
     questions.forEach((question, index) => {
       const div = document.createElement('div');
-      div.className = 'question col-10 col-sm-6 col-md-5 col-lg-3 container-flex p-2';
+      div.className = 'question col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 container-flex p-2';
       div.dataset.id = question.id;
 
 
@@ -75,10 +75,13 @@ const quiz1Questions = [
   const boutonCorrection = document.createElement('button');
   boutonCorrection.id = "verify-btn-quiz1";
   boutonCorrection.innerHTML = "Vérifier mes réponses";
-  divBouton.appendChild(boutonCorrection);
+  boutonCorrection.className = "bouton-site";
+   boutonCorrection.setAttribute("onclick", "handleClick()");
+   divBouton.appendChild(boutonCorrection);
   container.appendChild(divBouton);
+ 
 
-  const resultDiv = document.getElementById('result-quiz1');
+  const resultDiv = document.getElementById('result');
     resultDiv.textContent = "";
   }
 
@@ -113,29 +116,30 @@ const quiz1Questions = [
       }
     });
 
-    const resultDiv = document.getElementById('result-quiz1');
+    const resultDiv = document.getElementById('result');
     resultDiv.textContent = `Ton score : ${score} / ${quiz1Questions.length}`;
 
-    document.getElementById('verify-btn-quiz1').innerHTML = "Réessayer";
   }
 
   // Initialiser
   shuffleArray(quiz1Questions);
   renderQuiz(quiz1Questions);
 
-  document.getElementById('verify-btn-quiz1').addEventListener('click', function() {
-    const button = this;
-    
-    if (button.textContent === "Vérifier mes réponses") {
-      verifyAnswers();
-      button.textContent = "Réessayer";
-    } else {
-      shuffleArray(quiz1Questions);
-      renderQuiz(quiz1Questions);
-      document.getElementById('result').textContent = '';
-      button.textContent = "Vérifier mes réponses";
-    }
-  });
+let modeVerification = true;
+const bouton = document.getElementById("verify-btn-quiz1");
+function handleClick() {
+  if (modeVerification) {
+    verifyAnswers();
+    bouton.textContent = "Réessayer";
+  } else {
+    shuffleArray(quiz1Questions);
+    renderQuiz(quiz1Questions);
+    document.getElementById("result").textContent = "";
+    bouton.textContent = "Vérifier mes réponses";
+  }
+  modeVerification = !modeVerification;
+}
+ 
 
 
  

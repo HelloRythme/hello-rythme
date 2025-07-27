@@ -1,3 +1,5 @@
+import { API_BASE_URL } from "/js/config_api.js";
+
 function jaune(e){
   const films = document.getElementsByClassName("film");
   for(var i = 0; i < films.length; i++){
@@ -8,15 +10,8 @@ function jaune(e){
       films_liens[i].style.backgroundColor = "yellow";
   }
 }
+window.jaune = jaune;
 
-
-function yellow(vid_id){
-  const films = document.getElementsByClassName("film");
-  for(var i = 0; i < films.length; i++){
-      films[i].style.backgroundColor = "white";
-  }
-  vid_id.parentNode.style.backgroundColor = "yellow";
-}
 
 
 function loadVideo(el) {
@@ -30,34 +25,16 @@ function loadVideo(el) {
     iframe.setAttribute("loading", "lazy");
     el.parentElement.replaceChild(iframe, el);
   }
-
+window.loadVideo = loadVideo;
 
   const heartButtons = document.querySelectorAll(".vote-btn");
 
-  const SUPABASE_URL = 'https://edipnfeqeqimtvtbglum.supabase.co'; 
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVkaXBuZmVxZXFpbXR2dGJnbHVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4MDI2NzgsImV4cCI6MjA2NzM3ODY3OH0.20XNJ061P8ln5arJJ6haVEgrn6OtZRq7DiS1BjZ2IgY'; 
-  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-  supabaseClient
-  .from("votes")
-  .select("*")
-  .order("vote_count", { ascending: false })
-  .limit(3)
-  .then(({ data }) => {
+ 
+  fetch(`${API_BASE_URL}/get-top-votes`)
+  .then((res) => res.json())
+  .then((data) => {
     if (data) {
-      data.forEach((entry, i) => {
-        const sourceDiv = document.getElementById(entry.video_id);
-        const danse = sourceDiv.dataset.danse;
-        const titre = sourceDiv.dataset.titre;
-        const URL = sourceDiv.dataset.id;
-        const targetA = document.getElementById("podium"+i);
-        const targetAtext = document.getElementById("podium"+i+"-text");
-        const targetAimg = document.getElementById("podium"+i+"-img");
-        targetAtext.innerHTML = danse +"<br>"+titre+"<br>"+entry.vote_count+" votes";
-        targetAimg.setAttribute("src", "https://img.youtube.com/vi/"+URL+"/hqdefault.jpg");
-        targetA.setAttribute("href", "#"+entry.video_id);
-        targetA.setAttribute("onclick", "yellow("+entry.video_id+");");
-      });
+      updatePodium(data);
     }
   });
 
@@ -87,12 +64,9 @@ const y = rect.top + rect.height / 2;
     const videoId = container.id ;
 
     // Afficher le score au chargement
-    supabaseClient
-      .from("votes")
-      .select("vote_count")
-      .eq("video_id", videoId)
-      .maybeSingle()
-      .then(({ data }) => {
+    fetch(`${API_BASE_URL}/get-vote-count?video_id=${videoId}`)
+  .then((res) => res.json())
+  .then((data) => {
         if (data)
         {
           btn.title = `${data.vote_count} vote(s)`;
@@ -109,36 +83,46 @@ const y = rect.top + rect.height / 2;
 
       triggerHeartAnimationFromButton(btn);
 
-      const { data, error } = await supabaseClient
-        .from("votes")
-        .select("*")
-        .eq("video_id", videoId)
-        .maybeSingle();
+      fetch(`${API_BASE_URL}/vote`, {
+      method: "POST",
+            headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ video_id: videoId })
+      })
+      .then(response => response.json())
+      .then(data => {console.log(data);
+        if (data && data.vote_count !== undefined) {
+          btn.title = `${data.vote_count} vote(s)`;
+        } 
+        if (data && data.topVotes !== undefined) {
+          updatePodium(data.topVotes);
+        }
+      })
+      .catch(error => {
+        console.error("Erreur lors du vote :", error);
+});
 
-      if (data) {
-        // update
-        const newCount = data.vote_count + 1;
-        await supabaseClient
-          .from("votes")
-          .update({ vote_count: newCount })
-          .eq("video_id", videoId);
-          btn.title = `${newCount} vote(s)`;
-      } else {
-        // insert
-        await supabaseClient
-          .from("votes")
-          .insert({ video_id: videoId, vote_count: 1 });
-          btn.title = "1 vote";
-      }
 
-      supabaseClient
-      .from("votes")
-      .select("*")
-      .order("vote_count", { ascending: false })
-      .limit(3)
-      .then(({ data }) => {
-        if (data) {
-          data.forEach((entry, i) => {
+      
+
+
+
+    });
+  }); 
+  
+  function yellow(vid_id){
+  const films = document.getElementsByClassName("film");
+  for(var i = 0; i < films.length; i++){
+      films[i].style.backgroundColor = "rgba(247, 239, 229)";
+  }
+  vid_id.parentNode.style.backgroundColor = "yellow";
+}
+window.yellow = yellow;
+
+function updatePodium(data){console.log(data);
+const sortedData = data.sort((a, b) => b.vote_count - a.vote_count);
+          sortedData.forEach((entry, i) => {console.log(entry.video_id, i);
             const sourceDiv = document.getElementById(entry.video_id);
             const danse = sourceDiv.dataset.danse;
             const titre = sourceDiv.dataset.titre;
@@ -151,15 +135,11 @@ const y = rect.top + rect.height / 2;
             targetA.setAttribute("href", "#"+entry.video_id);
             targetA.setAttribute("onclick", "yellow("+entry.video_id+");");
           });
-        }
-      });
-    
-      
 
 
 
-    });
-  });  
+
+}
 
 
   

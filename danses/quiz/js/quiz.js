@@ -50,7 +50,8 @@ shuffledNames.forEach((name, index) => {
     div.dataset.type = 'name';
   
     // Créer un élément pour le nom
-    const title = document.createElement('h5');
+    const title = document.createElement('p');
+    title.className = "card-name";
     title.textContent = name.name;
     div.appendChild(title);
   
@@ -107,7 +108,7 @@ shuffledNames.forEach((name, index) => {
       firstCard = card;
       firstCardType = cardType;
       card.classList.add('selected');
-      card.style.backgroundColor = '#e0e0e0'; // gris clair temporaire
+      card.style.backgroundColor = '#C2B7AD'; // gris clair temporaire
     } else if (firstCard === card) {
       // Même carte → on déselectionne
       firstCard.style.backgroundColor = 'white';
@@ -125,7 +126,7 @@ shuffledNames.forEach((name, index) => {
   
           const color = colors[matchCount % colors.length]; // choisir une couleur parmi la liste
           matchCount++;
-  
+
           firstCard.style.backgroundColor = color;
           card.style.backgroundColor = color;
   
@@ -185,7 +186,7 @@ shuffledNames.forEach((name, index) => {
         firstCard = card;
         firstCardType = cardType;
         card.classList.add('selected');
-        card.style.backgroundColor = '#e0e0e0';
+        card.style.backgroundColor = '#C2B7AD';
       }
     }
   }
@@ -194,6 +195,7 @@ shuffledNames.forEach((name, index) => {
   renderQuiz();
 
   function resetQuiz() {
+    matchCount = 0;
     selectedPairs = {};
     matchedIds.clear();
     renderQuiz();
