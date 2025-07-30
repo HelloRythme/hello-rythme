@@ -164,11 +164,11 @@ svg{
 }
 
 #solo{
-    background-image: url('static/cours.jpg');
+    background-image: url('./static/cours.jpg');
 }
 
 #couple{
-    background-image: url('static/team-building.jpg');
+    background-image: url('./static/team-building.jpg');
 }
 
 #conditions{
