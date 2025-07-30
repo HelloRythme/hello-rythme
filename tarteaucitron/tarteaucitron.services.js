@@ -2718,7 +2718,7 @@ tarteaucitron.services.dailymotion = {
             if (embed_type === undefined || !['video', 'playlist'].includes(embed_type)) {
                 embed_type = "video";
             }
-            video_frame = '<iframe title="' + frame_title + '" src=".//www.dailymotion.com/embed/' + embed_type + '/' + video_id + '?' + params + '" style="' + styleAttr + '" ' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
+            video_frame = '<iframe title="' + frame_title + '" src="/www.dailymotion.com/embed/' + embed_type + '/' + video_id + '?' + params + '" style="' + styleAttr + '" ' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
             return video_frame;
         });
     },
@@ -2872,7 +2872,7 @@ tarteaucitron.services.deezer = {
                 tracklist = "true";
             }
             params = 'tracklist=' + tracklist + '&radius=' + radius;
-            deezer_frame = '<iframe title="' + frame_title + '" src=".//widget.deezer.com/widget/' + embed_theme + '/' + embed_type + '/' + deezer_id + '?' + params + '" style="' + styleAttr + '" ' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
+            deezer_frame = '<iframe title="' + frame_title + '" src="/widget.deezer.com/widget/' + embed_theme + '/' + embed_type + '/' + deezer_id + '?' + params + '" style="' + styleAttr + '" ' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
             return deezer_frame;
         });
     },
@@ -3997,7 +3997,7 @@ tarteaucitron.services.instagram = {
                 styleAttr = 'height:' + tarteaucitron.getStyleSize(embed_height) + ';';
             }
 
-            post_frame = '<iframe title="' + frame_title + '" src=".//www.instagram.com/p/' + post_id + '/embed" style="' + styleAttr + '"></iframe>';
+            post_frame = '<iframe title="' + frame_title + '" src="/www.instagram.com/p/' + post_id + '/embed" style="' + styleAttr + '"></iframe>';
 
             return post_frame;
         });
@@ -4644,7 +4644,7 @@ tarteaucitron.services.spotify = {
             if (spotify_height !== "") {
                 styleAttr += 'height:' + tarteaucitron.getStyleSize(spotify_height) + ';';
             }
-            spotify_frame = '<iframe title="' + frame_title + '" src=".//open.spotify.com/embed/' + spotify_id + '" style="' + styleAttr + '" allowfullscreen></iframe>';
+            spotify_frame = '<iframe title="' + frame_title + '" src="/open.spotify.com/embed/' + spotify_id + '" style="' + styleAttr + '" allowfullscreen></iframe>';
             return spotify_frame;
         });
     },
@@ -4981,7 +4981,7 @@ tarteaucitron.services.vimeo = {
                 styleAttr += 'height:' + tarteaucitron.getStyleSize(video_height) + ';';
             }
 
-            video_frame = '<iframe title="' + frame_title + '" src=".//player.vimeo.com/video/' + video_id + video_qs + '" style="' + styleAttr + '" ' + (video_allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
+            video_frame = '<iframe title="' + frame_title + '" src="/player.vimeo.com/video/' + video_id + video_qs + '" style="' + styleAttr + '" ' + (video_allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
 
             return video_frame;
         });
@@ -5284,7 +5284,7 @@ tarteaucitron.services.youtube = {
                 loading = '';
             }
 
-            video_frame = '<iframe title="' + frame_title + '" style="' + styleAttr + '" src=".//www.youtube-nocookie.com/embed/' + video_id + '?' + params + '"' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + ' ' + srcdoc + ' ' + loading + '></iframe>';
+            video_frame = '<iframe title="' + frame_title + '" style="' + styleAttr + '" src="/www.youtube-nocookie.com/embed/' + video_id + '?' + params + '"' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + ' ' + srcdoc + ' ' + loading + '></iframe>';
             return video_frame;
         });
     },
@@ -5328,7 +5328,7 @@ tarteaucitron.services.youtubeplaylist = {
             if (video_height !== "") {
                 styleAttr += 'height:' + tarteaucitron.getStyleSize(video_height) + ';';
             }
-            video_frame = '<iframe title="' + frame_title + '" style="' + styleAttr + '" src=".//www.youtube-nocookie.com/embed/videoseries?list=' + playlist_id + '&' + params + '"' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
+            video_frame = '<iframe title="' + frame_title + '" style="' + styleAttr + '" src="/www.youtube-nocookie.com/embed/videoseries?list=' + playlist_id + '&' + params + '"' + (allowfullscreen == '0' ? '' : ' webkitallowfullscreen mozallowfullscreen allowfullscreen') + '></iframe>';
             return video_frame;
         });
     },
@@ -5484,7 +5484,7 @@ tarteaucitron.services.issuu = {
             if (issuu_id.match(/\d+\/\d+/)) { issuu_embed = '#' + issuu_id; } else if (issuu_id.match(/d=(.*)&u=(.*)/)) { issuu_embed = '?' + issuu_id; }
 
 
-            issuu_frame = '<iframe title="' + frame_title + '" style="' + styleAttr + '" src=".//e.issuu.com/embed.html' + issuu_embed + '"></iframe>';
+            issuu_frame = '<iframe title="' + frame_title + '" style="' + styleAttr + '" src="/e.issuu.com/embed.html' + issuu_embed + '"></iframe>';
 
             return issuu_frame;
         });
