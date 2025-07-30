@@ -9,5 +9,5 @@ function include(file, tagName) {
     });
 }
   
-  include("../partials/header.html", "header");
-  include("./partials/footer.html", "footer");
+  include("partials/header.html", "header");
+  include("partials/footer.html", "footer");
