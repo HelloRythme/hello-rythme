@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /danses/test/
+Disallow: /danses/analyseur/
+
+Sitemap: https://hellorythme-danse.fr/sitemap.xml

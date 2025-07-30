@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "/js/config_api.js";
+import { API_BASE_URL , AUTH_TOKEN } from "/js/config_api.js";
 
 function jaune(e){
   const films = document.getElementsByClassName("film");
@@ -29,8 +29,12 @@ window.loadVideo = loadVideo;
 
   const heartButtons = document.querySelectorAll(".vote-btn");
 
- 
-  fetch(`${API_BASE_URL}/get-top-votes`)
+  fetch(`${API_BASE_URL}/get-top-votes`, {
+  method: "GET",
+  headers: {
+    "Authorization": 'Bearer ${AUTH_TOKEN}'
+  }
+})
   .then((res) => res.json())
   .then((data) => {
     if (data) {
@@ -64,7 +68,12 @@ const y = rect.top + rect.height / 2;
     const videoId = container.id ;
 
     // Afficher le score au chargement
-    fetch(`${API_BASE_URL}/get-vote-count?video_id=${videoId}`)
+    fetch(`${API_BASE_URL}/get-vote-count?video_id=${videoId}`, {
+  method: "GET",
+  headers: {
+    "Authorization": `Bearer ${AUTH_TOKEN}`
+  }
+})
   .then((res) => res.json())
   .then((data) => {
         if (data)
@@ -86,12 +95,13 @@ const y = rect.top + rect.height / 2;
       fetch(`${API_BASE_URL}/vote`, {
       method: "POST",
             headers: {
+          "Authorization": `Bearer ${AUTH_TOKEN}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ video_id: videoId })
       })
       .then(response => response.json())
-      .then(data => {console.log(data);
+      .then(data => {
         if (data && data.vote_count !== undefined) {
           btn.title = `${data.vote_count} vote(s)`;
         } 
@@ -120,9 +130,9 @@ const y = rect.top + rect.height / 2;
 }
 window.yellow = yellow;
 
-function updatePodium(data){console.log(data);
+function updatePodium(data){
 const sortedData = data.sort((a, b) => b.vote_count - a.vote_count);
-          sortedData.forEach((entry, i) => {console.log(entry.video_id, i);
+          sortedData.forEach((entry, i) => {
             const sourceDiv = document.getElementById(entry.video_id);
             const danse = sourceDiv.dataset.danse;
             const titre = sourceDiv.dataset.titre;

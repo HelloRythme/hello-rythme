@@ -1,14 +1,14 @@
 const quiz1Questions = [
     { id: 1, spotifyEmbed: "https://open.spotify.com/embed/track/2GYHyAoLWpkxLVa4oYTVko", correctType: "Latine", correctDance: "Samba" },
-    { id: 2, spotifyEmbed: "https://open.spotify.com/embed/track/7GHKA8GIMcND6c5nN1sFnD", correctType: "Latine", correctDance: "Cha cha" },
-    { id: 3, spotifyEmbed: "https://open.spotify.com/embed/track/528QhCT2v3HgD71RmrSUNW", correctType: "Latine", correctDance: "Rumba" },
+    { id: 2, spotifyEmbed: "https://open.spotify.com/embed/track/0n4bITAu0Y0nigrz3MFJMb", correctType: "Latine", correctDance: "Cha cha" },
+    { id: 3, spotifyEmbed: "https://open.spotify.com/embed/track/68zSzKkU28AfZvr5FkAUWT", correctType: "Latine", correctDance: "Rumba" },
     { id: 4, spotifyEmbed: "https://open.spotify.com/embed/track/3Wrjm47oTz2sjIgck11l5e", correctType: "Latine", correctDance: "Jive" },
     { id: 5, spotifyEmbed: "https://open.spotify.com/embed/track/709CndJJB3GTUhQD0LLFse", correctType: "Latine", correctDance: "Paso doble" },
-    { id: 6, spotifyEmbed: "https://open.spotify.com/embed/track/4I8Mc5kqPcaK3tWSTNDC70", correctType: "Standard", correctDance: "Valse lente" },
-    { id: 7, spotifyEmbed: "https://open.spotify.com/embed/track/0B9x2BRHqj3Qer7biM3pU3", correctType: "Standard", correctDance: "Quickstep" },
-    { id: 8, spotifyEmbed: "https://open.spotify.com/embed/track/6jGnykaS6TkWp15utXSAeI", correctType: "Standard", correctDance: "Slow fox trot" },
-    { id: 9, spotifyEmbed: "https://open.spotify.com/embed/track/1n8NKQRg8LVHy7oUhUgbFF", correctType: "Standard", correctDance: "Valse viennoise" },
-    { id: 10, spotifyEmbed: "https://open.spotify.com/embed/track/1opNhHzl7YYxo1szmZOLAA", correctType: "Standard", correctDance: "Tango" }
+    { id: 6, spotifyEmbed: "https://open.spotify.com/embed/track/6lanRgr6wXibZr8KgzXxBl", correctType: "Standard", correctDance: "Valse lente" },
+    { id: 7, spotifyEmbed: "https://open.spotify.com/embed/track/6xIe0xU5Zf0P7Em8Fa31i4", correctType: "Standard", correctDance: "Quickstep" },
+    { id: 8, spotifyEmbed: "https://open.spotify.com/embed/track/0805TOCWUjT53fRTt5uEgW", correctType: "Standard", correctDance: "Slow fox trot" },
+    { id: 9, spotifyEmbed: "https://open.spotify.com/embed/track/69vToJ9BMbbLlFZo7k7A7B", correctType: "Standard", correctDance: "Valse viennoise" },
+    { id: 10, spotifyEmbed: "https://open.spotify.com/embed/track/0x756ZHppLmUGM4xQxpNPv", correctType: "Standard", correctDance: "Tango" }
   ];
 
   const danceTypes = ["--", "Latine", "Standard"];

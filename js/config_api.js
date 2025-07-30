@@ -1,1 +1,2 @@
-export const API_BASE_URL = "http://192.168.1.62:5000"; 
+export const API_BASE_URL = "https://votes-api-h1wf.onrender.com"; 
+export const AUTH_TOKEN = "ApiToken!HelloRythme2025!";

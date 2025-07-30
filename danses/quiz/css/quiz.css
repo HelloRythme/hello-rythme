@@ -25,7 +25,7 @@ max-width: 20em;
 
 
 .card ul{text-align: left;
-font-size: 80%;
+font-size: 75%;
 line-height: 12pt;}
 
 iframe{
@@ -49,8 +49,8 @@ iframe{
 }
 
 .card-name{
-  font-size: 90%;
-  margin-top: 1em;
+  font-size: 80%;
+  margin-top: 1.5em;
   margin-bottom: 0em;
 }
 

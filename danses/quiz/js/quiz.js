@@ -4,10 +4,36 @@
   // Couleurs (5 différentes)
   const colors = ['#f1d7ff', '#FFD6A5', '#FDFFB6', '#CAFFBF', '#A0C4FF'];
   
+function prepareQuizData(musics, names) {
+  const result = [];
+
+  for (const danceName in musics) {
+    const ids = musics[danceName];
+    const randomId = ids[Math.floor(Math.random() * ids.length)];
+    const features = names[danceName];
+
+    result.push({
+      id: randomId,
+      name: danceName,
+      features: features
+    });
+  }
+
+  return result;
+}
+
+
+
+
   // Shuffle
   function shuffleArray(array) {
-    return array.sort(() => Math.random() - 0.5);
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
   }
+  return result;
+}
   
   // Variables d'état
   let firstCard = null;
@@ -28,16 +54,19 @@ let completedQuiz = document.getElementById("quiz-completed").children[0];
     completedQuiz.innerHTML = ' ';
 
     // Mélange
-    const shuffledMusics = shuffleArray([...musics]);
-    const shuffledNames = shuffleArray([...names]);
+    const musicsData = prepareQuizData(musics, names).map(({ id, name }) => ({ id, name }));
+    const namesData = prepareQuizData(musics, names).map(({ name, features }) => ({ name, features }));
+
+    const shuffledMusics = shuffleArray(musicsData);
+    const shuffledNames = shuffleArray(namesData);
   
     // Remplit la série musique
     shuffledMusics.forEach((music, index) => {
       const div = document.createElement('div');
       div.classList.add('card');
-      div.dataset.id = music.id;
+      div.dataset.id = music.name;
       div.dataset.type = 'music';
-      div.innerHTML = `<iframe src="${music.iframe}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+      div.innerHTML = `<iframe src="https://open.spotify.com/embed/track/${music.id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
       musicContainer.appendChild(div);
       
     });
@@ -46,7 +75,7 @@ let completedQuiz = document.getElementById("quiz-completed").children[0];
 shuffledNames.forEach((name, index) => {
     const div = document.createElement('div');
     div.classList.add('card');
-    div.dataset.id = name.id;
+    div.dataset.id = name.name;
     div.dataset.type = 'name';
   
     // Créer un élément pour le nom
@@ -57,9 +86,8 @@ shuffledNames.forEach((name, index) => {
   
     // Créer la liste ul
     const ul = document.createElement('ul');
-    
     // Ajouter chaque point de reconnaissance en li
-    name.details.forEach(detail => {
+    name.features.forEach(detail => {
       const li = document.createElement('li');
       li.textContent = detail;
       ul.appendChild(li);
@@ -125,8 +153,7 @@ shuffledNames.forEach((name, index) => {
           matchedIds.add(card.dataset.id);
   
           const color = colors[matchCount % colors.length]; // choisir une couleur parmi la liste
-          matchCount++;
-
+          matchCount++; 
           firstCard.style.backgroundColor = color;
           card.style.backgroundColor = color;
   
@@ -145,7 +172,7 @@ shuffledNames.forEach((name, index) => {
             second.classList.remove('pulse');
           }, 500);
 
-          if (matchCount === musics.length) {
+          if (matchCount === 5) {
 
             
               afficheRedirect();
