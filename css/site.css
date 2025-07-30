@@ -4,7 +4,7 @@
 
 .pompons{
 
-	background-image: url('/static/pompons.png');
+	background-image: url('static/pompons.png');
 	background-repeat: repeat;
 	background-size: 100%;
 }
