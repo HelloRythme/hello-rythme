@@ -19,8 +19,8 @@ const musics_back = [
     'Quickstep': 
     [
         "04LAPXr5C6W4ufoCVxr5Bx",
-        "0CJ1quCQhVX9Ax2jYwwovA",
-        "77vjMJ0LBNtNy3GhD7um3F",
+        "7GAeM2p8SRZyQx2hHfnI7O",
+        "2uBUM0WhWYrdXq0wYhefhw",
         "2v4bVS3O0V4ryd0jzHvEAL"
       ],
       'Tango': 
