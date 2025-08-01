@@ -19,9 +19,7 @@ iframe{
 #oisy {
      max-height: 200px;
     position: relative;
-    left: -1em;
-    top: -0.2em;
-    transform: rotate(15deg);
+    top: 0.5em;
     border-radius: 12px;
 }
 
