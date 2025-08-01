@@ -1,4 +1,4 @@
-import { API_BASE_URL , AUTH_TOKEN } from "../../../js/config_api.js";
+import { API_BASE_URL , AUTH_TOKEN } from "/js/config_api.js";
 
 function jaune(e){
   const films = document.getElementsByClassName("film");
