@@ -110,7 +110,7 @@ svg{max-width: 1440px;
 #bandeau-titre{
 	position: absolute;	
 	z-index: 5;
-	top: 4.5em;
+	top: 5em;
 	display: flexbox;
 	font-size: 150%;
 }
@@ -160,7 +160,7 @@ h2{font-size: 120%;}
 	}
 	#bandeau-titre {
 		top: 4em;
-		font-size: 200%;
+		font-size: 150%;
 		letter-spacing: 12pt;
 	}
 	svg{top:11em;}
@@ -173,6 +173,7 @@ h2{font-size: 120%;}
 	  }
 	#bandeau-titre {
 		top: 1.8em;
+		font-size: 200%;
 	}
 	#fond-clair{
 		height: 5em;
