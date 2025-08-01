@@ -52,7 +52,6 @@ header{ position: relative;
 #titre-page{
 	position: relative;
 	z-index: 5;
-	font-size: 90%;
 }
 
 nav{justify-content: center;
@@ -162,14 +161,14 @@ h1{font-size: 130%;}
 		height: 11em;
 	}
 	#bandeau-titre {
-		top: 5.2em;
+		top: 5.5em;
 		font-size: 150%;
 		letter-spacing: 12pt;
 	}
 	svg{top:11em;}
 	main {margin-top: 17em !important;}
-	#titre-page{
-	font-size: 100%;
+	h1{
+	font-size: 150%;
 }
   }
 
