@@ -51,7 +51,7 @@ header{ position: relative;
 
 #titre-page{
 	position: relative;
-	z-index: 5;
+	z-index: 8;
 }
 
 nav{justify-content: center;
