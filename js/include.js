@@ -9,5 +9,5 @@ function include(file, tagName) {
     });
 }
   
-  include("/hello-rythme/partials/header.html", "header");
-  include("/hello-rythme/partials/footer.html", "footer");
+  include("/partials/header.html", "header");
+  include("/partials/footer.html", "footer");
