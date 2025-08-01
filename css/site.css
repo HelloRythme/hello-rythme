@@ -14,7 +14,7 @@ html {
 	margin: 0 0 0 0 ;
 	padding: 0 0 0 0 ;
 	scroll-padding-top: 9.2em; /* Ajuste en fonction de la hauteur de ta barre sticky */
-	overflow-x: hidden;
+
   }
   
 .row{
@@ -152,6 +152,7 @@ h2{font-size: 120%;}
 @media screen and (min-width: 491px) {
 	html {
 		scroll-padding-top:9.2em; 
+		overflow-x: hidden;
 	  }
 	#fond-clair{
 		height: 11em;
