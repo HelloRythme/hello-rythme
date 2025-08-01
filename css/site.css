@@ -111,7 +111,7 @@ svg{max-width: 1440px;
 #bandeau-titre{
 	position: absolute;	
 	z-index: 5;
-	top: 5.3em;
+	top: 5.4em;
 	display: flexbox;
 	font-size: 150%;
 	letter-spacing: 6pt;
@@ -146,6 +146,7 @@ main {
 h4{font-size: 100%;}
 h3{font-size: 105%;}
 h2{font-size: 120%;}
+h1{font-size: 130%;}
 
 .cat{
 	color: #463f32;
@@ -161,7 +162,7 @@ h2{font-size: 120%;}
 		height: 11em;
 	}
 	#bandeau-titre {
-		top: 5em;
+		top: 5.2em;
 		font-size: 150%;
 		letter-spacing: 12pt;
 	}
