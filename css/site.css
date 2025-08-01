@@ -110,8 +110,7 @@ svg{max-width: 1440px;
 #bandeau-titre{
 	position: absolute;	
 	z-index: 5;
-	top: 4.1em;
-	letter-spacing: 12pt;
+	top: 4.5em;
 	display: flexbox;
 	font-size: 150%;
 }
@@ -126,7 +125,7 @@ svg{max-width: 1440px;
 
 
 main {
-	margin-top: 13.2em !important;
+	margin-top: 13.3em !important;
 	width: 100%;
 	background-color: rgba(247, 239, 229);
 	z-index: 1;
