@@ -79,7 +79,7 @@ svg{max-width: 1440px;
 #fond-clair{
 	position: absolute;
 	top: 0em;
-	height: 12em;
+	height: 12.2em;
 }
 
 .great-vibes-regular {
@@ -184,7 +184,7 @@ h1{font-size: 140%;}
 		height: 5em;
 	}
 	svg{top:5em;}
-	main {margin-top: 12em !important;}
+	main {margin-top: 12.2em !important;}
 	.mini{font-size: 50%;}
 	.normal{font-size: 100%;}
 	h4{font-size: 110%;}
@@ -222,7 +222,7 @@ h1{font-size: 140%;}
 		top: 1.5em;
 	}
 	svg{top:4em;}
-	main {margin-top: 13.1em !important;}
+	main {margin-top: 13.3em !important;}
 	.mini{font-size: 60%;}
 	.normal{font-size: 100%;}
 	h5{font-size: 85%;}
@@ -248,7 +248,7 @@ h1{font-size: 140%;}
 		font-size: 280%;
 		letter-spacing: 18pt;
 	}
-	main {margin-top: 15.8em !important;}
+	main {margin-top: 16em !important;}
 	.mini{font-size: 60%;}
 	h5{font-size: 80%;}
   }
