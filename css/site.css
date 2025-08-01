@@ -109,7 +109,7 @@ svg{max-width: 1440px;
   
 #bandeau-titre{
 	position: absolute;	
-	z-index: 5;
+	z-index: 1;
 	top: 5.6em;
 	display: flexbox;
 	font-size: 150%;
@@ -129,7 +129,7 @@ main {
 	margin-top: 13.5em !important;
 	width: 100%;
 	background-color: rgba(247, 239, 229);
-	z-index: 1;
+	z-index: 5;
 }
 
 .mini{
