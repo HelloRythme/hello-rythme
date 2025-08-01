@@ -78,6 +78,16 @@ ul{
     padding-right: 0.5em;
 }
 
+ .marquee-wrapper {
+        max-width: 98vw;
+        overflow: hidden;
+        padding: 1rem 0;
+        font-size: 1rem;
+        margin-top: 1em;
+        box-sizing: border-box;
+        position: relative;
+      }
+
 @media screen and (min-width: 350px) {
 	.submenu {
         height: 300px;
@@ -89,6 +99,7 @@ ul{
     .fond, .cat{
         margin-top: -300px;
     }
+    
 }
 
 @media screen and (min-width: 575px) {
@@ -102,6 +113,9 @@ ul{
     .fond, .cat{
         margin-top: -250px;
     }
+     .marquee-wrapper {
+        font-size: 1.5rem;
+      }
 
 }
 
@@ -124,15 +138,7 @@ svg{
 	background: radial-gradient(ellipse 2% 80% at 100% -25%, #C2B7AD 100%, #463f32 100%);
 	}  
     
-    .marquee-wrapper {
-        max-width: 98vw;
-        overflow: hidden;
-        padding: 1rem 0;
-        font-size: 1.5rem;
-        margin-top: 1em;
-        box-sizing: border-box;
-        position: relative;
-      }
+   
   
       .marquee {
         display: flex;
