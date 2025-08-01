@@ -1,5 +1,7 @@
-*{
+*{  box-sizing: border-box;
 	background-color: none !important;
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0 ;
 }
 
 .pompons{
@@ -77,6 +79,7 @@ svg{max-width: 1440px;
 #fond-clair{
 	position: absolute;
 	top: 0em;
+	height: 12em;
 }
 
 .great-vibes-regular {
@@ -107,7 +110,7 @@ svg{max-width: 1440px;
 #bandeau-titre{
 	position: absolute;	
 	z-index: 5;
-	top: 3.5em;
+	top: 4.1em;
 	font-size: 200%;
 	letter-spacing: 12pt;
 	display: flexbox;
@@ -123,7 +126,7 @@ svg{max-width: 1440px;
 
 
 main {
-	margin-top: 16em !important;
+	margin-top: 13em !important;
 	width: 100%;
 	background-color: rgba(247, 239, 229);
 	z-index: 1;
