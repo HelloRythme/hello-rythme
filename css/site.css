@@ -16,7 +16,7 @@ html {
 	margin: 0 0 0 0 ;
 	padding: 0 0 0 0 ;
 	scroll-padding-top: 9.2em; /* Ajuste en fonction de la hauteur de ta barre sticky */
-
+    overflow-x: hidden;
   }
   
 .row{
@@ -111,9 +111,9 @@ svg{max-width: 1440px;
 	position: absolute;	
 	z-index: 5;
 	top: 4.1em;
-	font-size: 200%;
 	letter-spacing: 12pt;
 	display: flexbox;
+	font-size: 150%;
 }
 
 #titre-site{
@@ -126,7 +126,7 @@ svg{max-width: 1440px;
 
 
 main {
-	margin-top: 13em !important;
+	margin-top: 13.2em !important;
 	width: 100%;
 	background-color: rgba(247, 239, 229);
 	z-index: 1;
@@ -154,7 +154,7 @@ h2{font-size: 120%;}
 @media screen and (min-width: 491px) {
 	html {
 		scroll-padding-top:9.2em; 
-		overflow-x: hidden;
+		
 	  }
 	#fond-clair{
 		height: 11em;
