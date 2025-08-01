@@ -110,9 +110,10 @@ svg{max-width: 1440px;
 #bandeau-titre{
 	position: absolute;	
 	z-index: 5;
-	top: 5em;
+	top: 5.3em;
 	display: flexbox;
 	font-size: 150%;
+	letter-spacing: 12pt;
 }
 
 #titre-site{
@@ -159,9 +160,9 @@ h2{font-size: 120%;}
 		height: 11em;
 	}
 	#bandeau-titre {
-		top: 4em;
+		top: 4.5em;
 		font-size: 150%;
-		letter-spacing: 12pt;
+		
 	}
 	svg{top:11em;}
 	main {margin-top: 17em !important;}
