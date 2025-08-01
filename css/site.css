@@ -36,7 +36,6 @@ body{
 }
 
 #site{
-	min-width: 491px;
 	max-width: 1440px;
 	margin: auto;
 }
@@ -108,7 +107,7 @@ svg{max-width: 1440px;
 #bandeau-titre{
 	position: absolute;	
 	z-index: 5;
-	top: 4em;
+	top: 3.5em;
 	font-size: 200%;
 	letter-spacing: 12pt;
 	display: flexbox;
@@ -124,7 +123,7 @@ svg{max-width: 1440px;
 
 
 main {
-	margin-top: 18em !important;
+	margin-top: 16em !important;
 	width: 100%;
 	background-color: rgba(247, 239, 229);
 	z-index: 1;
