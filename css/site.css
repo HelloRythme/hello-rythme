@@ -154,7 +154,7 @@ h1{font-size: 140%;}
 @media screen and (min-width: 450px) {
 	main {margin-top: 19em !important;}
 	#bandeau-titre {
-		top: 5.5em;
+		top: 5.4em;
 	}
   }
 
@@ -281,6 +281,11 @@ h1{font-size: 140%;}
 	main {margin-top: 20.5em !important;}
 	.mini{font-size: 80%;}
 	h5{font-size: 105%;}
+  }
+
+   @media screen and (min-width: 1450px) {
+
+	main {margin-top: 21em !important;}
   }
 
 h2{
