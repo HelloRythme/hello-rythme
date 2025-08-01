@@ -109,8 +109,8 @@ svg{max-width: 1440px;
   
 #bandeau-titre{
 	position: absolute;	
-	z-index: 1;
-	top: 5.6em;
+	z-index: 5;
+	top: 5.5em;
 	display: flexbox;
 	font-size: 150%;
 	letter-spacing: 6pt;
@@ -129,7 +129,7 @@ main {
 	margin-top: 13.5em !important;
 	width: 100%;
 	background-color: rgba(247, 239, 229);
-	z-index: 5;
+	z-index: 1;
 }
 
 .mini{
@@ -150,6 +150,13 @@ h1{font-size: 140%;}
 .cat{
 	color: #463f32;
 }
+
+@media screen and (min-width: 450px) {
+	main {margin-top: 19em !important;}
+	#bandeau-titre {
+		top: 5.5em;
+	}
+  }
 
 
 @media screen and (min-width: 491px) {
