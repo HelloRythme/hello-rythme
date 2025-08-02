@@ -66,7 +66,7 @@ let completedQuiz = document.getElementById("quiz-completed").children[0];
       div.classList.add('card');
       div.dataset.id = music.name;
       div.dataset.type = 'music';
-      div.innerHTML = `<iframe src="https://open.spotify.com/embed/track/${music.id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+      div.innerHTML = `<iframe loading="lazy" src="https://open.spotify.com/embed/track/${music.id}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
       musicContainer.appendChild(div);
       
     });
