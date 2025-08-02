@@ -1,12 +1,3 @@
-const musics_back = [
-    { id: 1, iframe: 'https://open.spotify.com/embed/track/5vXEPFOkx6eugLNxg4YauT' },
-    { id: 2, iframe: 'https://open.spotify.com/embed/track/1CCuMgDauGruOwxrSh9NSW' },
-    { id: 3, iframe: 'https://open.spotify.com/embed/track/5ahHeVvCLL4iSIAFD1PhRe' },
-    { id: 4, iframe: 'https://open.spotify.com/embed/track/2q6fxAvSpqXR4jx9Ne7RGz' },
-    { id: 5, iframe: 'https://open.spotify.com/embed/track/6OzAkuRDmEpd52RF1g1WvU' }
-  ];
-
-
   const musics = 
     {
       'Valse lente': 
@@ -35,7 +26,7 @@ const musics_back = [
         "2q6fxAvSpqXR4jx9Ne7RGz",
         "4Ylqc711Eq763XbTAOABu3",
         "4PFAm88FBkY7IFtvCaGctZ",
-        "2RWs4c3ZJ74WwXlVC3QCQN"
+        "2ehxBkLyfsQz6SNy4XMEj4"
       ],
     'Slow fox trot': 
     [
