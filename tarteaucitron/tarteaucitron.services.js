@@ -1443,7 +1443,7 @@ tarteaucitron.services.myfeelback = {
             _context: {
                 lang: undefined,
                 privacyMode: false,
-                _page&nbsp;: {
+                _page: {
                     url: location.pathname,
                     storageDuration: 30
                 }
